@@ -1,34 +1,38 @@
 package roles;
 
+/**Classe utilisée pour attribuer aléatoirement un role à une fourmi adulte.
+ * 
+ * @author Damien
+ *
+ */
 public class UsineRole {
 
   final int maxProbabilite = 100;
-
-  final int ouvrierMin = 0;
+  
+  //60% de chances d'être un ouvrier
   final int ouvrierMax = 60;
 
-  final int soldatMin = 60;
+  // 25% de chance d'être un soldat
   final int soldatMax = 85;
 
-  final int sexueMin = 85;
+  // 15% de chance d'être sexuee
   final int sexueMax = 100;
-
-  private int randVal() {
-    return (int) (Math.random() * maxProbabilite);
-  }
-
+  
   /**
-   * creer aleatoirement un role pour un adulte.
-   * 
-   * @return un Role
+   * Crée un role aléatoire en fonction des seuils de chaque rôle. 
+   * @return
    */
   public Role creerRole() {
-    int val = this.randVal();
-    if (val >= ouvrierMin && val <= ouvrierMax) {
+    
+    //Nombre aléatoire entre 0 et 100
+    int val = (int) (Math.random() * maxProbabilite);
+    
+    //
+    if (val <= ouvrierMax) {
       return new Ouvrier();
     }
 
-    if (val > soldatMin && val <= soldatMax) {
+    if (val <= soldatMax) {
       return new Soldat();
     }
 
