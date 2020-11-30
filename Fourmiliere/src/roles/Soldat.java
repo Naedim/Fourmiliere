@@ -1,6 +1,4 @@
-package adultes;
-
-import main.Role;
+package roles;
 
 public class Soldat implements Role {
 

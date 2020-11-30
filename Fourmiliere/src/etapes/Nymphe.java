@@ -1,4 +1,4 @@
-package enfants;
+package etapes;
 
 import main.Etape;
 import main.Simulation;
@@ -18,7 +18,7 @@ public class Nymphe implements Simulation, Etape {
   @Override
   public Etape next() {
     if (this.dureeVie == this.tempsEvolution) {
-      // TO DO
+
     }
     return this;
   }

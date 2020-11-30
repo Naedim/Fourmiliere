@@ -1,4 +1,4 @@
-package main;
+package roles;
 
 public interface Role {
 

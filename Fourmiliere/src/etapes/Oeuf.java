@@ -1,4 +1,4 @@
-package enfants;
+package etapes;
 
 import main.Etape;
 import main.Simulation;
