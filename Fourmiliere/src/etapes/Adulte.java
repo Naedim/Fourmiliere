@@ -5,10 +5,15 @@ import roles.Role;
 
 public class Adulte implements Etape, Role {
 
-  protected final int tempsEvolution = 548;
-  protected int dureeVie = 0;
+  protected final int tempsVieMin = 548;
+  protected final int tempsVieMax = 913;
+  protected int tempsVie;
+  protected int dureeVie;
 
-  public Adulte() {}
+  public Adulte() {
+    this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin));
+    this.dureeVie = 0;
+  }
 
   @Override
   public void step() {
@@ -17,7 +22,10 @@ public class Adulte implements Etape, Role {
 
   @Override
   public Etape next() {
-    return new Adulte();
+    if (dureeVie == tempsVie) {
+      return null;
+    }
+    return this;
   }
 
 }
