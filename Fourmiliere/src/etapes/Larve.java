@@ -1,7 +1,5 @@
 package etapes;
 
-import main.Etape;
-
 public class Larve implements Etape {
 
   protected final int tempsEvolution = 10;

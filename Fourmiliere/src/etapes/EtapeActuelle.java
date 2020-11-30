@@ -1,6 +1,6 @@
-package main;
+package etapes;
 
-import etapes.Oeuf;
+import simulation.Simulation;
 
 public class EtapeActuelle implements Simulation {
 
@@ -22,11 +22,8 @@ public class EtapeActuelle implements Simulation {
     }
   }
 
+  /** Permet de supprimer une fourmis de la fourmilière. **/
   void mourir() {
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> Etapes
   }
 }

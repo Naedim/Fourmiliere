@@ -1,7 +1,6 @@
 package etapes;
 
-import main.Etape;
-import main.Simulation;
+import simulation.Simulation;
 
 public class Nymphe implements Simulation, Etape {
 
@@ -18,7 +17,7 @@ public class Nymphe implements Simulation, Etape {
   @Override
   public Etape next() {
     if (this.dureeVie == this.tempsEvolution) {
-
+      
     }
     return this;
   }

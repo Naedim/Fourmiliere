@@ -1,6 +1,5 @@
 package etapes;
 
-import main.Etape;
 import roles.Role;
 import roles.UsineRole;
 
@@ -12,7 +11,7 @@ public class Adulte implements Etape, Role {
   protected int dureeVie;
   protected Role role;
 
-  /**Constructeur de la classe adulte.
+  /** Constructeur de la classe adulte.
    *  
    */
   public Adulte() {

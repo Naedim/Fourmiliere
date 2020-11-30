@@ -1,7 +1,6 @@
 package etapes;
 
-import main.Etape;
-import main.Simulation;
+import simulation.Simulation;
 
 public class Oeuf implements Simulation, Etape {
 
