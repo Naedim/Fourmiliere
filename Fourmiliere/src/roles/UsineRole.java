@@ -18,11 +18,11 @@ public class UsineRole {
   }
 
   /**
-   * creer al�atoirement un role pour un adulte.
+   * creer aleatoirement un role pour un adulte.
    * 
    * @return un Role
    */
-  public Role creerAdulte() {
+  public Role creerRole() {
     int val = this.randVal();
     if (val >= ouvrierMin && val <= ouvrierMax) {
       return new Ouvrier();
