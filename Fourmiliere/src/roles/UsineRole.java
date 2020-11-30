@@ -1,7 +1,7 @@
 package roles;
 
 public class UsineRole {
-  
+
   final int maxProbabilite = 100;
 
   final int ouvrierMin = 0;
@@ -27,15 +27,12 @@ public class UsineRole {
     if (val >= ouvrierMin && val <= ouvrierMax) {
       return new Ouvrier();
     }
-    
+
     if (val > soldatMin && val <= soldatMax) {
       return new Soldat();
     }
-    
-    if (val > sexueMin && val <= sexueMax) {
-      return new Sexue();
-    }
-    return null;
+
+    return new Sexue();
 
   }
 }
