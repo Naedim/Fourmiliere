@@ -1,15 +1,25 @@
 public class Oeuf implements Simulation, Etape  {
 
+	
+	protected final int tempsEvolution = 3;
+	protected int dureeVie;
+	
+	
+	public Oeuf() {
+		this.dureeVie = 0;
+	}
+
 	@Override
 	public void step() {
-		// TODO Auto-generated method stub
+		this.dureeVie++;
+		this = this.next();
 		
 	}
 
 	@Override
 	public Etape next() {
-		// TODO Auto-generated method stub
-		return null;
+	 if(this.dureeVie == this.tempsEvolution) return new Larve();
+	 return this;
 	}
 
 }
