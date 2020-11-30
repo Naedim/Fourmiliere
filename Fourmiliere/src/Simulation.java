@@ -1,9 +1,6 @@
 
 public interface Simulation {
 
-	/**
-	 * Méthode incrémentant de 1 step la simulation, 
-	 * Un step équivaut à un jour.
-	 */
-	public void step();
+  /** MÃ©thode incrÃ©mentant de 1 step la simulation, Un step Ã©quivaut Ã  un jour. */
+  public void step();
 }

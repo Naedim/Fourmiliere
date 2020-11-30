@@ -1,6 +1,5 @@
 
 public interface Etape {
 
-	public Etape next();
-
+  public Etape next();
 }

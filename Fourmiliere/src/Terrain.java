@@ -1,15 +1,14 @@
 
 public class Terrain implements Simulation {
-	Fourmiliere fourmiliere;
+  Fourmiliere fourmiliere;
 
-	public Terrain() {
-		this.fourmiliere = new Fourmiliere();
-	}
+  public Terrain() {
+    this.fourmiliere = new Fourmiliere();
+  }
 
-	@Override
-	public void step() {
-		// TODO Auto-generated method stub
-
-	}
+  @Override
+  public void step() {
+  
+  }
 
 }
