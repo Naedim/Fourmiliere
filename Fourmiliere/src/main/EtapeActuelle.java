@@ -23,7 +23,10 @@ public class EtapeActuelle implements Simulation {
   }
 
   void mourir() {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> Etapes
   }
-
 }
