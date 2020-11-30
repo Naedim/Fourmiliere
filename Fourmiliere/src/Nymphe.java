@@ -1,23 +1,22 @@
 
 public class Nymphe implements Simulation, Etape {
 
-	protected final int tempsEvolution = 5;
-	protected int dureeVie = 0;	
-	
-	public Nymphe() {
-	}
+  protected final int tempsEvolution = 5;
+  protected int dureeVie = 0;
 
-	@Override
-	public void step() {
-		this.dureeVie++;
-	}
+  public Nymphe() {}
 
-	@Override
-	public Etape next() {
-		 if(this.dureeVie == this.tempsEvolution) {
-			 //TO DO 
-		 }
-		 return this;
-		}
+  @Override
+  public void step() {
+    this.dureeVie++;
+  }
+
+  @Override
+  public Etape next() {
+    if (this.dureeVie == this.tempsEvolution) {
+      // TO DO
+    }
+    return this;
+  }
 
 }
