@@ -18,7 +18,7 @@ public class UsineRole {
   }
 
   /**
-   * creer aléatoirement un role pour un adulte.
+   * creer alï¿½atoirement un role pour un adulte.
    * 
    * @return un Role
    */
@@ -29,11 +29,11 @@ public class UsineRole {
     }
     
     if (val > soldatMin && val <= soldatMax) {
-      return new Ouvrier();
+      return new Soldat();
     }
     
     if (val > sexueMin && val <= sexueMax) {
-      return new Ouvrier();
+      return new Sexue();
     }
     return null;
 
