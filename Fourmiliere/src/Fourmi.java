@@ -1,10 +1,10 @@
 
 public class Fourmi implements Simulation {
-  Etape etape;
+	EtapeActuelle etape;
 
-  public Fourmi() {
-    this.etape = new Oeuf();
-  }
+	public Fourmi() {
+		this.etape = new EtapeActuelle();
+	}
 
   @Override
   public void step() {
