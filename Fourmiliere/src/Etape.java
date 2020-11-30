@@ -1,4 +1,6 @@
 
-public class Etape {
+public interface Etape {
+
+	public Etape next();
 
 }
