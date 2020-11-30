@@ -14,5 +14,9 @@ public class EtapeActuelle implements Simulation {
     this.etapeActuelle.step();
     this.etapeActuelle = this.etapeActuelle.next();
   }
+  
+  void mourrir() {
+    
+  }
 
 }

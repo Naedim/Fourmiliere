@@ -1,12 +1,10 @@
 package main;
 
-import enfants.Oeuf;
-
 public class Fourmi implements Simulation {
-  Etape etape;
+  EtapeActuelle etapeActuelle;
 
   public Fourmi() {
-    this.etape = new Oeuf();
+    this.etapeActuelle = new EtapeActuelle();
   }
 
   @Override
