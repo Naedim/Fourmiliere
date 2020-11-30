@@ -15,6 +15,6 @@ public class Fourmi implements Simulation {
 
   @Override
   public void step() {
-
+    this.etapeActuelle.step();
   }
 }

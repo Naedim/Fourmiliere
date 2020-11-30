@@ -12,9 +12,13 @@ public class Terrain implements Simulation {
     this.fourmiliere = new Fourmiliere();
   }
 
+  public Fourmiliere getFourmiliere() {
+    return fourmiliere;
+  }
+
   @Override
   public void step() {
-  
+    this.fourmiliere.step();
   }
 
 }

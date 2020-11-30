@@ -14,7 +14,9 @@ public class Fourmiliere implements Simulation {
 
   @Override
   public void step() {
-
+    for (Fourmi f : listFourmi) {
+      f.step();
+    }
   }
 
 }
