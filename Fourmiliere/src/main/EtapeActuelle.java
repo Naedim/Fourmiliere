@@ -1,3 +1,6 @@
+package main;
+
+import enfants.Oeuf;
 
 public class EtapeActuelle implements Simulation {
 

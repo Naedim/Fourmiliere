@@ -1,10 +1,14 @@
+package enfants;
+
+import main.Etape;
+import main.Simulation;
+
 public class Oeuf implements Simulation, Etape {
 
   protected final int tempsEvolution = 3;
   protected int dureeVie = 0;
 
-  public Oeuf() {
-  }
+  public Oeuf() {}
 
   @Override
   public void step() {

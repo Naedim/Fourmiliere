@@ -1,3 +1,6 @@
+package enfants;
+
+import main.Etape;
 
 public class Larve implements Etape {
 

@@ -1,3 +1,7 @@
+package enfants;
+
+import main.Etape;
+import main.Simulation;
 
 public class Nymphe implements Simulation, Etape {
 
