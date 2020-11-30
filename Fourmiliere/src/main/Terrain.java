@@ -18,7 +18,7 @@ public class Terrain implements Simulation {
 
   @Override
   public void step() {
-  
+    this.fourmiliere.step();
   }
 
 }

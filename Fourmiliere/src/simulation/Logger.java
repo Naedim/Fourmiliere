@@ -19,7 +19,7 @@ public class Logger {
 
     try {
       FileWriter fw = new FileWriter(file, true);
-      fw.write("[temps] LOG : Population de fourmis = \n");
+      fw.write("[temps] LOG : Population de fourmis = " + f + "\n");
       fw.write("Nombres d'oeufs = \n");
       fw.write("Nombres de larves = \n");
       fw.write("Nombres de nymphes = \n");
@@ -27,7 +27,7 @@ public class Logger {
       fw.write("    Soldat = \n");
       fw.write("    Ouvrier = \n");
       fw.write("    Sexué = \n\n");
-      
+
       fw.close();
     } catch (IOException e) {
       System.out.println("Erreur de fichier");
