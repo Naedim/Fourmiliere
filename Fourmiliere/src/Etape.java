@@ -1,6 +1,5 @@
 
-public interface Etape {
+public interface Etape extends Simulation{
 
 	public Etape next();
-
 }
