@@ -18,7 +18,7 @@ public class Nymphe implements Simulation, Etape {
   @Override
   public Etape next() {
     if (this.dureeVie == this.tempsEvolution) {
-
+      return new Adulte();
     }
     return this;
   }
