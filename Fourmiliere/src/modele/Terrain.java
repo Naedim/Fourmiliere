@@ -1,8 +1,6 @@
 package modele;
 
-import simulation.Simulation;
-
-public class Terrain implements Simulation {
+public class Terrain {
   Fourmiliere fourmiliere;
 
   /**
@@ -16,9 +14,7 @@ public class Terrain implements Simulation {
     return fourmiliere;
   }
 
-  @Override
   public void step() {
     this.fourmiliere.step();
   }
-
 }

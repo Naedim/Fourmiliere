@@ -1,5 +1,7 @@
 package etapes;
 
+import modele.Fourmiliere;
+
 public class Larve implements Etape {
 
   protected final int tempsEvolution = 10;
@@ -9,7 +11,7 @@ public class Larve implements Etape {
   }
 
   @Override
-  public void step() {
+  public void step(Fourmiliere f) {
     this.dureeVie++;
   }
 

@@ -1,9 +1,8 @@
 package modele;
 
 import etapes.EtapeActuelle;
-import simulation.Simulation;
 
-public class Fourmi implements Simulation {
+public class Fourmi {
   EtapeActuelle etapeActuelle;
 
   /**
@@ -13,8 +12,7 @@ public class Fourmi implements Simulation {
     this.etapeActuelle = new EtapeActuelle();
   }
 
-  @Override
-  public void step() {
-    this.etapeActuelle.step();
+  public void step(Fourmiliere f) {
+    this.etapeActuelle.step(f);
   }
 }

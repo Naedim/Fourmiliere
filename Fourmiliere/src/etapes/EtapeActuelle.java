@@ -1,8 +1,8 @@
 package etapes;
 
-import simulation.Simulation;
+import modele.Fourmiliere;
 
-public class EtapeActuelle implements Simulation {
+public class EtapeActuelle {
 
   protected Etape etapeActuelle;
 
@@ -14,16 +14,8 @@ public class EtapeActuelle implements Simulation {
    * Méthode qui permet de passer à l'étape suivante de
    * l'évolution ou de finir sa vie.
    **/
-  public void step() {
-    this.etapeActuelle.step();
+  public void step(Fourmiliere f) {
+    this.etapeActuelle.step(f);
     this.etapeActuelle = this.etapeActuelle.next();
-    if (this.etapeActuelle.equals(null)) {
-      this.mourir();
-    }
-  }
-
-  /** Permet de supprimer une fourmis de la fourmilière. **/
-  void mourir() {
-
   }
 }
