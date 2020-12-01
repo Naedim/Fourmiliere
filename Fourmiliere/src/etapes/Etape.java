@@ -1,5 +1,6 @@
 package etapes;
 
+import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
 import simulation.Simulation;
@@ -33,7 +34,7 @@ public abstract class Etape implements Simulation {
   }
 
   @Override
-  public void bilan() {
-    this.etape.bilan();
+  public void bilan(Bilan b) {
+    
   }
 }

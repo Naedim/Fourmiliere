@@ -1,5 +1,6 @@
 package simulation;
 
+import modele.Bilan;
 import modele.Terrain;
 
 public class Simulateur {
@@ -18,17 +19,17 @@ public class Simulateur {
 
     Logger logger = new Logger("log.txt");
     int nbStep = 0;
-
     while (true) {
-      if (terrain.getFourmiliere().getTempsVieFourmiliere() > nbStep + 100) {
-        terrain.step();
-        nbStep++;
+      terrain.step();
+      nbStep++;
+      terrain.bilan();
+      Bilan bilan = terrain.getBilan();
+      logger.creeLog(terrain.getBilan(), nbStep);
 
-        logger.creeLog(terrain.getFourmiliere().faireUnBilan(), nbStep);
-        Thread.sleep(10);
-      } else {
-        System.out.println("Fin, stop le programme");
+      if (bilan.getNbFourmi() == 0) {
+        break;
       }
+      Thread.sleep(10);
     }
   }
 }

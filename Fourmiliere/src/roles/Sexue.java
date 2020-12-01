@@ -1,5 +1,7 @@
 package roles;
 
+import modele.Bilan;
+
 /**Fourmi sexuee.
  * 
  * @author Damien
@@ -12,7 +14,8 @@ public class Sexue implements Role {
   }
 
   @Override
-  public void bilan() {
+  public void bilan(Bilan b) {
+    b.incrementNbSexue();
     
     
   }

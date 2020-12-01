@@ -1,5 +1,6 @@
 package etapes;
 
+import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
 
@@ -13,8 +14,7 @@ public class Cadavre extends Etape {
 
   @Override
   public Etape next() {
-    // TODO Auto-generated method stub
-    return null;
+    return this;
   }
   
   public void finCadavre() {
@@ -24,5 +24,10 @@ public class Cadavre extends Etape {
   @Override 
   public void step() {
     this.dureeVie++;
+  }
+  
+  @Override
+  public void bilan(Bilan b) {
+    b.incrementNbCadavre();
   }
 }

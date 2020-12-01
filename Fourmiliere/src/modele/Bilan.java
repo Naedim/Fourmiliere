@@ -23,18 +23,27 @@ public class Bilan {
     nbCadavres = 0;
   }
 
+
+  public void setNbFourmi(int nbFourmi) {
+    this.nbFourmi = nbFourmi - this.getNbCadavre();
+  }
+
   public int getNbAdultes() {
     return this.nbOuvrier + this.nbSexue + this.nbSoldat;
   }
-  
+
   public int getNbCadavre() {
-    return nbCadavres;
+    return this.nbCadavres;
   }
-  
+
+  public void incrementNbCadavre() {
+    this.nbCadavres++;
+  }
+
   public int getNbFourmi() {
     return nbFourmi;
   }
-  
+
   public int getNbOeuf() {
     return nbOeuf;
   }
@@ -43,9 +52,6 @@ public class Bilan {
     this.nbOeuf++;
   }
 
-  public void decrementNbOeuf() {
-    this.nbOeuf--;
-  }
 
   public int getNbLarve() {
     return nbLarve;
@@ -53,10 +59,6 @@ public class Bilan {
 
   public void incrementNbLarve() {
     this.nbLarve++;
-  }
-
-  public void decrementNbLarve() {
-    this.nbLarve--;
   }
 
   public int getNbNymphe() {
@@ -67,10 +69,6 @@ public class Bilan {
     this.nbNymphe++;
   }
 
-  public void decrementNbNymphe() {
-    this.nbNymphe--;
-  }
-
   public int getNbOuvrier() {
     return nbOuvrier;
   }
@@ -79,9 +77,6 @@ public class Bilan {
     this.nbOuvrier++;
   }
 
-  public void decrementNbOuvrier() {
-    this.nbOuvrier--;
-  }
 
   public int getNbSexue() {
     return nbSexue;
@@ -91,20 +86,12 @@ public class Bilan {
     this.nbSexue++;
   }
 
-  public void decrementNbSexue() {
-    this.nbSexue--;
-  }
-
   public int getNbSoldat() {
     return nbSoldat;
   }
 
   public void incrementNbSoldat() {
     this.nbSoldat++;
-  }
-
-  public void decrementNbSoldat() {
-    this.nbSoldat--;
   }
 
 }

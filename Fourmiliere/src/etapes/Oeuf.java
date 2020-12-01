@@ -1,5 +1,6 @@
 package etapes;
 
+import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
 
@@ -24,5 +25,10 @@ public class Oeuf extends Etape {
       return new Larve(this.fourmiliere, this.fourmi);
     }
     return this;
+  }
+
+  @Override
+  public void bilan(Bilan b) {
+    b.incrementNbOeuf();
   }
 }

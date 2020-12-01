@@ -1,5 +1,6 @@
 package etapes;
 
+import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
 
@@ -29,5 +30,10 @@ public class Nymphe extends Etape {
       return new Adulte(this.fourmiliere, this.fourmi);
     }
     return this;
+  }
+  
+  @Override
+  public void bilan(Bilan b) {
+    b.incrementNbNymphe();
   }
 }

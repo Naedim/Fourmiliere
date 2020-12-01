@@ -1,5 +1,7 @@
 package roles;
 
+import modele.Bilan;
+
 /**Fourmi ouvriere.
  * 
  * @author Damien
@@ -12,8 +14,8 @@ public class Ouvrier implements Role {
   }
 
   @Override
-  public void bilan() {
-    // TODO Auto-generated method stub
+  public void bilan(Bilan b) {
+    b.incrementNbOuvrier();
     
   }
 

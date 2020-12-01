@@ -1,5 +1,6 @@
 package etapes;
 
+import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
 import roles.Role;
@@ -32,14 +33,14 @@ public class Adulte extends Etape {
   @Override
   public Etape next() {
     if (this.dureeVie == this.tempsVie) {
-      return new Adulte(this.fourmiliere, this.fourmi);
+      return new Cadavre(this.fourmiliere, this.fourmi);
     }
     return this;
   }
   
   @Override 
-  public void bilan() {
-    this.role.bilan();
+  public void bilan(Bilan b) {
+    this.role.bilan(b);
   }
 
 }

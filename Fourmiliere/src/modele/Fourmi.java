@@ -19,7 +19,7 @@ public class Fourmi {
   }
  
   
-  public void bilan() {
-    this.etape.bilan();
+  public void bilan(Bilan b) {
+    this.etape.bilan(b);
   }
 }
