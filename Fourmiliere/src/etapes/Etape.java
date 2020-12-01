@@ -1,17 +1,22 @@
 package etapes;
 
-import simulation.Simulation;
+import modele.Fourmi;
+import modele.Fourmiliere;
 
-/**
- * Interface désignant les classes "étapes" de l'évolution d'une fourmi.
- */
-public interface Etape extends Simulation {
+public class EtapeActuelle {
+
+  protected Etape etapeActuelle;
+
+  public EtapeActuelle(Fourmiliere f, Fourmi fourmi) {
+    this.etapeActuelle = new Oeuf(f, fourmi);
+  }
 
   /**
-   * Permet de passer à l'étape suivante si la durée de vie est bonne.
-   * 
-   * @return Un objet Etape contenant la nouvelle étape si la condition de durée est ok, sinon
-   *         renvoie l'étape actuelle
-   */
-  public Etape next();
+   * Méthode qui permet de passer à l'étape suivante de
+   * l'évolution ou de finir sa vie.
+   **/
+  public void step() {
+    this.etapeActuelle.step();
+    this.etapeActuelle = this.etapeActuelle.next();
+  }
 }
