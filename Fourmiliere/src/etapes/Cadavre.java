@@ -1,13 +1,22 @@
 package etapes;
 
-import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
+import simulation.Bilan;
 
+/**
+ * Classe cadavre, dernière étape de la vie d'une fourmi.
+ */
 public class Cadavre extends Etape {
   protected int tempsVie = 2;
   protected int dureeVie = 0;
 
+  /**
+   * Constructeur de cadavre.
+   * 
+   * @param f : Foumilière
+   * @param fourmi : Fourmi
+   */
   public Cadavre(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
   }

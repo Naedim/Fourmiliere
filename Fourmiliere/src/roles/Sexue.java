@@ -1,9 +1,9 @@
 package roles;
 
-import modele.Bilan;
+import simulation.Bilan;
 
-/**Fourmi sexuee.
- * 
+/** 
+ * Fourmi sexuee, soit mâle soit femelle (possible nouvelle reine).
  * @author Damien
  *
  */
@@ -16,7 +16,5 @@ public class Sexue implements Role {
   @Override
   public void bilan(Bilan b) {
     b.incrementNbSexue();
-    
-    
   }
 }

@@ -1,11 +1,15 @@
 package etapes;
 
-import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
 import roles.Role;
 import roles.UsineRole;
+import simulation.Bilan;
 
+/**
+ * Classe Adulte, permettant de symboliser l'étape adulte de l'évolution.
+ *
+ */
 public class Adulte extends Etape {
 
   protected final int tempsVieMin = 548;
@@ -15,8 +19,8 @@ public class Adulte extends Etape {
   protected Role role;
 
   /**
-   * Constructeur de la classe adulte.
-   * 
+   * Constructeur de la classe adulte. Initialise le temps de vie d'une fourmi adulte 
+   * entre deux bornes d'espérance de vie.
    */
   public Adulte(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
@@ -37,8 +41,8 @@ public class Adulte extends Etape {
     }
     return this;
   }
-  
-  @Override 
+
+  @Override
   public void bilan(Bilan b) {
     this.role.bilan(b);
   }

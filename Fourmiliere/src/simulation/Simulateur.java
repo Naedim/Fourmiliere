@@ -1,15 +1,15 @@
 package simulation;
 
-import modele.Bilan;
 import modele.Terrain;
 
 public class Simulateur {
 
   /**
-   * Classe simulation.
+   * Classe simulation, permet de simuler le fonctionnement d'une fourmilière jusqu'à 
+   * ce qu'elle disparaisse.
    * 
    * @param args : arg
-   * @throws InterruptedException : d
+   * @throws InterruptedException : Erreur lié au Thread.sleep
    */
   public static void main(String[] args) throws InterruptedException {
 

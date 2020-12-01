@@ -1,8 +1,8 @@
 package roles;
 
-import modele.Bilan;
+import simulation.Bilan;
 
-/**Fourmi ouvriere.
+/** Fourmi ouvriere.
  * 
  * @author Damien
  *
@@ -16,7 +16,6 @@ public class Ouvrier implements Role {
   @Override
   public void bilan(Bilan b) {
     b.incrementNbOuvrier();
-    
   }
 
 }

@@ -1,10 +1,13 @@
 package etapes;
 
-import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
+import simulation.Bilan;
 import simulation.Simulation;
 
+/**
+ * Classe abstraite représentant les étapes de l'évolution d'une fourmi.
+ */
 public abstract class Etape implements Simulation {
 
   protected Etape etape;
@@ -12,7 +15,7 @@ public abstract class Etape implements Simulation {
   protected Fourmi fourmi;
 
   /**
-   * .
+   * Constructeur d'étape, récupère la fourmilière pour que chaque étape soit lié à sa fourmilière.
    * 
    * @param f : d
    * @param fourmi : f
@@ -22,19 +25,23 @@ public abstract class Etape implements Simulation {
     this.fourmi = fourmi;
   }
 
+  /**
+   * Méthode permettant de passer à la prochaine étape d'évolution si la durée d'évolution 
+   * est bonne, sinon renvoie l'étape actuelle.
+   * 
+   * @return Etape suivante de l'évolution
+   */
   public abstract Etape next();
 
-  /**
-   * Méthode qui permet de passer à l'étape suivante de l'évolution ou de finir sa vie.
-   **/
   @Override
   public void step() {
     this.etape = this.etape.next();
     this.etape.step();
   }
 
+  // oubli de suppresion ?
   @Override
   public void bilan(Bilan b) {
-    
+
   }
 }

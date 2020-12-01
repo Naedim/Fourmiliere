@@ -1,5 +1,8 @@
-package modele;
+package simulation;
 
+/**
+ * Classe Bilan permettant de récuperer les données d'une fourmilière.
+ */
 public class Bilan {
 
   protected int nbFourmi;
@@ -11,7 +14,7 @@ public class Bilan {
   protected int nbSoldat;
   protected int nbCadavres;
 
-  /** . **/
+  /** Constructeur de Bilan, initialise les compteurs à 0. **/
   public Bilan() {
     nbFourmi = 0;
     nbOeuf = 0;
@@ -24,12 +27,16 @@ public class Bilan {
   }
 
 
-  public void setNbFourmi(int nbFourmi) {
-    this.nbFourmi = nbFourmi - this.getNbCadavre();
-  }
-
   public int getNbAdultes() {
     return this.nbOuvrier + this.nbSexue + this.nbSoldat;
+  }
+  
+  public int getNbFourmi() {
+    return nbFourmi;
+  }
+  
+  public void setNbFourmi(int nbFourmi) {
+    this.nbFourmi = nbFourmi - this.getNbCadavre();
   }
 
   public int getNbCadavre() {
@@ -40,10 +47,6 @@ public class Bilan {
     this.nbCadavres++;
   }
 
-  public int getNbFourmi() {
-    return nbFourmi;
-  }
-
   public int getNbOeuf() {
     return nbOeuf;
   }
@@ -51,7 +54,6 @@ public class Bilan {
   public void incrementNbOeuf() {
     this.nbOeuf++;
   }
-
 
   public int getNbLarve() {
     return nbLarve;
@@ -76,7 +78,6 @@ public class Bilan {
   public void incrementNbOuvrier() {
     this.nbOuvrier++;
   }
-
 
   public int getNbSexue() {
     return nbSexue;

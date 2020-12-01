@@ -1,5 +1,7 @@
 package modele;
 
+import simulation.Bilan;
+
 public class Terrain {
   Fourmiliere fourmiliere;
   protected Bilan bilan;
@@ -17,10 +19,16 @@ public class Terrain {
     return fourmiliere;
   }
 
+  /** 
+   * Méthode qui avance de 1 step le fonctionnement d'une fourmiliere.
+   */
   public void step() {
     this.fourmiliere.step();
   }
 
+  /**
+   * Méthode qui permet de lancer le processus de bilan.
+   */
   public void bilan() {
     this.bilan = new Bilan();
     this.fourmiliere.bilan(this.bilan);

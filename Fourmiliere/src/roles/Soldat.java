@@ -1,9 +1,9 @@
 package roles;
 
-import modele.Bilan;
+import simulation.Bilan;
 
-/**Fourmi soldat.
- * 
+/**
+ * Fourmi soldat.
  * @author Damien
  *
  */

@@ -5,13 +5,15 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import modele.Bilan;
 
+/**
+ * Classe Logger, permet de créer un suivi de valeurs d'une fourmiliere dans un fichier txt.
+ */
 public class Logger {
   File file;
 
   /**
-   * .
+   * Constructeur de logger.
    * 
    * @param chemin : Chemin du fichier log
    */
@@ -28,7 +30,10 @@ public class Logger {
   }
 
   /**
-   * .
+   * Méthode renseignant un fichier texte à partir d'un Objet Bilan.
+   * 
+   * @param bilan : Bilan
+   * @param temps : Nombre de step depuis le lancement
    */
   public void creeLog(Bilan bilan, int temps) {
     try {

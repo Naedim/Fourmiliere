@@ -1,19 +1,23 @@
 package etapes;
 
-import modele.Bilan;
 import modele.Fourmi;
 import modele.Fourmiliere;
+import simulation.Bilan;
 
+/**
+ * Classe Larve, 2ème étape de l'évolution d'une fourmi. Evolue en Nymphe après un temps
+ * d'évolution précis.
+ */
 public class Larve extends Etape {
 
   protected final int tempsEvolution = 10;
   protected int dureeVie = 0;
 
   /**
-   * .
+   * Constructeur de larve.
    * 
-   * @param f .
-   * @param fourmi .
+   * @param f : Fourmiliere
+   * @param fourmi : Fourmi
    */
   public Larve(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
@@ -31,7 +35,7 @@ public class Larve extends Etape {
     }
     return this;
   }
-  
+
   @Override
   public void bilan(Bilan b) {
     b.incrementNbLarve();
