@@ -5,7 +5,7 @@ import modele.Fourmiliere;
 
 public abstract class Etape {
 
-  protected Etape etapeActuelle;
+  protected Etape etape;
   protected Fourmiliere fourmiliere;
   protected Fourmi fourmi;
 
@@ -17,7 +17,6 @@ public abstract class Etape {
   public Etape(Fourmiliere f, Fourmi fourmi) {
     this.fourmiliere = f;
     this.fourmi = fourmi;
-    this.etapeActuelle = new Oeuf(f, fourmi);
   }
 
   public abstract Etape next();
@@ -26,7 +25,7 @@ public abstract class Etape {
    * Méthode qui permet de passer à l'étape suivante de l'évolution ou de finir sa vie.
    **/
   public void step() {
-    this.etapeActuelle.step();
-    this.etapeActuelle = this.etapeActuelle.next();
+    this.etape = this.etape.next();
+    this.etape.step();
   }
 }

@@ -9,7 +9,6 @@ public class Oeuf extends Etape implements Simulation {
   protected final int tempsEvolution = 3;
   protected int dureeVie = 0;
 
-
   public Oeuf(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
   }

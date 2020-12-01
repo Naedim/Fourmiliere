@@ -5,12 +5,13 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import modele.Fourmiliere;
+import modele.Bilan;
 
 public class Logger {
   File file;
 
-  /** .
+  /**
+   * .
    * 
    * @param chemin : Chemin du fichier log
    */
@@ -29,18 +30,18 @@ public class Logger {
   /**
    * .
    */
-  public void creeLog(Fourmiliere f, int temps) {
+  public void creeLog(Bilan bilan, int temps) {
     try {
       FileWriter fw = new FileWriter(file, true);
-      fw.write("[" + temps + "] LOG : Population de fourmis = " + f.getNbFourmi() + "\n");
-      fw.write("Nombre d'oeufs = " + f.getNbOeuf() + "\n");
-      fw.write("Nombre de larves = " + f.getNbLarve() + "\n");
-      fw.write("Nombre de nymphes = " + f.getNbNymphe() + "\n");
-      fw.write("Nombres de fourmis Adultes : " + f.getNbAdultes() + "\n");
-      fw.write("    Soldat = " + f.getNbSoldat() + "\n");
-      fw.write("    Ouvrier = " + f.getNbOuvrier() + "\n");
-      fw.write("    Sexué = " + f.getNbSexue() + "\n");
-      fw.write("Nombre de cadavres : \n\n");
+      fw.write("[" + temps + "] LOG : Population de fourmis = " + bilan.getNbFourmi() + "\n");
+      fw.write("Nombre d'oeufs = " + bilan.getNbOeuf() + "\n");
+      fw.write("Nombre de larves = " + bilan.getNbLarve() + "\n");
+      fw.write("Nombre de nymphes = " + bilan.getNbNymphe() + "\n");
+      fw.write("Nombres de fourmis Adultes : " + bilan.getNbAdultes() + "\n");
+      fw.write("    Soldat = " + bilan.getNbSoldat() + "\n");
+      fw.write("    Ouvrier = " + bilan.getNbOuvrier() + "\n");
+      fw.write("    Sexué = " + bilan.getNbSexue() + "\n");
+      fw.write("Nombre de cadavres : " + bilan.getNbCadavre() + "\n\n");
       fw.close();
     } catch (IOException e) {
       System.out.println("Erreur de fichier");

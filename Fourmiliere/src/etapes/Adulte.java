@@ -32,7 +32,6 @@ public class Adulte extends Etape implements Role {
     
     if (dureeVie == tempsVie) {
       
-
       if (this.role instanceof Ouvrier) {
         this.fourmiliere.decrementNbOuvrier();
       } else if (this.role instanceof Soldat) {

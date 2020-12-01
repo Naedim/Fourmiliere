@@ -32,5 +32,4 @@ public class Nymphe extends Etape implements Simulation {
     }
     return this;
   }
-
 }
