@@ -96,11 +96,13 @@ public class Fourmiliere {
     for (Fourmi f : listFourmi) {
       f.step();
     }
+    this.dureeVie++;
   }
 
   private void pondre() {
     if (this.dureeVie < this.tempsVie) {
       this.listFourmi.add(new Fourmi(this));
+      this.nbOeuf++;
     }
   }
 
