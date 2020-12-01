@@ -2,8 +2,9 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
+import simulation.Simulation;
 
-public abstract class Etape {
+public abstract class Etape implements Simulation {
 
   protected Etape etapeActuelle;
   protected Fourmiliere fourmiliere;
@@ -17,7 +18,6 @@ public abstract class Etape {
   public Etape(Fourmiliere f, Fourmi fourmi) {
     this.fourmiliere = f;
     this.fourmi = fourmi;
-    this.etapeActuelle = new Oeuf(f, fourmi);
   }
 
   public abstract Etape next();

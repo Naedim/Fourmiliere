@@ -134,7 +134,6 @@ public class Fourmiliere {
     if (this.dureeVie < this.tempsVie) {
       for (int i = 0; i < nbPonte; i++) {
         this.listFourmi.add(new Fourmi(this));
-        this.nbOeuf++;
       }
     }
   }
