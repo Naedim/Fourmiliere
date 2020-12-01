@@ -1,5 +1,6 @@
 package etapes;
 
+import modele.Fourmiliere;
 import simulation.Simulation;
 
 public class Nymphe implements Simulation, Etape {
@@ -10,7 +11,7 @@ public class Nymphe implements Simulation, Etape {
   public Nymphe() {}
 
   @Override
-  public void step() {
+  public void step(Fourmiliere f) {
     this.dureeVie++;
   }
 
