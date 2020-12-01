@@ -15,10 +15,8 @@ public class Simulateur {
     Terrain terrain = new Terrain(); 
     Logger logger = new Logger("log.txt"); 
 
- 
     while (true) {
       terrain.step();
-      
       logger.creeLog(terrain.getFourmiliere()); 
       Thread.sleep(1000); 
     } 

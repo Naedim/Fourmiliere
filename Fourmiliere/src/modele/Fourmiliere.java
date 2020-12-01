@@ -103,4 +103,8 @@ public class Fourmiliere {
       this.listFourmi.add(new Fourmi(this));
     }
   }
+
+  public int getNbAdultes() {
+    return this.nbOuvrier + this.nbSexue + this.nbSoldat;
+  }
 }
