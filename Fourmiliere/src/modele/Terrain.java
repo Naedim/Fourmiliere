@@ -1,4 +1,4 @@
-package main;
+package modele;
 
 import simulation.Simulation;
 

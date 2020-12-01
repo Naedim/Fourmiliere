@@ -1,6 +1,6 @@
 package simulation; 
  
-import main.Terrain; 
+import modele.Terrain; 
  
 public class Simulateur { 
  

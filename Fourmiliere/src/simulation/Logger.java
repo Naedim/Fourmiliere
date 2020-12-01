@@ -3,7 +3,7 @@ package simulation;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import main.Fourmiliere;
+import modele.Fourmiliere;
 
 public class Logger {
   File file;
