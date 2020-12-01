@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fourmiliere {
+
+  protected final int tempsVie;
+  protected int dureeVie;
+
+  protected final int tempsVieMax = 1460;
+  protected final int tempsVieMin = 3650;
+
+
   protected List<Fourmi> listFourmi;
   protected int nbOeuf;
   protected int nbLarve;
@@ -11,10 +19,13 @@ public class Fourmiliere {
   protected int nbOuvrier;
   protected int nbSexue;
   protected int nbSoldat;
-  
+
   /** Constructeur de fourmilière, initialise la liste de fourmis. **/
   public Fourmiliere() {
     this.listFourmi = new ArrayList<Fourmi>();
+    this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin));
+    this.dureeVie = 0;
+
     nbOeuf = 0;
     nbLarve = 0;
     nbNymphe = 0;
@@ -74,15 +85,22 @@ public class Fourmiliere {
   public void incrementNbSoldat() {
     this.nbSoldat++;
   }
-  
-  
+
+
   /**
    * .
    * 
    */
   public void step() {
+    this.pondre();
     for (Fourmi f : listFourmi) {
       f.step();
+    }
+  }
+
+  private void pondre() {
+    if (this.dureeVie < this.tempsVie) {
+      this.listFourmi.add(new Fourmi(this));
     }
   }
 }
