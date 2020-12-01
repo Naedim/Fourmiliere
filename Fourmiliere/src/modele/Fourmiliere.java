@@ -35,7 +35,7 @@ public class Fourmiliere {
   }
 
   public int getNbFourmi() {
-    return listFourmi.size();
+    return listFourmi.size() + 1;
   }
 
   public int getNbOeuf() {

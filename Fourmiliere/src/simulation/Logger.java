@@ -1,15 +1,29 @@
 package simulation;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import modele.Fourmiliere;
 
 public class Logger {
   File file;
 
+  /** .
+   * 
+   * @param chemin : Chemin du fichier log
+   */
   public Logger(String chemin) {
     file = new File(chemin);
+    PrintWriter writer;
+    try {
+      writer = new PrintWriter(file);
+      writer.print("");
+      writer.close();
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
   }
 
   /**
