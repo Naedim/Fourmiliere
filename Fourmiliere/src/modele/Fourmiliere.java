@@ -8,8 +8,8 @@ public class Fourmiliere {
   protected final int tempsVie;
   protected int dureeVie;
 
-  protected final int tempsVieMax = 1460;
-  protected final int tempsVieMin = 3650;
+  protected final int tempsVieMin  = 1460;
+  protected final int tempsVieMax = 3650;
 
 
   protected List<Fourmi> listFourmi;
@@ -45,6 +45,10 @@ public class Fourmiliere {
   public void incrementNbOeuf() {
     this.nbOeuf++;
   }
+  
+  public void decrementNbOeuf() {
+    this.nbOeuf--;
+  }
 
   public int getNbLarve() {
     return nbLarve;
@@ -52,6 +56,10 @@ public class Fourmiliere {
 
   public void incrementNbLarve() {
     this.nbLarve++;
+  }
+  
+  public void decrementNbLarve() {
+    this.nbLarve--;
   }
 
   public int getNbNymphe() {
@@ -61,6 +69,10 @@ public class Fourmiliere {
   public void incrementNbNymphe() {
     this.nbNymphe++;
   }
+  
+  public void decrementNbNymphe() {
+    this.nbNymphe--;
+  }
 
   public int getNbOuvrier() {
     return nbOuvrier;
@@ -68,6 +80,10 @@ public class Fourmiliere {
 
   public void incrementNbOuvrier() {
     this.nbOuvrier++;
+  }
+  
+  public void decrementNbOuvrier() {
+    this.nbOuvrier--;
   }
 
   public int getNbSexue() {
@@ -78,12 +94,20 @@ public class Fourmiliere {
     this.nbSexue++;
   }
 
+  public void decrementNbSexue() {
+    this.nbSexue--;
+  }
+  
   public int getNbSoldat() {
     return nbSoldat;
   }
 
   public void incrementNbSoldat() {
     this.nbSoldat++;
+  }
+  
+  public void decrementNbSoldat() {
+    this.nbSoldat--;
   }
 
 

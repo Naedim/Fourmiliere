@@ -22,6 +22,7 @@ public class Oeuf implements Simulation, Etape {
   public Etape next() {
     if (this.dureeVie == this.tempsEvolution) {
       // Ajout d'une larve
+      this.fourmiliere.decrementNbOeuf();
       return new Larve(this.fourmiliere);
     }
     return this;

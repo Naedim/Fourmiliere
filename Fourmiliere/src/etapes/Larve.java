@@ -21,6 +21,7 @@ public class Larve implements Etape {
   @Override
   public Etape next() {
     if (this.dureeVie == this.tempsEvolution) {
+      this.fourmiliere.decrementNbLarve();
       return new Nymphe(this.fourmiliere);
     }
     return this;
