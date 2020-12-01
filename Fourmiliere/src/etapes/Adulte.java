@@ -2,12 +2,10 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
-import roles.Ouvrier;
 import roles.Role;
-import roles.Soldat;
 import roles.UsineRole;
 
-public class Adulte extends Etape implements Role {
+public class Adulte extends Etape {
 
   protected final int tempsVieMin = 548;
   protected final int tempsVieMax = 913;
@@ -29,21 +27,13 @@ public class Adulte extends Etape implements Role {
   @Override
   public void step() {
     this.dureeVie++;
-    
-    if (dureeVie == tempsVie) {
-      
-      if (this.role instanceof Ouvrier) {
-        this.fourmiliere.decrementNbOuvrier();
-      } else if (this.role instanceof Soldat) {
-        this.fourmiliere.decrementNbSoldat();
-      } else {
-        this.fourmiliere.decrementNbSexue();
-      }
-    }
   }
 
   @Override
   public Etape next() {
+    if (this.dureeVie == this.tempsVie) {
+      return new Adulte(this.fourmiliere, this.fourmi);
+    }
     return this;
   }
 

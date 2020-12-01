@@ -2,8 +2,9 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
+import simulation.Simulation;
 
-public abstract class Etape {
+public abstract class Etape implements Simulation {
 
   protected Etape etape;
   protected Fourmiliere fourmiliere;

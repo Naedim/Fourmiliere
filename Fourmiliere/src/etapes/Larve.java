@@ -16,7 +16,6 @@ public class Larve extends Etape {
    */
   public Larve(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
-    this.fourmiliere.incrementNbLarve();
   }
 
   @Override
@@ -27,7 +26,6 @@ public class Larve extends Etape {
   @Override
   public Etape next() {
     if (this.dureeVie == this.tempsEvolution) {
-      this.fourmiliere.decrementNbLarve();
       return new Nymphe(this.fourmiliere, this.fourmi);
     }
     return this;
