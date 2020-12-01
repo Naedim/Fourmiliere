@@ -36,5 +36,10 @@ public class Adulte extends Etape {
     }
     return this;
   }
+  
+  @Override 
+  public void bilan() {
+    this.role.bilan();
+  }
 
 }

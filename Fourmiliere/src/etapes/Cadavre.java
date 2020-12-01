@@ -9,7 +9,6 @@ public class Cadavre extends Etape {
 
   public Cadavre(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
-    this.fourmiliere.incrementNbNymphe();
   }
 
   @Override

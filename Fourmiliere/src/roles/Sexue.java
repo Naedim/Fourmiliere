@@ -1,7 +1,5 @@
 package roles;
 
-import modele.Fourmiliere;
-
 /**Fourmi sexuee.
  * 
  * @author Damien
@@ -14,7 +12,8 @@ public class Sexue implements Role {
   }
 
   @Override
-  public void decremente(Fourmiliere f) {
-    f.decrementNbSexue();
+  public void bilan() {
+    
+    
   }
 }

@@ -2,8 +2,9 @@ package modele;
 
 import java.util.ArrayList;
 import java.util.List;
+import simulation.Simulation;
 
-public class Fourmiliere {
+public class Fourmiliere implements Simulation {
 
   protected final int tempsVie;
   protected int dureeVie;
@@ -13,7 +14,7 @@ public class Fourmiliere {
   protected final int tempsVieMax = 3650;
 
   protected List<Fourmi> listFourmi;
-  
+
   Bilan bilan;
 
   /** Constructeur de fourmilière, initialise la liste de fourmis. **/
@@ -27,7 +28,7 @@ public class Fourmiliere {
   public int getTempsVieFourmiliere() {
     return tempsVie;
   }
-  
+
   public int getNbFourmi() {
     return listFourmi.size() + 1;
   }
@@ -52,5 +53,13 @@ public class Fourmiliere {
       }
     }
   }
-  
+
+  @Override
+  public void bilan() {
+    for (Fourmi f : listFourmi) {
+      f.bilan();
+    }
+
+  }
+
 }

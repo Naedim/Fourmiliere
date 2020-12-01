@@ -1,7 +1,5 @@
 package roles;
 
-import modele.Fourmiliere;
-
 /**Fourmi ouvriere.
  * 
  * @author Damien
@@ -14,8 +12,8 @@ public class Ouvrier implements Role {
   }
 
   @Override
-  public void decremente(Fourmiliere f) {
-    f.decrementNbOuvrier();
+  public void bilan() {
+    // TODO Auto-generated method stub
     
   }
 

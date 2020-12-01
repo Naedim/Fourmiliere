@@ -11,7 +11,8 @@ public abstract class Etape implements Simulation {
   protected Fourmi fourmi;
 
   /**
-   *  .
+   * .
+   * 
    * @param f : d
    * @param fourmi : f
    */
@@ -25,8 +26,14 @@ public abstract class Etape implements Simulation {
   /**
    * Méthode qui permet de passer à l'étape suivante de l'évolution ou de finir sa vie.
    **/
+  @Override
   public void step() {
     this.etape = this.etape.next();
     this.etape.step();
+  }
+
+  @Override
+  public void bilan() {
+    this.etape.bilan();
   }
 }

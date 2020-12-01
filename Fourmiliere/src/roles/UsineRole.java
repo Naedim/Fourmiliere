@@ -30,16 +30,13 @@ public class UsineRole {
     int val = (int) (Math.random() * maxProbabilite);
     
     if (val <= ouvrierMax) {
-      fourmiliere.incrementNbOuvrier();
       return new Ouvrier();
     }
 
     if (val <= soldatMax) {
-      fourmiliere.incrementNbSoldat();
       return new Soldat();
     }
 
-    fourmiliere.incrementNbSexue();
     return new Sexue();
 
   }

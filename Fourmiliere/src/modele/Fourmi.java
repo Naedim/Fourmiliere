@@ -17,4 +17,9 @@ public class Fourmi {
     this.etape = this.etape.next();
     this.etape.step();
   }
+ 
+  
+  public void bilan() {
+    this.etape.bilan();
+  }
 }
