@@ -15,10 +15,10 @@ public class Logger {
   /**
    * .
    */
-  public void creeLog(Fourmiliere f) {
+  public void creeLog(Fourmiliere f, int temps) {
     try {
       FileWriter fw = new FileWriter(file, true);
-      fw.write("[temps] LOG : Population de fourmis = " + f.getNbFourmi() + "\n");
+      fw.write("[" + temps + "] LOG : Population de fourmis = " + f.getNbFourmi() + "\n");
       fw.write("Nombres d'oeufs = " + f.getNbOeuf() + "\n");
       fw.write("Nombres de larves = " + f.getNbLarve() + "\n");
       fw.write("Nombres de nymphes = " + f.getNbNymphe() + "\n");

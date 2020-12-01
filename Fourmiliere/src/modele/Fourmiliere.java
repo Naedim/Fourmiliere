@@ -101,6 +101,8 @@ public class Fourmiliere {
   private void pondre() {
     if (this.dureeVie < this.tempsVie) {
       this.listFourmi.add(new Fourmi(this));
+    } else {
+      System.out.println("FIN DE LA FOURMILIERE");
     }
   }
 
