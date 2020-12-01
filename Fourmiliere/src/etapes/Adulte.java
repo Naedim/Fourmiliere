@@ -2,7 +2,9 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
+import roles.Ouvrier;
 import roles.Role;
+import roles.Soldat;
 import roles.UsineRole;
 
 public class Adulte implements Etape, Role {
@@ -36,6 +38,14 @@ public class Adulte implements Etape, Role {
   public Etape next() {
     if (dureeVie == tempsVie) {
       this.fourmiliere.mortFourmi(this.fourmi);
+
+      if (this.role instanceof Ouvrier) {
+        this.fourmiliere.decrementNbOuvrier();
+      } else if (this.role instanceof Soldat) {
+        this.fourmiliere.decrementNbSoldat();
+      } else {
+        this.fourmiliere.decrementNbSexue();
+      }
     }
     return this;
   }
