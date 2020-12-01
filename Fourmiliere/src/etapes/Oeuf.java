@@ -9,21 +9,21 @@ public class Oeuf implements Simulation, Etape {
   protected int dureeVie = 0;
   protected Fourmiliere fourmiliere;
 
-  public Oeuf() {
-    
+  public Oeuf(Fourmiliere f) {
+    this.fourmiliere = f;
   }
 
   @Override
-  public void step(Fourmiliere f) {
+  public void step() {
     this.dureeVie++;
   }
 
   @Override
   public Etape next() {
     if (this.dureeVie == this.tempsEvolution) {
-      return new Larve();
+      // Ajout d'une larve
+      return new Larve(this.fourmiliere);
     }
     return this;
   }
-
 }

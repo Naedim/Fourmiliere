@@ -1,5 +1,7 @@
 package roles;
 
+import modele.Fourmiliere;
+
 /**Classe utilisée pour attribuer aléatoirement un role à une fourmi adulte.
  * 
  * @author Damien
@@ -22,20 +24,23 @@ public class UsineRole {
    * Crée un role aléatoire en fonction des seuils de chaque rôle. 
    * @return
    */
-  public Role creerRole() {
+  public Role creerRole(Fourmiliere fourmiliere) {
     
     //Nombre aléatoire entre 0 et 100
     int val = (int) (Math.random() * maxProbabilite);
     
     //
     if (val <= ouvrierMax) {
+      fourmiliere.incrementNbOuvrier();
       return new Ouvrier();
     }
 
     if (val <= soldatMax) {
+      fourmiliere.incrementNbSoldat();
       return new Soldat();
     }
 
+    fourmiliere.incrementNbSexue();
     return new Sexue();
 
   }
