@@ -24,6 +24,10 @@ public class Fourmiliere {
     this.dureeVie = 0;
   }
 
+  public Bilan faireUnBilan() {
+    return bilan;
+  }
+  
   public int getTempsVieFourmiliere() {
     return tempsVie;
   }

@@ -24,7 +24,7 @@ public class Simulateur {
         terrain.step();
         nbStep++;
 
-        logger.creeLog(terrain.getFourmiliere(), nbStep);
+        logger.creeLog(terrain.getFourmiliere().faireUnBilan(), nbStep);
         Thread.sleep(10);
       } else {
         System.out.println("Fin, stop le programme");
