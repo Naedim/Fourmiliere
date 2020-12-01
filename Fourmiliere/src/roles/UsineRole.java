@@ -29,7 +29,6 @@ public class UsineRole {
     //Nombre aléatoire entre 0 et 100
     int val = (int) (Math.random() * maxProbabilite);
     
-    //
     if (val <= ouvrierMax) {
       fourmiliere.incrementNbOuvrier();
       return new Ouvrier();

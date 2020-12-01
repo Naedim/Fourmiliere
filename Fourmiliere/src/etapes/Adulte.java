@@ -24,7 +24,7 @@ public class Adulte implements Etape, Role {
   public Adulte(Fourmiliere f, Fourmi fourmi) {
     this.fourmiliere = f;
     this.fourmi = fourmi;
-    this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin));
+    this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin) + tempsVieMin);
     this.dureeVie = 0;
     this.role = new UsineRole().creerRole(f);
   }

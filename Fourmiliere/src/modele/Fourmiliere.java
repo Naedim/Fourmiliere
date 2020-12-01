@@ -28,7 +28,7 @@ public class Fourmiliere {
     this.cadavreIntermediaire = new ArrayList<Fourmi>();
     this.listFourmi = new ArrayList<Fourmi>();
     this.listCadavre = new ArrayList<Fourmi>();
-    this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin));
+    this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin) + tempsVieMin);
     this.dureeVie = 0;
 
     nbOeuf = 0;
@@ -39,6 +39,10 @@ public class Fourmiliere {
     nbSoldat = 0;
   }
 
+  public int getTempsVieFourmiliere() {
+    return tempsVie;
+  }
+  
   public int getNbCadavre() {
     return listCadavre.size();
   }

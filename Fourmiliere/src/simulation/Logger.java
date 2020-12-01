@@ -39,7 +39,7 @@ public class Logger {
       fw.write("Nombres de fourmis Adultes : " + f.getNbAdultes() + "\n");
       fw.write("    Soldat = " + f.getNbSoldat() + "\n");
       fw.write("    Ouvrier = " + f.getNbOuvrier() + "\n");
-      fw.write("    Sexué = " + f.getNbSexue() + "\n\n");
+      fw.write("    Sexué = " + f.getNbSexue() + "\n");
       fw.write("Nombre de cadavres : " + f.getNbCadavre() + "\n\n");
       fw.close();
     } catch (IOException e) {
