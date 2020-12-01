@@ -8,7 +8,8 @@ public class Fourmiliere {
   protected final int tempsVie;
   protected int dureeVie;
 
-  protected final int tempsVieMin  = 1460;
+  protected final int nbPonte = 100;
+  protected final int tempsVieMin = 1460;
   protected final int tempsVieMax = 3650;
 
 
@@ -45,7 +46,7 @@ public class Fourmiliere {
   public void incrementNbOeuf() {
     this.nbOeuf++;
   }
-  
+
   public void decrementNbOeuf() {
     this.nbOeuf--;
   }
@@ -57,7 +58,7 @@ public class Fourmiliere {
   public void incrementNbLarve() {
     this.nbLarve++;
   }
-  
+
   public void decrementNbLarve() {
     this.nbLarve--;
   }
@@ -69,7 +70,7 @@ public class Fourmiliere {
   public void incrementNbNymphe() {
     this.nbNymphe++;
   }
-  
+
   public void decrementNbNymphe() {
     this.nbNymphe--;
   }
@@ -81,7 +82,7 @@ public class Fourmiliere {
   public void incrementNbOuvrier() {
     this.nbOuvrier++;
   }
-  
+
   public void decrementNbOuvrier() {
     this.nbOuvrier--;
   }
@@ -97,7 +98,7 @@ public class Fourmiliere {
   public void decrementNbSexue() {
     this.nbSexue--;
   }
-  
+
   public int getNbSoldat() {
     return nbSoldat;
   }
@@ -105,7 +106,7 @@ public class Fourmiliere {
   public void incrementNbSoldat() {
     this.nbSoldat++;
   }
-  
+
   public void decrementNbSoldat() {
     this.nbSoldat--;
   }
@@ -125,8 +126,10 @@ public class Fourmiliere {
 
   private void pondre() {
     if (this.dureeVie < this.tempsVie) {
-      this.listFourmi.add(new Fourmi(this));
-      this.nbOeuf++;
+      for (int i = 0; i < nbPonte; i++) {
+        this.listFourmi.add(new Fourmi(this));
+        this.nbOeuf++;
+      }
     }
   }
 

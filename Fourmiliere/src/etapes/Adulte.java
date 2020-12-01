@@ -31,7 +31,7 @@ public class Adulte implements Etape, Role {
   @Override
   public Etape next() {
     if (dureeVie == tempsVie) {
-      return null;
+      this.fourmiliere.
     }
     return this;
   }

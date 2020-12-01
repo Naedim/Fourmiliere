@@ -1,5 +1,5 @@
-[1] LOG : Population de fourmis = 1
-Nombres d'oeufs = 1
+[1] LOG : Population de fourmis = 101
+Nombres d'oeufs = 100
 Nombres de larves = 0
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
@@ -7,8 +7,8 @@ Nombres de fourmis Adultes : 0
     Ouvrier = 0
     Sexué = 0
 
-[2] LOG : Population de fourmis = 2
-Nombres d'oeufs = 2
+[2] LOG : Population de fourmis = 201
+Nombres d'oeufs = 200
 Nombres de larves = 0
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
@@ -16,417 +16,165 @@ Nombres de fourmis Adultes : 0
     Ouvrier = 0
     Sexué = 0
 
-[3] LOG : Population de fourmis = 3
-Nombres d'oeufs = 2
-Nombres de larves = 1
+[3] LOG : Population de fourmis = 301
+Nombres d'oeufs = 200
+Nombres de larves = 100
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[4] LOG : Population de fourmis = 4
-Nombres d'oeufs = 2
-Nombres de larves = 2
+[4] LOG : Population de fourmis = 401
+Nombres d'oeufs = 200
+Nombres de larves = 200
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[5] LOG : Population de fourmis = 5
-Nombres d'oeufs = 2
-Nombres de larves = 3
+[5] LOG : Population de fourmis = 501
+Nombres d'oeufs = 200
+Nombres de larves = 300
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[6] LOG : Population de fourmis = 6
-Nombres d'oeufs = 2
-Nombres de larves = 4
+[6] LOG : Population de fourmis = 601
+Nombres d'oeufs = 200
+Nombres de larves = 400
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[7] LOG : Population de fourmis = 7
-Nombres d'oeufs = 2
-Nombres de larves = 5
+[7] LOG : Population de fourmis = 701
+Nombres d'oeufs = 200
+Nombres de larves = 500
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[8] LOG : Population de fourmis = 8
-Nombres d'oeufs = 2
-Nombres de larves = 6
+[8] LOG : Population de fourmis = 801
+Nombres d'oeufs = 200
+Nombres de larves = 600
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[9] LOG : Population de fourmis = 9
-Nombres d'oeufs = 2
-Nombres de larves = 7
+[9] LOG : Population de fourmis = 901
+Nombres d'oeufs = 200
+Nombres de larves = 700
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[10] LOG : Population de fourmis = 10
-Nombres d'oeufs = 2
-Nombres de larves = 8
+[10] LOG : Population de fourmis = 1001
+Nombres d'oeufs = 200
+Nombres de larves = 800
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[11] LOG : Population de fourmis = 11
-Nombres d'oeufs = 2
-Nombres de larves = 9
+[11] LOG : Population de fourmis = 1101
+Nombres d'oeufs = 200
+Nombres de larves = 900
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[12] LOG : Population de fourmis = 12
-Nombres d'oeufs = 2
-Nombres de larves = 10
+[12] LOG : Population de fourmis = 1201
+Nombres d'oeufs = 200
+Nombres de larves = 1000
 Nombres de nymphes = 0
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[13] LOG : Population de fourmis = 13
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 1
+[13] LOG : Population de fourmis = 1301
+Nombres d'oeufs = 200
+Nombres de larves = 1000
+Nombres de nymphes = 100
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[14] LOG : Population de fourmis = 14
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 2
+[14] LOG : Population de fourmis = 1401
+Nombres d'oeufs = 200
+Nombres de larves = 1000
+Nombres de nymphes = 200
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[15] LOG : Population de fourmis = 15
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 3
+[15] LOG : Population de fourmis = 1501
+Nombres d'oeufs = 200
+Nombres de larves = 1000
+Nombres de nymphes = 300
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[16] LOG : Population de fourmis = 16
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 4
+[16] LOG : Population de fourmis = 1601
+Nombres d'oeufs = 200
+Nombres de larves = 1000
+Nombres de nymphes = 400
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[17] LOG : Population de fourmis = 17
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
+[17] LOG : Population de fourmis = 1701
+Nombres d'oeufs = 200
+Nombres de larves = 1000
+Nombres de nymphes = 500
 Nombres de fourmis Adultes : 0
     Soldat = 0
     Ouvrier = 0
     Sexué = 0
 
-[18] LOG : Population de fourmis = 18
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 1
-    Soldat = 0
-    Ouvrier = 1
-    Sexué = 0
+[18] LOG : Population de fourmis = 1801
+Nombres d'oeufs = 200
+Nombres de larves = 1000
+Nombres de nymphes = 500
+Nombres de fourmis Adultes : 100
+    Soldat = 24
+    Ouvrier = 63
+    Sexué = 13
 
-[19] LOG : Population de fourmis = 19
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 2
-    Soldat = 0
-    Ouvrier = 2
-    Sexué = 0
+[19] LOG : Population de fourmis = 1901
+Nombres d'oeufs = 200
+Nombres de larves = 1000
+Nombres de nymphes = 500
+Nombres de fourmis Adultes : 200
+    Soldat = 48
+    Ouvrier = 126
+    Sexué = 26
 
-[20] LOG : Population de fourmis = 20
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 3
-    Soldat = 0
-    Ouvrier = 3
-    Sexué = 0
-
-[21] LOG : Population de fourmis = 21
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 4
-    Soldat = 0
-    Ouvrier = 4
-    Sexué = 0
-
-[22] LOG : Population de fourmis = 22
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 5
-    Soldat = 1
-    Ouvrier = 4
-    Sexué = 0
-
-[23] LOG : Population de fourmis = 23
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 6
-    Soldat = 1
-    Ouvrier = 5
-    Sexué = 0
-
-[24] LOG : Population de fourmis = 24
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 7
-    Soldat = 2
-    Ouvrier = 5
-    Sexué = 0
-
-[25] LOG : Population de fourmis = 25
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 8
-    Soldat = 2
-    Ouvrier = 6
-    Sexué = 0
-
-[26] LOG : Population de fourmis = 26
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 9
-    Soldat = 2
-    Ouvrier = 7
-    Sexué = 0
-
-[27] LOG : Population de fourmis = 27
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 10
-    Soldat = 2
-    Ouvrier = 8
-    Sexué = 0
-
-[28] LOG : Population de fourmis = 28
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 11
-    Soldat = 2
-    Ouvrier = 9
-    Sexué = 0
-
-[29] LOG : Population de fourmis = 29
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 12
-    Soldat = 2
-    Ouvrier = 10
-    Sexué = 0
-
-[30] LOG : Population de fourmis = 30
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 13
-    Soldat = 3
-    Ouvrier = 10
-    Sexué = 0
-
-[31] LOG : Population de fourmis = 31
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 14
-    Soldat = 4
-    Ouvrier = 10
-    Sexué = 0
-
-[32] LOG : Population de fourmis = 32
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 15
-    Soldat = 4
-    Ouvrier = 11
-    Sexué = 0
-
-[33] LOG : Population de fourmis = 33
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 16
-    Soldat = 4
-    Ouvrier = 12
-    Sexué = 0
-
-[34] LOG : Population de fourmis = 34
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 17
-    Soldat = 4
-    Ouvrier = 13
-    Sexué = 0
-
-[35] LOG : Population de fourmis = 35
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 18
-    Soldat = 4
-    Ouvrier = 13
-    Sexué = 1
-
-[36] LOG : Population de fourmis = 36
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 19
-    Soldat = 5
-    Ouvrier = 13
-    Sexué = 1
-
-[37] LOG : Population de fourmis = 37
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 20
-    Soldat = 5
-    Ouvrier = 14
-    Sexué = 1
-
-[38] LOG : Population de fourmis = 38
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 21
-    Soldat = 5
-    Ouvrier = 14
-    Sexué = 2
-
-[39] LOG : Population de fourmis = 39
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 22
-    Soldat = 5
-    Ouvrier = 14
-    Sexué = 3
-
-[40] LOG : Population de fourmis = 40
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 23
-    Soldat = 5
-    Ouvrier = 15
-    Sexué = 3
-
-[41] LOG : Population de fourmis = 41
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 24
-    Soldat = 5
-    Ouvrier = 16
-    Sexué = 3
-
-[42] LOG : Population de fourmis = 42
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 25
-    Soldat = 5
-    Ouvrier = 17
-    Sexué = 3
-
-[43] LOG : Population de fourmis = 43
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 26
-    Soldat = 5
-    Ouvrier = 18
-    Sexué = 3
-
-[44] LOG : Population de fourmis = 44
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 27
-    Soldat = 5
-    Ouvrier = 19
-    Sexué = 3
-
-[45] LOG : Population de fourmis = 45
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 28
-    Soldat = 5
-    Ouvrier = 19
-    Sexué = 4
-
-[46] LOG : Population de fourmis = 46
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 29
-    Soldat = 5
-    Ouvrier = 20
-    Sexué = 4
-
-[47] LOG : Population de fourmis = 47
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 30
-    Soldat = 6
-    Ouvrier = 20
-    Sexué = 4
-
-[48] LOG : Population de fourmis = 48
-Nombres d'oeufs = 2
-Nombres de larves = 10
-Nombres de nymphes = 5
-Nombres de fourmis Adultes : 31
-    Soldat = 6
-    Ouvrier = 21
-    Sexué = 4
+[20] LOG : Population de fourmis = 2001
+Nombres d'oeufs = 200
+Nombres de larves = 1000
+Nombres de nymphes = 500
+Nombres de fourmis Adultes : 300
+    Soldat = 68
+    Ouvrier = 193
+    Sexué = 39
 
