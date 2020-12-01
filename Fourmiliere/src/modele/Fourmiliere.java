@@ -12,8 +12,6 @@ public class Fourmiliere {
   protected final int tempsVieMin = 1460;
   protected final int tempsVieMax = 3650;
 
-  protected List<Fourmi> cadavreIntermediaire;
-  protected List<Fourmi> listCadavre;
   protected List<Fourmi> listFourmi;
   
   protected int nbOeuf;
@@ -22,12 +20,11 @@ public class Fourmiliere {
   protected int nbOuvrier;
   protected int nbSexue;
   protected int nbSoldat;
+  protected int nbCadavres;
 
   /** Constructeur de fourmilière, initialise la liste de fourmis. **/
   public Fourmiliere() {
-    this.cadavreIntermediaire = new ArrayList<Fourmi>();
     this.listFourmi = new ArrayList<Fourmi>();
-    this.listCadavre = new ArrayList<Fourmi>();
     this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin) + tempsVieMin);
     this.dureeVie = 0;
 
@@ -43,14 +40,6 @@ public class Fourmiliere {
     return tempsVie;
   }
   
-  public int getNbCadavre() {
-    return listCadavre.size();
-  }
-  
-  public void mortFourmi(Fourmi fourmi) {
-    this.cadavreIntermediaire.add(fourmi);
-  }
-
   public int getNbFourmi() {
     return listFourmi.size() + 1;
   }
@@ -138,11 +127,6 @@ public class Fourmiliere {
       f.step();
     }
 
-    for (Fourmi f : cadavreIntermediaire) {
-      this.listCadavre.add(f);
-      this.listFourmi.remove(f);
-    }
-    this.cadavreIntermediaire.clear();
     this.dureeVie++;
   }
 

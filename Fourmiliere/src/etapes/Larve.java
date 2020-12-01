@@ -3,12 +3,10 @@ package etapes;
 import modele.Fourmi;
 import modele.Fourmiliere;
 
-public class Larve implements Etape {
+public class Larve extends Etape {
 
   protected final int tempsEvolution = 10;
   protected int dureeVie = 0;
-  protected Fourmiliere fourmiliere;
-  protected Fourmi fourmi;
 
   /**
    * .
@@ -17,8 +15,7 @@ public class Larve implements Etape {
    * @param fourmi .
    */
   public Larve(Fourmiliere f, Fourmi fourmi) {
-    this.fourmiliere = f;
-    this.fourmi = fourmi;
+    super(f, fourmi);
     this.fourmiliere.incrementNbLarve();
   }
 

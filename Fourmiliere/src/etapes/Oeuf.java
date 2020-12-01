@@ -4,17 +4,14 @@ import modele.Fourmi;
 import modele.Fourmiliere;
 import simulation.Simulation;
 
-public class Oeuf implements Simulation, Etape {
+public class Oeuf extends Etape implements Simulation {
 
   protected final int tempsEvolution = 3;
   protected int dureeVie = 0;
-  protected Fourmiliere fourmiliere;
-  protected Fourmi fourmi;
-  
-  
+
+
   public Oeuf(Fourmiliere f, Fourmi fourmi) {
-    this.fourmiliere = f;
-    this.fourmi = fourmi;
+    super(f, fourmi);
   }
 
   @Override

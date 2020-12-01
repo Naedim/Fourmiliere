@@ -1,18 +1,20 @@
 package modele;
 
-import etapes.EtapeActuelle;
+import etapes.Etape;
+import etapes.Oeuf;
 
 public class Fourmi {
-  EtapeActuelle etapeActuelle;
+  Etape etape;
 
   /**
    * Constructeur de fourmi, initialise une fourmi à la première étape de sa vie. (Oeuf)
    */
   public Fourmi(Fourmiliere f) {
-    this.etapeActuelle = new EtapeActuelle(f, this);
+    this.etape = new Oeuf(f, this);
   }
 
   public void step() {
-    this.etapeActuelle.step();
+    this.etape = this.etape.next();
+    this.etape.step();
   }
 }

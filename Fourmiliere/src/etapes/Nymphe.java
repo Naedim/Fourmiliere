@@ -4,12 +4,10 @@ import modele.Fourmi;
 import modele.Fourmiliere;
 import simulation.Simulation;
 
-public class Nymphe implements Simulation, Etape {
+public class Nymphe extends Etape implements Simulation {
 
   protected final int tempsEvolution = 5;
   protected int dureeVie = 0;
-  protected Fourmiliere fourmiliere;
-  protected Fourmi fourmi;
 
   /**.
    * 
@@ -17,8 +15,7 @@ public class Nymphe implements Simulation, Etape {
    * @param fourmi .
    */
   public Nymphe(Fourmiliere f, Fourmi fourmi) {
-    this.fourmiliere = f;
-    this.fourmi = fourmi;
+    super(f, fourmi);
     this.fourmiliere.incrementNbNymphe();
   }
 

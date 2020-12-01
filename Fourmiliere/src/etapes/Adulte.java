@@ -7,23 +7,20 @@ import roles.Role;
 import roles.Soldat;
 import roles.UsineRole;
 
-public class Adulte implements Etape, Role {
+public class Adulte extends Etape implements Role {
 
   protected final int tempsVieMin = 548;
   protected final int tempsVieMax = 913;
   protected int tempsVie;
   protected int dureeVie;
   protected Role role;
-  protected Fourmiliere fourmiliere;
-  protected Fourmi fourmi;
 
   /**
    * Constructeur de la classe adulte.
    * 
    */
   public Adulte(Fourmiliere f, Fourmi fourmi) {
-    this.fourmiliere = f;
-    this.fourmi = fourmi;
+    super(f, fourmi);
     this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin) + tempsVieMin);
     this.dureeVie = 0;
     this.role = new UsineRole().creerRole(f);
@@ -32,12 +29,9 @@ public class Adulte implements Etape, Role {
   @Override
   public void step() {
     this.dureeVie++;
-  }
-
-  @Override
-  public Etape next() {
+    
     if (dureeVie == tempsVie) {
-      this.fourmiliere.mortFourmi(this.fourmi);
+      
 
       if (this.role instanceof Ouvrier) {
         this.fourmiliere.decrementNbOuvrier();
@@ -47,6 +41,10 @@ public class Adulte implements Etape, Role {
         this.fourmiliere.decrementNbSexue();
       }
     }
+  }
+
+  @Override
+  public Etape next() {
     return this;
   }
 

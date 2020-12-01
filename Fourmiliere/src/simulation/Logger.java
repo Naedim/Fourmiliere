@@ -40,7 +40,7 @@ public class Logger {
       fw.write("    Soldat = " + f.getNbSoldat() + "\n");
       fw.write("    Ouvrier = " + f.getNbOuvrier() + "\n");
       fw.write("    Sexué = " + f.getNbSexue() + "\n");
-      fw.write("Nombre de cadavres : " + f.getNbCadavre() + "\n\n");
+      fw.write("Nombre de cadavres : \n\n");
       fw.close();
     } catch (IOException e) {
       System.out.println("Erreur de fichier");
