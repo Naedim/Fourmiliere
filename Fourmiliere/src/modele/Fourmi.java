@@ -9,7 +9,7 @@ public class Fourmi {
    * Constructeur de fourmi, initialise une fourmi à la première étape de sa vie. (Oeuf)
    */
   public Fourmi(Fourmiliere f) {
-    this.etapeActuelle = new EtapeActuelle(f);
+    this.etapeActuelle = new EtapeActuelle(f, this);
   }
 
   public void step() {

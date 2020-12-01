@@ -156,25 +156,7 @@ Nombres d'oeufs = 200
 Nombres de larves = 1000
 Nombres de nymphes = 500
 Nombres de fourmis Adultes : 100
-    Soldat = 24
-    Ouvrier = 63
+    Soldat = 35
+    Ouvrier = 52
     Sexué = 13
-
-[19] LOG : Population de fourmis = 1901
-Nombres d'oeufs = 200
-Nombres de larves = 1000
-Nombres de nymphes = 500
-Nombres de fourmis Adultes : 200
-    Soldat = 48
-    Ouvrier = 126
-    Sexué = 26
-
-[20] LOG : Population de fourmis = 2001
-Nombres d'oeufs = 200
-Nombres de larves = 1000
-Nombres de nymphes = 500
-Nombres de fourmis Adultes : 300
-    Soldat = 68
-    Ouvrier = 193
-    Sexué = 39
 

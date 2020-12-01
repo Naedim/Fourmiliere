@@ -1,5 +1,6 @@
 package etapes;
 
+import modele.Fourmi;
 import modele.Fourmiliere;
 import simulation.Simulation;
 
@@ -8,9 +9,16 @@ public class Nymphe implements Simulation, Etape {
   protected final int tempsEvolution = 5;
   protected int dureeVie = 0;
   protected Fourmiliere fourmiliere;
+  protected Fourmi fourmi;
 
-  public Nymphe(Fourmiliere f) {
+  /**.
+   * 
+   * @param f .
+   * @param fourmi .
+   */
+  public Nymphe(Fourmiliere f, Fourmi fourmi) {
     this.fourmiliere = f;
+    this.fourmi = fourmi;
     this.fourmiliere.incrementNbNymphe();
   }
 
@@ -23,7 +31,7 @@ public class Nymphe implements Simulation, Etape {
   public Etape next() {
     if (this.dureeVie == this.tempsEvolution) {
       this.fourmiliere.decrementNbNymphe();
-      return new Adulte(this.fourmiliere);
+      return new Adulte(this.fourmiliere, this.fourmi);
     }
     return this;
   }
