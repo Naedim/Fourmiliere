@@ -85,4 +85,8 @@ public class Fourmiliere {
       f.step();
     }
   }
+
+  public int getNbAdultes() {
+    return this.nbOuvrier + this.nbSexue + this.nbSoldat;
+  }
 }
