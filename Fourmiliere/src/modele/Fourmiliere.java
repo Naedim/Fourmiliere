@@ -4,13 +4,66 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fourmiliere {
-  List<Fourmi> listFourmi;
-  int nbOeuf;
-  int nbLarve;
-  int nbNymphe;
-  int nbOuvrier;
-  int nbSexue;
-  int nbSoldat;
+  protected List<Fourmi> listFourmi;
+  protected int nbOeuf;
+  protected int nbLarve;
+  protected int nbNymphe;
+  
+  public int getNbFourmi() {
+    return listFourmi.size();
+  }
+
+  public int getNbOeuf() {
+    return nbOeuf;
+  }
+
+  public void incrementNbOeuf() {
+    this.nbOeuf++;
+  }
+
+  public int getNbLarve() {
+    return nbLarve;
+  }
+
+  public void incrementNbLarve() {
+    this.nbLarve++;
+  }
+
+  public int getNbNymphe() {
+    return nbNymphe;
+  }
+
+  public void incrementNbNymphe() {
+    this.nbNymphe++;
+  }
+
+  public int getNbOuvrier() {
+    return nbOuvrier;
+  }
+
+  public void incrementNbOuvrier() {
+    this.nbOuvrier++;
+  }
+
+  public int getNbSexue() {
+    return nbSexue;
+  }
+
+  public void incrementNbSexue() {
+    this.nbSexue++;
+  }
+
+  public int getNbSoldat() {
+    return nbSoldat;
+  }
+
+  public void incrementNbSoldat() {
+    this.nbSoldat++;
+  }
+
+  protected int nbOuvrier;
+  protected int nbSexue;
+  protected int nbSoldat;
 
   /** Constructeur de fourmilière, initialise la liste de fourmis. **/
   public Fourmiliere() {
@@ -23,7 +76,8 @@ public class Fourmiliere {
     nbSoldat = 0;
   }
 
-  /** .
+  /**
+   * .
    * 
    */
   public void step() {
