@@ -2,6 +2,7 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
+import vue.BilanGraphique;
 
 /**
  * Classe cadavre, derni�re �tape de la vie d'une fourmi.
@@ -29,7 +30,7 @@ public class Cadavre extends Etape {
   }
 
   @Override
-  public void step() {
+  public void step(BilanGraphique b) {
     this.dureeVie++;
   }
 }

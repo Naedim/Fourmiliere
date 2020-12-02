@@ -1,11 +1,12 @@
 package vue; 
  
 import graphicLayer.GRect; 
-import java.awt.Color; 
-import java.awt.Dimension; 
-import java.awt.Point; 
-import java.util.ArrayList; 
-import java.util.List; 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Point;
+import java.util.ArrayList;
+import java.util.List;
+
  
 public class FourmiliereGraphique implements ElementGraphique { 
  
@@ -42,5 +43,17 @@ public class FourmiliereGraphique implements ElementGraphique {
   public GRect getElementGraphique() {
     return this.elementGraphique;
   } 
+  
+  public void ajouterFourmi() {
+    this.listFourmi.add(new GRect());
+  }
+  
+  public void supprimerFourmi(int index) {
+    this.listFourmi.remove(index);
+  }
+  
+  public void deplacerFourmi(int index, Point p) {
+    this.listFourmi.get(index).setPosition(p);
+  }
  
 } 

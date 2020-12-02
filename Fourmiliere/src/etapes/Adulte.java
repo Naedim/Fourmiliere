@@ -4,6 +4,7 @@ import modele.Fourmi;
 import modele.Fourmiliere;
 import roles.Role;
 import roles.UsineRole;
+import vue.BilanGraphique;
 
 /**
  * Classe Adulte, permettant de symboliser l'étape adulte de l'évolution.
@@ -31,7 +32,7 @@ public class Adulte extends Etape {
   }
 
   @Override
-  public void step() {
+  public void step(BilanGraphique b) {
     this.dureeVie++;
   }
 

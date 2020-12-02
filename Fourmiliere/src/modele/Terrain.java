@@ -1,10 +1,10 @@
 package modele;
 
-import simulation.Bilan;
+import vue.BilanGraphique;
 
 public class Terrain {
   Fourmiliere fourmiliere;
-  protected Bilan bilan;
+  protected BilanGraphique bilan;
 
 
   /**
@@ -12,17 +12,21 @@ public class Terrain {
    */
   public Terrain() {
     this.fourmiliere = new Fourmiliere();
-    this.bilan = new Bilan();
+    this.bilan = new BilanGraphique();
+  }
+
+  public BilanGraphique getBilan() {
+    return bilan;
   }
 
   public Fourmiliere getFourmiliere() {
     return fourmiliere;
   }
 
-  /** 
+  /**
    * Méthode qui avance de 1 step le fonctionnement d'une fourmiliere.
    */
   public void step() {
-    this.fourmiliere.step();
+    this.fourmiliere.step(bilan);
   }
 }

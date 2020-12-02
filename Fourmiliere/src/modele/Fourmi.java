@@ -2,7 +2,7 @@ package modele;
 
 import etapes.Etape;
 import etapes.Oeuf;
-import simulation.Bilan;
+import vue.BilanGraphique;
 
 /**
  * Classe de Fourmi, permet de représenter une fourmi en fonction de son étape d'évolution.
@@ -24,8 +24,8 @@ public class Fourmi {
   /**
    * Méthode permettant de lancer le processus d'évolution.
    */
-  public void step() {
+  public void step(BilanGraphique b) {
     this.etape = this.etape.next();
-    this.etape.step();
+    this.etape.step(b);
   }
 }

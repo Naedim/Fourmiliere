@@ -3,6 +3,7 @@ package modele;
 import java.util.ArrayList;
 import java.util.List;
 import simulation.Simulation;
+import vue.BilanGraphique;
 
 /**
  * Classe Fourmiliere, simule le fonctionnement d'une fourmiliere. Une reine est de base intégrée
@@ -46,7 +47,7 @@ public class Fourmiliere implements Simulation {
    * Méthode permettant le fonctionnement de la fourmiliere, la ponte des oeufs puis
    * l'incrémentation de sa durée de vie.
    */
-  public void step() {
+  public void step(BilanGraphique b) {
     this.pondre();
     this.dureeVie++;
     if (this.dureeVie == tempsVie) {
@@ -54,12 +55,13 @@ public class Fourmiliere implements Simulation {
     }
 
     for (Fourmi f : listFourmi) {
-      f.step();
+      f.step(b);
     }
     
     for (Fourmi f : listCadavres) {
       listFourmi.remove(f);
     }
+    listCadavres.clear();
   }
 
   /**
@@ -69,6 +71,7 @@ public class Fourmiliere implements Simulation {
     if (this.dureeVie < this.tempsVie) {
       for (int i = 0; i < nbPonte; i++) {
         this.listFourmi.add(new Fourmi(this));
+        
       }
     }
   }

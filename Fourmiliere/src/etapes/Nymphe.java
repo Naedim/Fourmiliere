@@ -2,7 +2,7 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
-import simulation.Bilan;
+import vue.BilanGraphique;
 
 /**
  * Classe Nymphe, 3ème étape de l'évolution d'une fourmi. Evolue en fourmi Adulte après 
@@ -28,7 +28,7 @@ public class Nymphe extends Etape {
   }
   
   @Override
-  public void step() {
+  public void step(BilanGraphique b) {
     this.dureeVie++;
   }
 

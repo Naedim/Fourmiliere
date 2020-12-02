@@ -2,7 +2,7 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
-import simulation.Bilan;
+import vue.BilanGraphique;
 
 /**
  * Classe Oeuf, 1ère étape de l'évolution d'une fourmi. Evolue en larve après 
@@ -28,7 +28,7 @@ public class Oeuf extends Etape {
   }
   
   @Override
-  public void step() {
+  public void step(BilanGraphique b) {
     this.dureeVie++;
   }
 
