@@ -36,6 +36,14 @@ public class Adulte extends Etape {
     this.dureeVie++;
   }
 
+  public int getTempsVie() {
+    return tempsVie;
+  }
+
+  public void setTempsVie(int tempsVie) {
+    this.tempsVie = tempsVie;
+  }
+
   /**
    * Si la durée de vie d'une fourmi adulte est égale à son temps de vie, la fourmi meurt et devient
    * un cadavre.
@@ -49,6 +57,10 @@ public class Adulte extends Etape {
       return new Cadavre(this.fourmiliere, this.fourmi);
     }
     return this;
+  }
+
+  public int getDureeVie() {
+    return dureeVie;
   }
 
   @Override
