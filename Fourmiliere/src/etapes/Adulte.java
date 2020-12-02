@@ -8,6 +8,8 @@ import simulation.Bilan;
 
 /**
  * Classe Adulte, permettant de symboliser l'Ã©tape adulte de l'Ã©volution.
+ * Une fourmi adulte à une espérance de vie, une fourm adulte arrivée
+ *  à la fin de son espérance de vie passe à l'étape cadavre.
  *
  */
 public class Adulte extends Etape {
@@ -19,8 +21,8 @@ public class Adulte extends Etape {
   protected Role role;
 
   /**
-   * Constructeur de la classe adulte. Initialise le temps de vie d'une fourmi adulte 
-   * entre deux bornes d'espÃ©rance de vie.
+   * Constructeur de la classe adulte. Initialise un temps de vie aléatoired'une fourmi adulte entre
+   * deux bornes d'espérance de vie.
    */
   public Adulte(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
@@ -34,6 +36,13 @@ public class Adulte extends Etape {
     this.dureeVie++;
   }
 
+  /**
+   * Si la durée de vie d'une fourmi adulte est égale à son temps de vie, la fourmi meurt et devient
+   * un cadavre.
+   * 
+   * @return le même object Adulte si durée de vie dureeVie == tempsVie, sinon renvoie un nouveau
+   *         Cadavre
+   */
   @Override
   public Etape next() {
     if (this.dureeVie == this.tempsVie) {
