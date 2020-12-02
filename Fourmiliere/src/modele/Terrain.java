@@ -15,8 +15,15 @@ public class Terrain {
     this.bilan = new BilanGraphique();
   }
 
+  /**
+   * .
+   * 
+   * @return .
+   */
   public BilanGraphique getBilan() {
-    return bilan;
+    BilanGraphique b = this.bilan;
+    this.bilan = new BilanGraphique();
+    return b;
   }
 
   public Fourmiliere getFourmiliere() {

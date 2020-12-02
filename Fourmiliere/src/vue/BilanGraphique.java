@@ -32,7 +32,6 @@ public class BilanGraphique {
 
   public void disparition(int indexFourmi) {
     this.listAction.add(new Action(EnumAction.SUPPRIMER, new Parametre(indexFourmi)));
-
   }
 
 
