@@ -16,8 +16,8 @@ public abstract class Etape implements Simulation {
   /**
    * Constructeur d'étape, récupère la fourmilière pour que chaque étape soit lié à sa fourmilière.
    * 
-   * @param f : d
-   * @param fourmi : f
+   * @param f : Fourmiliere
+   * @param fourmi : Fourmi
    */
   public Etape(Fourmiliere f, Fourmi fourmi) {
     this.fourmiliere = f;

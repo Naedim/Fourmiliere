@@ -2,10 +2,12 @@ package modele;
 
 import simulation.Bilan;
 
+/**
+ * Classe représentant le terrain dans lequel se développe une fourmilière.
+ */
 public class Terrain {
   Fourmiliere fourmiliere;
   protected Bilan bilan;
-
 
   /**
    * Constructeur de terrain, créer un terrain dans lequel est installé une fourmilière.

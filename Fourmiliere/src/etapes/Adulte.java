@@ -7,9 +7,9 @@ import roles.UsineRole;
 import simulation.Bilan;
 
 /**
- * Classe Adulte, permettant de symboliser l'Ã©tape adulte de l'Ã©volution.
- * Une fourmi adulte à une espérance de vie, une fourm adulte arrivée
- *  à la fin de son espérance de vie passe à l'étape cadavre.
+ * Classe Adulte, permettant de symboliser l'Ã©tape adulte de l'Ã©volution. Une fourmi adulte Ã  une
+ * espÃ©rance de vie, une fourmi adulte arrivÃ©e Ã  la fin de son espÃ©rance de vie passe Ã  l'Ã©tape
+ * cadavre.
  *
  */
 public class Adulte extends Etape {
@@ -21,8 +21,11 @@ public class Adulte extends Etape {
   protected Role role;
 
   /**
-   * Constructeur de la classe adulte. Initialise un temps de vie aléatoired'une fourmi adulte entre
-   * deux bornes d'espérance de vie.
+   * Constructeur de la classe adulte. Initialise un temps de vie alÃ©atoire d'une fourmi adulte
+   * entre deux bornes d'espÃ©rance de vie.
+   * 
+   * @param f : Fourmiliere
+   * @param fourmi : Fourmi
    */
   public Adulte(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
@@ -45,10 +48,10 @@ public class Adulte extends Etape {
   }
 
   /**
-   * Si la durée de vie d'une fourmi adulte est égale à son temps de vie, la fourmi meurt et devient
+   * Si la durÃ©e de vie d'une fourmi adulte est Ã©gale Ã  son temps de vie, la fourmi meurt et devient
    * un cadavre.
    * 
-   * @return le même object Adulte si durée de vie dureeVie == tempsVie, sinon renvoie un nouveau
+   * @return le mÃªme object Adulte si durÃ©e de vie dureeVie == tempsVie, sinon renvoie un nouveau
    *         Cadavre
    */
   @Override

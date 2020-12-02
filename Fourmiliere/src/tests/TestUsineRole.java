@@ -1,7 +1,6 @@
 package tests;
 
 import static org.junit.Assert.assertTrue;
-
 import java.util.ArrayList;
 import java.util.List;
 import modele.Fourmiliere;
@@ -51,9 +50,9 @@ class TestUsineRole {
     float psolr = (float) (this.nbSoldat) / nbRoles * 100;
     float psexr = (float) (this.nbSexue) / nbRoles * 100;
 
-    float pourcentO = (float)ur.getPourcentageOuvrier();
-    float pourcentSol = (float)ur.getPourcentageSoldat();
-    float pourcentSex = (float)ur.getPourcentageSexue();
+    float pourcentO = (float) ur.getPourcentageOuvrier();
+    float pourcentSol = (float) ur.getPourcentageSoldat();
+    float pourcentSex = (float) ur.getPourcentageSexue();
 
     assertTrue(pourcentO - 2.5 <= por && por <= pourcentO + 2.5);
     assertTrue(pourcentSol - 2.5 <= psolr && psolr <= pourcentSol + 2.5);

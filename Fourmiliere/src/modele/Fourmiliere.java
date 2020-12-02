@@ -52,7 +52,6 @@ public class Fourmiliere implements Simulation {
     this.dureeVie++;
     if (this.dureeVie == tempsVie) {
       this.reine = false;
-
     }
 
     for (Fourmi f : listFourmi) {

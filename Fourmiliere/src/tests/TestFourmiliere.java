@@ -41,9 +41,6 @@ class TestFourmiliere {
 
     assertTrue(fourmiliere.getNbFourmi() == 1);
 
-    System.out.println("Temps de vie de la fourmilière : " + mortReine);
-
-
     for (int i = 0; i < mortReine; i++) {
       nbFourmiCrees += nbPonte;
       testStep();

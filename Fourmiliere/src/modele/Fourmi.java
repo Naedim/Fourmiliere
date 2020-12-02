@@ -16,6 +16,8 @@ public class Fourmi {
 
   /**
    * Constructeur de fourmi, initialise une fourmi à la première étape de sa vie. (Oeuf)
+   * 
+   * @param f : Fourmiliere
    */
   public Fourmi(Fourmiliere f) {
     this.etape = new Oeuf(f, this);

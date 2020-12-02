@@ -17,7 +17,11 @@ public class UsineRole {
 
   // 25% de chance d'être un soldat
   final int pourcentageSoldat = 25;
+  
+  // 15% de chance d'être sexuee
+  final int pourcentageSexue = 15;
 
+  
   public int getPourcentageOuvrier() {
     return pourcentageOuvrier;
   }
@@ -30,12 +34,11 @@ public class UsineRole {
     return pourcentageSexue;
   }
 
-  // 15% de chance d'être sexuee
-  final int pourcentageSexue = 15;
 
   /**
    * Crée un role aléatoire en fonction des seuils de chaque rôle.
    * 
+   * @param fourmiliere : Fourmiliere
    * @return Objet Role (Soldat, Sexuee, Ouvrier)
    */
   public Role creerRole(Fourmiliere fourmiliere) {
@@ -43,17 +46,17 @@ public class UsineRole {
     // Nombre aléatoire entre 0 et 100
     int val = (int) (Math.random() * maxProbabilite);
 
-    //Si le nombre est inf�rieur ou �gal � ouvrierMax, le role est Ouvrier
+    //Si le nombre est inférieur ou égal à ouvrierMax, le role est Ouvrier
     if (val <= pourcentageOuvrier) {
       return new Ouvrier();
     }
 
-    //Sinon si le nombre est inf�rieur ou �gal � soldatMax, le role est Soldat
+    //Sinon si le nombre est inférieur ou égal à soldatMax, le role est Soldat
     if (val <= pourcentageOuvrier + pourcentageSoldat) {
       return new Soldat();
     }
 
-    //Sinon le role ets Sexue
+    //Sinon le role est Sexue
     return new Sexue();
   }
 }

@@ -5,7 +5,6 @@ import simulation.Bilan;
 /** 
  * Fourmi sexuee, soit mâle soit femelle (possible nouvelle reine).
  * @author Damien
- *
  */
 public class Sexue implements Role {
 
