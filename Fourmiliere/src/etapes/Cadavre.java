@@ -5,7 +5,7 @@ import modele.Fourmiliere;
 import simulation.Bilan;
 
 /**
- * Classe cadavre, derniÃ¨re Ã©tape de la vie d'une fourmi.
+ * Classe cadavre, dernière étape de la vie d'une fourmi.
  */
 public class Cadavre extends Etape {
   protected int tempsVie = 2;
@@ -27,7 +27,7 @@ public class Cadavre extends Etape {
   }
   
   public void finCadavre() {
-    //TODO 
+    //Pas pour le moment 
   }
   
   @Override 
