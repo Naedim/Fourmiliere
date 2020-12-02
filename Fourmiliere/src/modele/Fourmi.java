@@ -1,8 +1,8 @@
 package modele;
 
+import bilan.BilanGraphique;
 import etapes.Etape;
 import etapes.Oeuf;
-import vue.BilanGraphique;
 
 /**
  * Classe de Fourmi, permet de représenter une fourmi en fonction de son étape d'évolution.

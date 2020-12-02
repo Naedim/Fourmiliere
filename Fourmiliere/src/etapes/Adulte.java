@@ -1,10 +1,10 @@
 package etapes;
 
+import bilan.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
 import roles.Role;
 import roles.UsineRole;
-import vue.BilanGraphique;
 
 /**
  * Classe Adulte, permettant de symboliser l'étape adulte de l'évolution. Une fourmi adulte � une

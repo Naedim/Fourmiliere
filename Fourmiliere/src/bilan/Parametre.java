@@ -1,4 +1,4 @@
-package vue;
+package bilan;
 
 import java.awt.Color;
 import java.awt.Point;

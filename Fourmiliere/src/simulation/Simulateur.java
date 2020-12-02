@@ -1,7 +1,6 @@
 package simulation;
 
 import modele.Terrain;
-import vue.ControlleurGraphique;
 
 public class Simulateur {
 

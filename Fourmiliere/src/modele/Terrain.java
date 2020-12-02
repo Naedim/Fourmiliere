@@ -1,6 +1,6 @@
 package modele;
 
-import vue.BilanGraphique;
+import bilan.BilanGraphique;
 
 public class Terrain {
   Fourmiliere fourmiliere;

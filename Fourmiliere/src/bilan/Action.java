@@ -1,4 +1,4 @@
-package vue;
+package bilan;
 
 public class Action {
   protected EnumAction action;
@@ -20,7 +20,4 @@ public class Action {
   public Parametre getParam() {
     return param;
   }
-  
-  
-
 }

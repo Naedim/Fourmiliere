@@ -2,8 +2,8 @@ package modele;
 
 import java.util.ArrayList;
 import java.util.List;
+import bilan.BilanGraphique;
 import simulation.Simulation;
-import vue.BilanGraphique;
 
 /**
  * Classe Fourmiliere, simule le fonctionnement d'une fourmiliere. Une reine est de base intégrée

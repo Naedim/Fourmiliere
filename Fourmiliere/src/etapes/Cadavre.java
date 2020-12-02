@@ -1,8 +1,8 @@
 package etapes;
 
+import bilan.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
-import vue.BilanGraphique;
 
 /**
  * Classe cadavre, derni�re �tape de la vie d'une fourmi.

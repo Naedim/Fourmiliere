@@ -1,9 +1,9 @@
 package etapes;
 
+import bilan.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
 import simulation.Simulation;
-import vue.BilanGraphique;
 
 /**
  * Classe abstraite représentant les étapes de l'évolution d'une fourmi.

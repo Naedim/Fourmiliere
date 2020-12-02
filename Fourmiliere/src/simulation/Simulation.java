@@ -1,6 +1,6 @@
 package simulation;
 
-import vue.BilanGraphique;
+import bilan.BilanGraphique;
 
 public interface Simulation {
 

@@ -1,8 +1,8 @@
 package etapes;
 
+import bilan.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
-import vue.BilanGraphique;
 
 /**
  * Classe Larve, 2ème étape de l'évolution d'une fourmi. Evolue en Nymphe après un temps

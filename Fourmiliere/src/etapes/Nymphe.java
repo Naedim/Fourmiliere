@@ -1,8 +1,8 @@
 package etapes;
 
+import bilan.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
-import vue.BilanGraphique;
 
 /**
  * Classe Nymphe, 3ème étape de l'évolution d'une fourmi. Evolue en fourmi Adulte après 

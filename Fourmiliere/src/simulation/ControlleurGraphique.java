@@ -1,9 +1,14 @@
-package vue;
+package simulation;
 
+import bilan.Action;
+import bilan.BilanGraphique;
+import bilan.Parametre;
 import graphicLayer.GRect;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
+import vue.FourmiliereGraphique;
+import vue.TerrainGraphique;
 
 
 public class ControlleurGraphique {
@@ -33,7 +38,7 @@ public class ControlleurGraphique {
    */
   public void updateIhm(BilanGraphique bilan) {
     for (Action action : bilan.getListAction()) {
-      switch (action.action) {
+      switch (action.getAction()) {
         case AJOUTER:
           this.ajouterFourmi();
           break;
@@ -55,7 +60,7 @@ public class ControlleurGraphique {
   }
 
   private void ajouterFourmi() {
-    FourmiliereGraphique fourmiliere  = this.getFourmiliere();
+    FourmiliereGraphique fourmiliere = this.getFourmiliere();
     int indexFourmi = fourmiliere.ajouterFourmi();
     this.ajouterElementGraphique(fourmiliere.getFourmi(indexFourmi));
   }
@@ -64,7 +69,7 @@ public class ControlleurGraphique {
     int indexFourmi = param.getIndex();
     this.getFourmiliere().supprimerFourmi(indexFourmi);
     this.supprimerElementGraphique(indexFourmi);
-    
+
   }
 
 
@@ -73,7 +78,7 @@ public class ControlleurGraphique {
     Color c = param.getColor();
 
     GRect fourmi = this.getTerrain().getFourmiliere().getFourmi(indexFourmi);
-    
+
 
     fourmi.setColor(c);
 
@@ -91,11 +96,11 @@ public class ControlleurGraphique {
   private FourmiliereGraphique getFourmiliere() {
     return this.getTerrain().getFourmiliere();
   }
-  
+
   private void ajouterElementGraphique(GRect element) {
     this.terrain.getElementGraphique().addElement(element);
   }
-  
+
   private void supprimerElementGraphique(int indexFourmi) {
     this.terrain.getElementGraphique().remove(indexFourmi);
   }

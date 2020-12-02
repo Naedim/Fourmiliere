@@ -1,8 +1,8 @@
 package etapes;
 
+import bilan.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
-import vue.BilanGraphique;
 
 /**
  * Classe Oeuf, 1ère étape de l'évolution d'une fourmi. Evolue en larve après 
