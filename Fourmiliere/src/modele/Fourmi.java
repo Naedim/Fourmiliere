@@ -10,6 +10,10 @@ import simulation.Bilan;
 public class Fourmi {
   Etape etape;
 
+  public Etape getEtape() {
+    return etape;
+  }
+
   /**
    * Constructeur de fourmi, initialise une fourmi à la première étape de sa vie. (Oeuf)
    */
