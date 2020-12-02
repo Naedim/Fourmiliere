@@ -2,7 +2,6 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
-import simulation.Bilan;
 import simulation.Simulation;
 
 /**
@@ -37,11 +36,5 @@ public abstract class Etape implements Simulation {
   public void step() {
     this.etape = this.etape.next();
     this.etape.step();
-  }
-
-  // oubli de suppresion ?
-  @Override
-  public void bilan(Bilan b) {
-
   }
 }

@@ -12,9 +12,9 @@ import simulation.Simulation;
  */
 public class Fourmiliere implements Simulation {
 
-  int reine = 1;
+  protected boolean reine = true;
 
-  protected final int tempsVie;
+  protected int tempsVie;
   protected int dureeVie;
 
   protected final int nbPonte = 100;
@@ -31,12 +31,16 @@ public class Fourmiliere implements Simulation {
     this.dureeVie = 0;
   }
 
+  public void setTempsVie(int tempsVie) {
+    this.tempsVie = tempsVie;
+  }
+
   public int getTempsVieFourmiliere() {
     return tempsVie;
   }
 
   public int getNbFourmi() {
-    return listFourmi.size() + reine;
+    return listFourmi.size() + (reine ? 1 : 0);
   }
 
   /**
@@ -47,7 +51,8 @@ public class Fourmiliere implements Simulation {
     this.pondre();
     this.dureeVie++;
     if (this.dureeVie == tempsVie) {
-      this.reine = 0;
+      this.reine = false;
+
     }
 
     for (Fourmi f : listFourmi) {
@@ -66,12 +71,21 @@ public class Fourmiliere implements Simulation {
     }
   }
 
+  public int getNbPonte() {
+    return nbPonte;
+  }
+
   @Override
   public void bilan(Bilan b) {
     for (Fourmi f : listFourmi) {
       f.bilan(b);
     }
     b.setNbFourmi(getNbFourmi());
+    if (reine) {
+      b.incrementeReine();
+    } else {
+      b.incrementNbCadavre();
+    }
 
   }
 

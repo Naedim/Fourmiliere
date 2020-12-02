@@ -14,6 +14,8 @@ public class Bilan {
   protected int nbSoldat;
   protected int nbCadavres;
 
+  protected int reine;
+
   /** Constructeur de Bilan, initialise les compteurs à 0. **/
   public Bilan() {
     nbFourmi = 0;
@@ -24,11 +26,12 @@ public class Bilan {
     nbSexue = 0;
     nbSoldat = 0;
     nbCadavres = 0;
+    reine = 0;
   }
 
 
   public int getNbAdultes() {
-    return this.nbOuvrier + this.nbSexue + this.nbSoldat;
+    return this.nbOuvrier + this.nbSexue + this.reine + this.nbSoldat;
   }
   
   public int getNbFourmi() {
@@ -93,6 +96,10 @@ public class Bilan {
 
   public void incrementNbSoldat() {
     this.nbSoldat++;
+  }
+  
+  public void incrementeReine() {
+    this.reine++;
   }
 
 }

@@ -5,8 +5,8 @@ import modele.Terrain;
 public class Simulateur {
 
   /**
-   * Classe simulation, permet de simuler le fonctionnement d'une fourmiliÃ¨re jusqu'Ã  
-   * ce qu'elle disparaisse.
+   * Classe simulation, permet de simuler le fonctionnement d'une fourmiliÃ¨re jusqu'Ã  ce
+   * qu'elle disparaisse.
    * 
    * @param args : arg
    * @throws InterruptedException : Erreur liÃ© au Thread.sleep
