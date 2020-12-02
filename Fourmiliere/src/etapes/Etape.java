@@ -31,11 +31,11 @@ public abstract class Etape implements Simulation {
    * 
    * @return Etape suivante de l'évolution
    */
-  public abstract Etape next();
+  public abstract Etape next(BilanGraphique b);
 
   @Override
   public void step(BilanGraphique b) {
-    this.etape = this.etape.next();
+    this.etape = this.etape.next(b);
     this.etape.step(b);
   }
 }

@@ -7,9 +7,9 @@ import roles.UsineRole;
 import vue.BilanGraphique;
 
 /**
- * Classe Adulte, permettant de symboliser l'étape adulte de l'évolution.
- * Une fourmi adulte � une esp�rance de vie, une fourm adulte arriv�e
- *  � la fin de son esp�rance de vie passe � l'�tape cadavre.
+ * Classe Adulte, permettant de symboliser l'étape adulte de l'évolution. Une fourmi adulte � une
+ * esp�rance de vie, une fourm adulte arriv�e � la fin de son esp�rance de vie passe � l'�tape
+ * cadavre.
  *
  */
 public class Adulte extends Etape {
@@ -52,8 +52,9 @@ public class Adulte extends Etape {
    *         Cadavre
    */
   @Override
-  public Etape next() {
+  public Etape next(BilanGraphique b) {
     if (this.dureeVie == this.tempsVie) {
+      b.mort(fourmi.getIndex());
       return new Cadavre(this.fourmiliere, this.fourmi);
     }
     return this;

@@ -22,9 +22,10 @@ public class Cadavre extends Etape {
   }
 
   @Override
-  public Etape next() {
+  public Etape next(BilanGraphique b) {
     if (dureeVie == tempsVie) {
       fourmiliere.ajoutCadavre(fourmi);
+      b.disparition(fourmi.getIndex());
     }
     return this;
   }

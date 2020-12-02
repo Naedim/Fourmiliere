@@ -10,10 +10,11 @@ import java.util.List;
  
 public class FourmiliereGraphique implements ElementGraphique { 
  
-  protected List<GRect> listFourmi; 
+  protected List<FourmiGraphique> listFourmi; 
   protected TerritoireGraphique territoire; 
   protected GRect elementGraphique; 
- 
+  protected int nbSupressionFourmi = 0;
+  
   /** 
    * . 
    *  
@@ -28,7 +29,7 @@ public class FourmiliereGraphique implements ElementGraphique {
  
     territoire = new TerritoireGraphique(posFourmiliere, dimFourmiliere); 
  
-    this.listFourmi = new ArrayList<GRect>(); 
+    this.listFourmi = new ArrayList<FourmiGraphique>(); 
   } 
  
   public TerritoireGraphique getTerritoire() { 
@@ -36,7 +37,7 @@ public class FourmiliereGraphique implements ElementGraphique {
   } 
    
   public GRect getFourmi(int i) { 
-    return this.listFourmi.get(i); 
+    return this.listFourmi.get(i).getElementGraphique(); 
   }
 
   @Override
@@ -44,16 +45,17 @@ public class FourmiliereGraphique implements ElementGraphique {
     return this.elementGraphique;
   } 
   
-  public void ajouterFourmi() {
-    this.listFourmi.add(new GRect());
+  public int ajouterFourmi() {
+    this.listFourmi.add(new FourmiGraphique());
+    return this.listFourmi.size();
   }
   
   public void supprimerFourmi(int index) {
-    this.listFourmi.remove(index);
+    this.listFourmi.remove(index - this.nbSupressionFourmi++);
   }
   
   public void deplacerFourmi(int index, Point p) {
-    this.listFourmi.get(index).setPosition(p);
+    this.listFourmi.get(index).getElementGraphique().setPosition(p);
   }
  
 } 

@@ -1,5 +1,6 @@
 package simulation;
 
+import modele.Terrain;
 import vue.ControlleurGraphique;
 
 public class Simulateur {
@@ -14,5 +15,11 @@ public class Simulateur {
   public static void main(String[] args) throws InterruptedException {
 
     ControlleurGraphique cg = new ControlleurGraphique();
+    Terrain terrain = new Terrain();
+
+    while (true) {
+      terrain.step();
+      cg.updateIhm(terrain.getBilan());
+    }
   }
 }

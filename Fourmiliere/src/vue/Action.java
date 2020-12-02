@@ -13,4 +13,14 @@ public class Action {
     this.param = param;
   }
 
+  public EnumAction getAction() {
+    return action;
+  }
+
+  public Parametre getParam() {
+    return param;
+  }
+  
+  
+
 }

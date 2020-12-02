@@ -22,4 +22,18 @@ public class Parametre {
     this.index = index;
     this.color = c;
   }
+
+  public int getIndex() {
+    return index;
+  }
+
+  public Point getPoint() {
+    return point;
+  }
+
+  public Color getColor() {
+    return color;
+  }
+  
+  
 }

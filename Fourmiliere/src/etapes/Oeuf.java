@@ -33,9 +33,9 @@ public class Oeuf extends Etape {
   }
 
   @Override
-  public Etape next() {
+  public Etape next(BilanGraphique b) {
     if (this.dureeVie == this.tempsEvolution) {
-      // Ajout d'une larve
+
       return new Larve(this.fourmiliere, this.fourmi);
     }
     return this;

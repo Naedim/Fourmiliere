@@ -30,5 +30,10 @@ public class BilanGraphique {
         .add(new Action(EnumAction.CHANGERCOULEUR, new Parametre(indexFourmi, Color.BLACK)));
   }
 
+  public void disparition(int indexFourmi) {
+    this.listAction.add(new Action(EnumAction.SUPPRIMER, new Parametre(indexFourmi)));
+
+  }
+
 
 }

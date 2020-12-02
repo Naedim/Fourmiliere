@@ -9,6 +9,7 @@ import vue.BilanGraphique;
  */
 public class Fourmi {
   Etape etape;
+  int index;
 
   public Etape getEtape() {
     return etape;
@@ -19,13 +20,19 @@ public class Fourmi {
    */
   public Fourmi(Fourmiliere f) {
     this.etape = new Oeuf(f, this);
+    this.index = f.getListFourmi().size() - 1;
+  }
+
+  
+  public int getIndex() {
+    return index;
   }
 
   /**
    * Méthode permettant de lancer le processus d'évolution.
    */
   public void step(BilanGraphique b) {
-    this.etape = this.etape.next();
+    this.etape = this.etape.next(b);
     this.etape.step(b);
   }
 }

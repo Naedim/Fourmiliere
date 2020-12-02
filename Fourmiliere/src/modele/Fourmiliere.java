@@ -30,6 +30,10 @@ public class Fourmiliere implements Simulation {
     this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin) + tempsVieMin);
     this.dureeVie = 0;
   }
+  
+  public List<Fourmi> getListFourmi() {
+    return listFourmi;
+  }
 
   public int getTempsVieFourmiliere() {
     return tempsVie;

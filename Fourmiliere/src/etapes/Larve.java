@@ -33,7 +33,7 @@ public class Larve extends Etape {
   }
 
   @Override
-  public Etape next() {
+  public Etape next(BilanGraphique b) {
     if (this.dureeVie == this.tempsEvolution) {
       return new Nymphe(this.fourmiliere, this.fourmi);
     }
