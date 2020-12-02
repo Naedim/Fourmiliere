@@ -2,10 +2,9 @@ package etapes;
 
 import modele.Fourmi;
 import modele.Fourmiliere;
-import simulation.Bilan;
 
 /**
- * Classe cadavre, dernière étape de la vie d'une fourmi.
+ * Classe cadavre, derniï¿½re ï¿½tape de la vie d'une fourmi.
  */
 public class Cadavre extends Etape {
   protected int tempsVie = 2;
@@ -23,14 +22,13 @@ public class Cadavre extends Etape {
 
   @Override
   public Etape next() {
+    if (dureeVie == tempsVie) {
+      fourmiliere.ajoutCadavre(fourmi);
+    }
     return this;
   }
-  
-  public void finCadavre() {
-    //Pas pour le moment 
-  }
-  
-  @Override 
+
+  @Override
   public void step() {
     this.dureeVie++;
   }
