@@ -12,10 +12,11 @@ public class Simulateur {
    * @throws InterruptedException : Erreur liÃ© au Thread.sleep
    */
   public static void main(String[] args) throws InterruptedException {
-
     Terrain terrain = new Terrain();
-    System.out.println(
-        "Temps de vie de la fourmiliÃ¨re : " + terrain.getFourmiliere().getTempsVieFourmiliere());
-
+    
+    while (true) { 
+      terrain.step();   
+      Thread.sleep(10); 
+    } 
   }
 }

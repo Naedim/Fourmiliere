@@ -3,7 +3,6 @@ package graphique;
 
 import graphicLayer.GRect;
 import graphicLayer.GSpace;
-import modele.Terrain;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
@@ -23,14 +22,12 @@ public class SimulationTerrain {
   }
 
   /**
-   * Méthode permettant d'initialiser le terrain, place une fourmiliere à un endroit et l'entoure
+   * Mï¿½thode permettant d'initialiser le terrain, place une fourmiliere ï¿½ un endroit et l'entoure
    * d'une zone "territoire" de 3 * la taille de fourmiliere.
    * 
    */
   public void initialisationTerrain() {
-    Terrain objTerrain = new Terrain();
-
-    // modifier pour une position aléatoire
+    // modifier pour une position alï¿½atoire
     Point posFourmiliere = new Point(350, 350);
     Dimension dimFourmiliere = new Dimension(100, 100);
     GRect fourmiliere = new GRect();
@@ -57,9 +54,4 @@ public class SimulationTerrain {
     terrain.addElement(fourmiliere);
     terrain.open();
   }
-
-  public static void main(String[] args) {
-    new SimulationTerrain();
-  }
-
 }

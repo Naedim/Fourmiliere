@@ -2,7 +2,6 @@ package modele;
 
 import java.util.ArrayList;
 import java.util.List;
-import simulation.Bilan;
 import simulation.Simulation;
 
 /**
@@ -13,19 +12,19 @@ import simulation.Simulation;
 public class Fourmiliere implements Simulation {
 
   int reine = 1;
-
-  protected final int tempsVie;
-  protected int dureeVie;
-
   protected final int nbPonte = 100;
   protected final int tempsVieMin = 1460;
   protected final int tempsVieMax = 3650;
-
+  
+  protected final int tempsVie;
+  protected int dureeVie;
   protected List<Fourmi> listFourmi;
+  protected List<Fourmi> listCadavres;
 
 
   /** Constructeur de fourmiliere, initialise la liste de fourmis et le temps de vie. **/
   public Fourmiliere() {
+    this.listCadavres = new ArrayList<Fourmi>();
     this.listFourmi = new ArrayList<Fourmi>();
     this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin) + tempsVieMin);
     this.dureeVie = 0;
@@ -34,7 +33,11 @@ public class Fourmiliere implements Simulation {
   public int getTempsVieFourmiliere() {
     return tempsVie;
   }
-
+  
+  public void ajoutCadavre(Fourmi fourmi) {
+    this.listCadavres.add(fourmi);
+  }
+  
   public int getNbFourmi() {
     return listFourmi.size() + reine;
   }
@@ -52,6 +55,10 @@ public class Fourmiliere implements Simulation {
 
     for (Fourmi f : listFourmi) {
       f.step();
+    }
+    
+    for (Fourmi f : listCadavres) {
+      listFourmi.remove(f);
     }
   }
 
