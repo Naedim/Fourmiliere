@@ -9,8 +9,7 @@ import etapes.Oeuf;
  */
 public class Fourmi {
   Etape etape;
-  int index;
-
+  
   public Etape getEtape() {
     return etape;
   }
@@ -20,12 +19,6 @@ public class Fourmi {
    */
   public Fourmi(Fourmiliere f) {
     this.etape = new Oeuf(f, this);
-    this.index = f.getListFourmi().size() - 1;
-  }
-
-  
-  public int getIndex() {
-    return index;
   }
 
   /**

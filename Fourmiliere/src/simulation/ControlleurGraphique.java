@@ -56,7 +56,6 @@ public class ControlleurGraphique {
       }
     }
     this.terrain.getElementGraphique().repaint();
-    this.getFourmiliere().resetNbSuppression();
   }
 
   private void ajouterFourmi() {

@@ -54,7 +54,7 @@ public class Adulte extends Etape {
   @Override
   public Etape next(BilanGraphique b) {
     if (this.dureeVie == this.tempsVie) {
-      b.mort(fourmi.getIndex());
+      b.mort(fourmiliere.getIndiceActuel());
       return new Cadavre(this.fourmiliere, this.fourmi);
     }
     return this;

@@ -25,7 +25,7 @@ public class Cadavre extends Etape {
   public Etape next(BilanGraphique b) {
     if (dureeVie == tempsVie) {
       fourmiliere.ajoutCadavre(fourmi);
-      b.disparition(fourmi.getIndex());
+      b.disparition(fourmiliere.getIndiceActuel());
     }
     return this;
   }

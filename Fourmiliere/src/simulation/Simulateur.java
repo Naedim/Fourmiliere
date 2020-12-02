@@ -19,6 +19,7 @@ public class Simulateur {
     while (true) {
       terrain.step();
       cg.updateIhm(terrain.getBilan());
+      Thread.sleep(10);
     }
   }
 }

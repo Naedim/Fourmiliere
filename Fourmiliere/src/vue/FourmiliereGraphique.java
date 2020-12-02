@@ -13,7 +13,6 @@ public class FourmiliereGraphique implements ElementGraphique {
   protected List<FourmiGraphique> listFourmi;
   protected TerritoireGraphique territoire;
   protected GRect elementGraphique;
-  protected int nbSupressionFourmi = 0;
 
   /**
    * .
@@ -51,15 +50,10 @@ public class FourmiliereGraphique implements ElementGraphique {
   }
 
   public void supprimerFourmi(int index) {
-    this.listFourmi.remove(index - this.nbSupressionFourmi++);
+    this.listFourmi.remove(index);
   }
 
   public void deplacerFourmi(int index, Point p) {
     this.listFourmi.get(index).getElementGraphique().setPosition(p);
   }
-  
-  public void resetNbSuppression() {
-    this.nbSupressionFourmi = 0;
-  }
-
 }
