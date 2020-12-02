@@ -12,17 +12,7 @@ public class Simulateur {
    * @throws InterruptedException : Erreur liÃ© au Thread.sleep
    */
   public static void main(String[] args) throws InterruptedException {
-<<<<<<< HEAD
 
     ControlleurGraphique cg = new ControlleurGraphique();
-
-=======
-    Terrain terrain = new Terrain();
-    
-    while (true) { 
-      terrain.step();   
-      Thread.sleep(10); 
-    } 
->>>>>>> Graphique
   }
 }

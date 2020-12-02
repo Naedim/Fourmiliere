@@ -1,14 +1,10 @@
-package vue;
-
-import graphicLayer.GElement;
-import graphicLayer.GRect;
-
-public abstract class ElementGraphique {
-  public static final GRect elementGraphique = new GRect();
-
-  public static GElement getElementGraphique() {
-    return elementGraphique;
-  }
-
-
-}
+package vue; 
+ 
+import graphicLayer.GRect; 
+ 
+public interface ElementGraphique {  
+ 
+  public GRect getElementGraphique();
+ 
+ 
+} 

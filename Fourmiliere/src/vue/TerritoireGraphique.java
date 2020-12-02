@@ -5,7 +5,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
 
-public class TerritoireGraphique extends ElementGraphique {
+public class TerritoireGraphique implements ElementGraphique {
   protected GRect elementGraphique;
 
   /**
@@ -29,5 +29,9 @@ public class TerritoireGraphique extends ElementGraphique {
     elementGraphique.setDimension(
         new Dimension((int) dimFourmiliere.getHeight() * 5, (int) dimFourmiliere.getWidth() * 5));
 
+  }
+
+  public GRect getElementGraphique() {
+    return this.elementGraphique;
   }
 }

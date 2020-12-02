@@ -15,13 +15,13 @@ public class TerrainGraphique {
    * 
    */
   public TerrainGraphique(Point posFourmiliere, Dimension dimFourmiliere) {
+
     elementGraphique = new GSpace("Simulation d'un terrain", new Dimension(1000, 800));
     fourmiliere = new FourmiliereGraphique(posFourmiliere, dimFourmiliere);
 
     elementGraphique.setColor(Color.WHITE);
-    elementGraphique.addElement(ElementGraphique.getElementGraphique());
-    fourmiliere.getTerritoire();
-    elementGraphique.addElement(ElementGraphique.getElementGraphique());
+    elementGraphique.addElement(fourmiliere.getTerritoire().getElementGraphique());
+    elementGraphique.addElement(fourmiliere.getElementGraphique());
     elementGraphique.open();
   }
 

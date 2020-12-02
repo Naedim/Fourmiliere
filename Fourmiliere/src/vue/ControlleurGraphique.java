@@ -18,14 +18,14 @@ public class ControlleurGraphique {
     Point posFourmiliere = new Point(350, 350);
     Dimension dimFourmiliere = new Dimension(100, 100);
     terrain = new TerrainGraphique(posFourmiliere, dimFourmiliere);
-
-    // modifier avec valeurs de l'objet fourmiliere
-
-
   }
 
   public TerrainGraphique getTerrain() {
     return terrain;
+  }
+  
+  public void updateIhm(BilanGraphique b) {
+    
   }
 
 
