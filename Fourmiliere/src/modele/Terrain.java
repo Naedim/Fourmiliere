@@ -25,16 +25,4 @@ public class Terrain {
   public void step() {
     this.fourmiliere.step();
   }
-
-  /**
-   * Méthode qui permet de lancer le processus de bilan.
-   */
-  public void bilan() {
-    this.bilan = new Bilan();
-    this.fourmiliere.bilan(this.bilan);
-  }
-  
-  public Bilan getBilan() {
-    return this.bilan;
-  }
 }

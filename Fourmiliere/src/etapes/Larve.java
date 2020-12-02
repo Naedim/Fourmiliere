@@ -39,10 +39,4 @@ public class Larve extends Etape {
     }
     return this;
   }
-
-  @Override
-  public void bilan(Bilan b) {
-    b.incrementNbLarve();
-  }
-
 }

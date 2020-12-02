@@ -28,12 +28,4 @@ public class Fourmi {
     this.etape = this.etape.next();
     this.etape.step();
   }
-
-  /**
-   * Méthode permettant de lancer le processus de bilan.
-   * @param b : Objet Bilan
-   */
-  public void bilan(Bilan b) {
-    this.etape.bilan(b);
-  }
 }

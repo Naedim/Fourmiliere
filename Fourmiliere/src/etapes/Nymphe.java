@@ -39,9 +39,4 @@ public class Nymphe extends Etape {
     }
     return this;
   }
-
-  @Override
-  public void bilan(Bilan b) {
-    b.incrementNbNymphe();
-  }
 }

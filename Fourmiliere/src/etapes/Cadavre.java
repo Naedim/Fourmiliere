@@ -34,9 +34,4 @@ public class Cadavre extends Etape {
   public void step() {
     this.dureeVie++;
   }
-  
-  @Override
-  public void bilan(Bilan b) {
-    b.incrementNbCadavre();
-  }
 }

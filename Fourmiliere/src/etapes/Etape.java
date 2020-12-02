@@ -38,10 +38,4 @@ public abstract class Etape implements Simulation {
     this.etape = this.etape.next();
     this.etape.step();
   }
-
-  // oubli de suppresion ?
-  @Override
-  public void bilan(Bilan b) {
-
-  }
 }

@@ -66,13 +66,4 @@ public class Fourmiliere implements Simulation {
     }
   }
 
-  @Override
-  public void bilan(Bilan b) {
-    for (Fourmi f : listFourmi) {
-      f.bilan(b);
-    }
-    b.setNbFourmi(getNbFourmi());
-
-  }
-
 }

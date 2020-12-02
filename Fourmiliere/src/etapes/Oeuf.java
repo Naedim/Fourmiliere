@@ -40,9 +40,4 @@ public class Oeuf extends Etape {
     }
     return this;
   }
-
-  @Override
-  public void bilan(Bilan b) {
-    b.incrementNbOeuf();
-  }
 }
