@@ -22,7 +22,11 @@ public class Oeuf extends Etape {
   public Oeuf(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
   }
-
+  
+  public int getTempsEvolution() {
+    return tempsEvolution;
+  }
+  
   @Override
   public void step() {
     this.dureeVie++;

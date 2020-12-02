@@ -22,6 +22,10 @@ public class Larve extends Etape {
   public Larve(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
   }
+  
+  public int getTempsEvolution() {
+    return tempsEvolution;
+  }
 
   @Override
   public void step() {

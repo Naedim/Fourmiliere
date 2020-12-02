@@ -23,6 +23,10 @@ public class Nymphe extends Etape {
     super(f, fourmi);
   }
 
+  public int getTempsEvolution() {
+    return tempsEvolution;
+  }
+  
   @Override
   public void step() {
     this.dureeVie++;

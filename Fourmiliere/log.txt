@@ -183,9 +183,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 100
+<<<<<<< HEAD
+    Soldat = 22
+    Ouvrier = 63
+    Sexué = 15
+=======
     Soldat = 26
     Ouvrier = 60
     Sexué = 14
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [20] LOG : Population de fourmis = 2001
@@ -193,9 +199,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 200
+<<<<<<< HEAD
+    Soldat = 48
+    Ouvrier = 120
+    Sexué = 32
+=======
     Soldat = 50
     Ouvrier = 123
     Sexué = 27
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [21] LOG : Population de fourmis = 2101
@@ -203,9 +215,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 300
+<<<<<<< HEAD
+    Soldat = 65
+    Ouvrier = 178
+    Sexué = 57
+=======
     Soldat = 86
     Ouvrier = 178
     Sexué = 36
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [22] LOG : Population de fourmis = 2201
@@ -213,9 +231,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 400
+<<<<<<< HEAD
+    Soldat = 92
+    Ouvrier = 238
+    Sexué = 70
+=======
     Soldat = 120
     Ouvrier = 234
     Sexué = 46
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [23] LOG : Population de fourmis = 2301
@@ -223,9 +247,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 500
+<<<<<<< HEAD
+    Soldat = 118
+    Ouvrier = 300
+    Sexué = 82
+=======
     Soldat = 144
     Ouvrier = 297
     Sexué = 59
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [24] LOG : Population de fourmis = 2401
@@ -233,9 +263,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 600
+<<<<<<< HEAD
+    Soldat = 145
+    Ouvrier = 363
+    Sexué = 92
+=======
     Soldat = 169
     Ouvrier = 362
     Sexué = 69
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [25] LOG : Population de fourmis = 2501
@@ -243,9 +279,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 700
+<<<<<<< HEAD
+    Soldat = 174
+    Ouvrier = 421
+    Sexué = 105
+=======
     Soldat = 202
     Ouvrier = 414
     Sexué = 84
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [26] LOG : Population de fourmis = 2601
@@ -253,9 +295,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 800
+<<<<<<< HEAD
+    Soldat = 196
+    Ouvrier = 483
+    Sexué = 121
+=======
     Soldat = 223
     Ouvrier = 478
     Sexué = 99
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [27] LOG : Population de fourmis = 2701
@@ -263,9 +311,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 900
+<<<<<<< HEAD
+    Soldat = 227
+    Ouvrier = 539
+    Sexué = 134
+=======
     Soldat = 242
     Ouvrier = 537
     Sexué = 121
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [28] LOG : Population de fourmis = 2801
@@ -273,9 +327,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1000
+<<<<<<< HEAD
+    Soldat = 257
+    Ouvrier = 592
+    Sexué = 151
+=======
     Soldat = 266
     Ouvrier = 601
     Sexué = 133
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [29] LOG : Population de fourmis = 2901
@@ -283,9 +343,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1100
+<<<<<<< HEAD
+    Soldat = 277
+    Ouvrier = 655
+    Sexué = 168
+=======
     Soldat = 296
     Ouvrier = 656
     Sexué = 148
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [30] LOG : Population de fourmis = 3001
@@ -293,9 +359,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1200
+<<<<<<< HEAD
+    Soldat = 293
+    Ouvrier = 720
+    Sexué = 187
+=======
     Soldat = 320
     Ouvrier = 716
     Sexué = 164
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [31] LOG : Population de fourmis = 3101
@@ -303,9 +375,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1300
+<<<<<<< HEAD
+    Soldat = 318
+    Ouvrier = 783
+    Sexué = 199
+=======
     Soldat = 346
     Ouvrier = 782
     Sexué = 172
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [32] LOG : Population de fourmis = 3201
@@ -313,9 +391,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1400
+<<<<<<< HEAD
+    Soldat = 342
+    Ouvrier = 848
+    Sexué = 210
+=======
     Soldat = 366
     Ouvrier = 843
     Sexué = 191
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [33] LOG : Population de fourmis = 3301
@@ -323,9 +407,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1500
+<<<<<<< HEAD
+    Soldat = 378
+    Ouvrier = 905
+    Sexué = 217
+=======
     Soldat = 387
     Ouvrier = 913
     Sexué = 200
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [34] LOG : Population de fourmis = 3401
@@ -333,9 +423,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1600
+<<<<<<< HEAD
+    Soldat = 399
+    Ouvrier = 973
+    Sexué = 228
+=======
     Soldat = 416
     Ouvrier = 974
     Sexué = 210
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [35] LOG : Population de fourmis = 3501
@@ -343,9 +439,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1700
+<<<<<<< HEAD
+    Soldat = 424
+    Ouvrier = 1032
+    Sexué = 244
+=======
     Soldat = 437
     Ouvrier = 1038
     Sexué = 225
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [36] LOG : Population de fourmis = 3601
@@ -353,9 +455,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1800
+<<<<<<< HEAD
+    Soldat = 447
+    Ouvrier = 1097
+    Sexué = 256
+=======
     Soldat = 455
     Ouvrier = 1107
     Sexué = 238
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [37] LOG : Population de fourmis = 3701
@@ -363,9 +471,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 1900
+<<<<<<< HEAD
+    Soldat = 471
+    Ouvrier = 1156
+    Sexué = 273
+=======
     Soldat = 485
     Ouvrier = 1168
     Sexué = 247
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [38] LOG : Population de fourmis = 3801
@@ -373,9 +487,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 2000
+<<<<<<< HEAD
+    Soldat = 495
+    Ouvrier = 1225
+    Sexué = 280
+=======
     Soldat = 509
     Ouvrier = 1233
     Sexué = 258
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [39] LOG : Population de fourmis = 3901
@@ -383,9 +503,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 2100
+<<<<<<< HEAD
+    Soldat = 518
+    Ouvrier = 1282
+    Sexué = 300
+=======
     Soldat = 541
     Ouvrier = 1290
     Sexué = 269
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [40] LOG : Population de fourmis = 4001
@@ -393,9 +519,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 2200
+<<<<<<< HEAD
+    Soldat = 539
+    Ouvrier = 1342
+    Sexué = 319
+=======
     Soldat = 560
     Ouvrier = 1355
     Sexué = 285
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [41] LOG : Population de fourmis = 4101
@@ -403,9 +535,15 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 2300
+<<<<<<< HEAD
+    Soldat = 563
+    Ouvrier = 1406
+    Sexué = 331
+=======
     Soldat = 584
     Ouvrier = 1421
     Sexué = 295
+>>>>>>> ChangemenProf
 Nombre de cadavres : 0
 
 [42] LOG : Population de fourmis = 4201
@@ -413,6 +551,13 @@ Nombre d'oeufs = 300
 Nombre de larves = 1000
 Nombre de nymphes = 500
 Nombres de fourmis Adultes : 2400
+<<<<<<< HEAD
+    Soldat = 589
+    Ouvrier = 1467
+    Sexué = 344
+Nombre de cadavres : 0
+
+=======
     Soldat = 619
     Ouvrier = 1471
     Sexué = 310
@@ -28038,3 +28183,4 @@ Nombres de fourmis Adultes : 0
     Sexué = 0
 Nombre de cadavres : 187800
 
+>>>>>>> ChangemenProf
