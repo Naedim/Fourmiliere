@@ -2,29 +2,30 @@ package bilan;
 
 import java.awt.Color;
 import java.awt.Point;
+import modele.Fourmi;
 
 public class Parametre {
 
-  protected int index;
+  protected Fourmi fourmi;
   protected Point point;
   protected Color color;
   
-  public Parametre(int index) {
-    this.index = index;
+  public Parametre(Fourmi fourmi) {
+    this.fourmi = fourmi;
   }
   
-  public Parametre(int index, Point p) {
-    this.index = index;
+  public Parametre(Fourmi fourmi, Point p) {
+    this.fourmi = fourmi;
     this.point = p;
   }
   
-  public Parametre(int index, Color c) {
-    this.index = index;
+  public Parametre(Fourmi fourmi, Color c) {
+    this.fourmi = fourmi;
     this.color = c;
   }
 
-  public int getIndex() {
-    return index;
+  public Fourmi getFourmi() {
+    return fourmi;
   }
 
   public Point getPoint() {

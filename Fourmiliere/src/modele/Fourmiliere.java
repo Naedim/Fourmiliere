@@ -1,8 +1,8 @@
 package modele;
 
+import bilan.BilanGraphique;
 import java.util.ArrayList;
 import java.util.List;
-import bilan.BilanGraphique;
 import simulation.Simulation;
 
 /**
@@ -21,8 +21,6 @@ public class Fourmiliere implements Simulation {
   protected int dureeVie;
   protected List<Fourmi> listFourmi;
   protected List<Fourmi> listCadavres;
-  protected int indiceActuel;
-
 
   /** Constructeur de fourmiliere, initialise la liste de fourmis et le temps de vie. **/
   public Fourmiliere() {
@@ -48,11 +46,6 @@ public class Fourmiliere implements Simulation {
     return listFourmi.size() + reine;
   }
 
-  
-  public int getIndiceActuel() {
-    return indiceActuel;
-  }
-
   /**
    * Méthode permettant le fonctionnement de la fourmiliere, la ponte des oeufs puis
    * l'incrémentation de sa durée de vie.
@@ -64,9 +57,7 @@ public class Fourmiliere implements Simulation {
       this.reine = 0;
     }
 
-    this.indiceActuel = -1;
     for (Fourmi f : listFourmi) {
-      this.indiceActuel++;
       f.step(b);
     }
 

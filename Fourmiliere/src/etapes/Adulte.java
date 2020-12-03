@@ -33,7 +33,10 @@ public class Adulte extends Etape {
 
   @Override
   public void step(BilanGraphique b) {
-    b.deplacement(this.fourmiliere.getIndiceActuel());
+    for (int i = 0; i < 5; i++) {
+      b.deplacement(this.fourmi);
+    }
+
     this.dureeVie++;
   }
 
@@ -55,7 +58,7 @@ public class Adulte extends Etape {
   @Override
   public Etape next(BilanGraphique b) {
     if (this.dureeVie == this.tempsVie) {
-      b.mort(fourmiliere.getIndiceActuel());
+      b.mort(this.fourmi);
       return new Cadavre(this.fourmiliere, this.fourmi);
     }
     return this;

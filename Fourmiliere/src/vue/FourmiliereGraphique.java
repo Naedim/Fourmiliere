@@ -4,13 +4,12 @@ import graphicLayer.GRect;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.HashMap;
+import modele.Fourmi;
 
 public class FourmiliereGraphique implements ElementGraphique {
 
-  protected List<FourmiGraphique> listFourmi;
+  protected HashMap<Fourmi, FourmiGraphique> listFourmi;
   protected TerritoireGraphique territoire;
   protected GRect elementGraphique;
 
@@ -28,15 +27,15 @@ public class FourmiliereGraphique implements ElementGraphique {
 
     territoire = new TerritoireGraphique(posFourmiliere, dimFourmiliere);
 
-    this.listFourmi = new ArrayList<FourmiGraphique>();
+    this.listFourmi = new HashMap<Fourmi, FourmiGraphique>();
   }
 
   public TerritoireGraphique getTerritoire() {
     return territoire;
   }
 
-  public GRect getFourmi(int i) {
-    return this.listFourmi.get(i).getElementGraphique();
+  public FourmiGraphique getFourmiGraphique(Fourmi fourmi) {
+    return this.listFourmi.get(fourmi);
   }
 
   @Override
@@ -44,16 +43,23 @@ public class FourmiliereGraphique implements ElementGraphique {
     return this.elementGraphique;
   }
 
-  public int ajouterFourmi() {
-    this.listFourmi.add(new FourmiGraphique());
-    return this.listFourmi.size() - 1;
+  /**.
+   * 
+   * @param fourmi .
+   * @return
+   */
+  public GRect ajouterFourmi(Fourmi fourmi) {
+    FourmiGraphique fourmiGraphique = new FourmiGraphique();
+    this.listFourmi.put(fourmi, fourmiGraphique);
+    return fourmiGraphique.getElementGraphique();
   }
 
-  public void supprimerFourmi(int index) {
-    this.listFourmi.remove(index);
+  public FourmiGraphique supprimerFourmiGraphique(Fourmi fourmi) {
+    FourmiGraphique fourmiGraphique = this.listFourmi.remove(fourmi);
+    return fourmiGraphique;
   }
 
-  public void deplacerFourmi(int index, Point p) {
-    this.listFourmi.get(index).getElementGraphique().setPosition(p);
+  public void deplacerFourmi(Fourmi fourmi, Point p) {
+    this.listFourmi.get(fourmi).getElementGraphique().setPosition(p);
   }
 }
