@@ -37,19 +37,29 @@ public class ControlleurGraphique {
    * @param bilan .
    */
   public void updateIhm(BilanGraphique bilan) {
+    int indexFourmi;
+    GRect fourmi;
     for (Action action : bilan.getListAction()) {
       switch (action.getAction()) {
         case AJOUTER:
           this.ajouterFourmi();
           break;
         case SUPPRIMER:
-          this.supprimerFourmi(action.getParam());
+          indexFourmi = action.getParam().getIndex();
+          this.supprimerFourmi(indexFourmi);
           break;
         case DEPLACER:
-          this.deplacerFourmi(action.getParam());
+          indexFourmi = action.getParam().getIndex();
+          fourmi = this.getFourmiliere().getFourmi(indexFourmi);
+          this.deplacerFourmi(fourmi);
           break;
         case CHANGERCOULEUR:
-          this.changerCouleurFourmi(action.getParam());
+          Parametre p = action.getParam();
+          indexFourmi = p.getIndex();
+          Color couleur = p.getColor();
+
+          fourmi = this.getFourmiliere().getFourmi(indexFourmi);
+          this.changerCouleurFourmi(fourmi, couleur);
           break;
         default:
 
@@ -64,33 +74,59 @@ public class ControlleurGraphique {
     this.ajouterElementGraphique(fourmiliere.getFourmi(indexFourmi));
   }
 
-  private void supprimerFourmi(Parametre param) {
-    int indexFourmi = param.getIndex();
+  private void supprimerFourmi(int indexFourmi) {
     this.getFourmiliere().supprimerFourmi(indexFourmi);
     this.supprimerElementGraphique(indexFourmi);
-
   }
 
 
-  private void changerCouleurFourmi(Parametre param) {
-    int indexFourmi = param.getIndex();
-    Color c = param.getColor();
-
-    GRect fourmi = this.getTerrain().getFourmiliere().getFourmi(indexFourmi);
-
-
-    fourmi.setColor(c);
-
+  private void changerCouleurFourmi(GRect fourmi, Color couleur) {
+    fourmi.setColor(couleur);
   }
 
-  private void deplacerFourmi(Parametre param) {
-    int indexFourmi = param.getIndex();
-    Point p = param.getPoint();
-    GRect fourmi = this.getFourmiliere().getFourmi(indexFourmi);
-    fourmi.setPosition(p);
+  /**
+   * Modifie la position d'un GRect d'une fourmi e manière aléatoire.
+   * 
+   * @param fourmi Le rectangle graphique à déplacer.
+   */
+  private void deplacerFourmi(GRect fourmi) {
+    Point posFourmi = fourmi.getPosition();
+    int deplacement = (int) Math.floor(Math.random() * 4);
+
+    int fourmiX = posFourmi.x;
+    int fourmiY = posFourmi.y;
+
+    switch (EnumDeplacementFourmi.values()[deplacement]) {
+      case HAUT:
+        fourmiY--;
+        break;
+      case BAS:
+        fourmiY++;
+        break;
+      case GAUCHE:
+        fourmiX--;
+        break;
+      case DROITE:
+        fourmiX++;
+        break;
+      default:
+        System.out.println("ON NE PASSE PAS DEDANS");
+    }
+
+    GRect territoire = this.getFourmiliere().getTerritoire().getElementGraphique();
+    Point positionTerrain = territoire.getPosition();
+    Dimension dimensionTerrain = territoire.getDimension().getSize();
+
+    int terrX = positionTerrain.x;
+    int terrY = positionTerrain.y;
+
+    if (terrX < fourmiX && fourmiX < (terrX + dimensionTerrain.width)) {
+      if (terrY < fourmiY && fourmiY < (terrY + dimensionTerrain.height)) {
+        fourmi.setPosition(new Point(fourmiX, fourmiY));
+      }
+    }
 
   }
-
 
   private FourmiliereGraphique getFourmiliere() {
     return this.getTerrain().getFourmiliere();

@@ -33,6 +33,7 @@ public class Adulte extends Etape {
 
   @Override
   public void step(BilanGraphique b) {
+    b.deplacement(this.fourmiliere.getIndiceActuel());
     this.dureeVie++;
   }
 

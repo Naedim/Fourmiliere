@@ -1,7 +1,6 @@
 package bilan;
 
 import java.awt.Color;
-import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +20,8 @@ public class BilanGraphique {
     this.listAction.add(new Action(EnumAction.AJOUTER));
   }
 
-  public void deplacement(int indexFourmi, Point p) {
-    this.listAction.add(new Action(EnumAction.DEPLACER, new Parametre(indexFourmi, p)));
+  public void deplacement(int indexFourmi) {
+    this.listAction.add(new Action(EnumAction.DEPLACER, new Parametre(indexFourmi)));
   }
 
   public void mort(int indexFourmi) {
