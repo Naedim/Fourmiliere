@@ -45,12 +45,10 @@ public class GRect extends GBounded {
     withBorder = true;
   }
 
-  /**
-   * .
-   * 
-   */
   public void draw(Graphics2D g) {
     Rectangle bounds = this.getBounds();
+    Color previousColor = g.getColor();
+    Stroke previousStroke = g.getStroke();
 
     g.setColor(color);
     g.fillRect(bounds.x, bounds.y, bounds.width, bounds.height);
@@ -59,8 +57,6 @@ public class GRect extends GBounded {
       g.setStroke(stroke);
       g.drawRect(bounds.x, bounds.y, bounds.width, bounds.height);
     }
-    Color previousColor = g.getColor();
-    Stroke previousStroke = g.getStroke();
 
     g.setColor(previousColor);
     g.setStroke(previousStroke);

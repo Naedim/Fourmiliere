@@ -117,19 +117,28 @@ public class GBounded extends GElement implements GContainer {
     this.setDimension(new Dimension(this.getWidth(), height));
   }
 
-  public void addSubElement(GElement m) {
+  public void addElement(GElement m) {
     if (m.getContainer() != null)
       return;
     m.setContainer(this);
     subElements.add(m);
   }
 
-  public void removeSubElement(GElement m) {
+  public void removeElement(GElement m) {
     if (m.getContainer() == null)
       return;
     subElements.remove(m);
     m.setContainer(null);
   }
+
+  public void clear() {
+    for (Iterator<GElement> iter = subElements.iterator(); iter.hasNext();) {
+      GElement e = iter.next();
+      e.setContainer(null);
+    }
+    subElements.clear();
+  }
+
 
   public int getWidth() {
     return (int) dim.getWidth();
