@@ -13,7 +13,7 @@ import simulation.Simulation;
 public class Fourmiliere implements Simulation {
 
   int reine = 1;
-  protected final int nbPonte = 1000;
+  protected final int nbPonte = 1;
   protected final int tempsVieMin = 1460;
   protected final int tempsVieMax = 3650;
 
@@ -39,10 +39,10 @@ public class Fourmiliere implements Simulation {
   }
 
   /**
-   * Ajout une fourmi a  la fin d'etape cadavre dans une liste intermiediaire, permet de ne pas
+   * Ajout une fourmi aï¿½ la fin d'etape cadavre dans une liste intermiediaire, permet de ne pas
    * supprimer directement sur la liste des fourmis.
    * 
-   * @param fourmi : Fourmi a  supprimer
+   * @param fourmi : Fourmi aï¿½ supprimer
    */
   public void ajoutCadavre(Fourmi fourmi) {
     this.listCadavres.add(fourmi);
@@ -57,7 +57,7 @@ public class Fourmiliere implements Simulation {
    * sa duree de vie puis ensuite elle defile la liste de cadavres pour supprimer les fourmis
    * correspondantes.
    * 
-   * @param b : BilanGraphique a  remplir
+   * @param b : BilanGraphique aï¿½ remplir
    */
   public void step(BilanGraphique b) {
     this.pondre();

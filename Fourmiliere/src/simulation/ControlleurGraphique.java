@@ -29,8 +29,7 @@ public class ControlleurGraphique {
   }
 
   /**
-   * Cree un terrainGraphique avec une representation graphique de fourmiliere et d'un
-   * territoire.
+   * Cree un terrainGraphique avec une representation graphique de fourmiliere et d'un territoire.
    */
   public ControlleurGraphique() {
     Point posFourmiliere = new Point(350, 350);
@@ -44,6 +43,7 @@ public class ControlleurGraphique {
 
   /**
    * Methode permettant d'effectuer les actions d'un bilan sur l'element graphique.
+   * 
    * @param bilan : Le bilan d'action de mon terrain
    */
   public void updateIhm(BilanGraphique bilan) {
@@ -100,7 +100,8 @@ public class ControlleurGraphique {
 
   /**
    * Methode permettant d'ajouter un objet fourmi dans la fourmiliere graphique.
-   * @param fourmi : L'objet fourmi a  ajouter dans l'affichage
+   * 
+   * @param fourmi : L'objet fourmi aï¿½ ajouter dans l'affichage
    */
   private void ajouterFourmi(Fourmi fourmi) {
     FourmiliereGraphique fourmiliereG = this.getFourmiliereGraphique();
@@ -111,7 +112,7 @@ public class ControlleurGraphique {
   /**
    * Methode permettant d'ajouter un objet proie dans le terrain graphique.
    * 
-   * @param proie : L'objet proie a  ajouter dans l'affichage
+   * @param proie : L'objet proie aï¿½ ajouter dans l'affichage
    */
   private void ajouterProie(Proie proie) {
     TerrainGraphique terrainG = this.terrainGraphique;
@@ -122,7 +123,7 @@ public class ControlleurGraphique {
   /**
    * Methode supprimant la fourmi et sa reference graphique.
    * 
-   * @param fourmi : L'objet fourmi qui reference l'objet graphique a  supprimer
+   * @param fourmi : L'objet fourmi qui reference l'objet graphique aï¿½ supprimer
    */
   private void supprimerFourmi(Fourmi fourmi) {
     FourmiGraphique fourmiGraphique =
@@ -136,6 +137,7 @@ public class ControlleurGraphique {
 
   /**
    * Methode permettant de simuler une decision aleatoire de deplacement.
+   * 
    * @param rect : GRect avant deplacement
    * @return Un nouveau point de position
    */
@@ -145,7 +147,7 @@ public class ControlleurGraphique {
 
     int posX = pos.x;
     int posY = pos.y;
-    int valeurDeplacement = (int) Math.floor(Math.random() *5);
+    int valeurDeplacement = (int) Math.floor(Math.random() * 5);
 
     switch (EnumDeplacementFourmi.values()[deplacement]) {
       case HAUT:
@@ -168,7 +170,8 @@ public class ControlleurGraphique {
 
   /**
    * Modifie la position d'une fourmi tout en respectant les limites imposer par le territoire.
-   * @param fourmiGraphique : La fourmi graphique a  deplacer
+   * 
+   * @param fourmiGraphique : La fourmi graphique aï¿½ deplacer
    */
   private void deplacerFourmi(GRect fourmiRect) {
     GRect territoire = this.getFourmiliereGraphique().getTerritoire().getElementGraphique();
@@ -188,7 +191,8 @@ public class ControlleurGraphique {
 
   /**
    * Modifie la position d'une proie tout ne respectant les limites imposer par le terrain.
-   * @param proieRect : La proie graphique a  deplacer
+   * 
+   * @param proieRect : La proie graphique aï¿½ deplacer
    */
   private void deplacerProie(GRect proieRect) {
     GSpace terrain = this.getTerrain().getElementGraphique();
@@ -210,6 +214,7 @@ public class ControlleurGraphique {
 
   /**
    * Ajoute l'element dans l'affichage du terrainGraphique.
+   * 
    * @param element : L'element graphique
    */
   private void ajouterElementGraphique(GRect element) {
@@ -218,6 +223,7 @@ public class ControlleurGraphique {
 
   /**
    * Supprime l'element de l'affichage du terrainGraphique.
+   * 
    * @param insecteRect : L'element graphique
    */
   private void supprimerElementGraphique(GRect insecteRect) {
