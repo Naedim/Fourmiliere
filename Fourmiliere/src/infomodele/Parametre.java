@@ -4,9 +4,10 @@ import java.awt.Color;
 import java.awt.Point;
 import modele.Fourmi;
 import modele.Proie;
+import vue.Case;
 
 /**
- * Contient les parametres a utiliser pour une action donnée.
+ * Contient les parametres a utiliser pour une action donnï¿½e.
  * @author Damien
  *
  */

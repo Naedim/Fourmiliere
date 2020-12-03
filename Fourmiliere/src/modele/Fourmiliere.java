@@ -13,7 +13,7 @@ import simulation.Simulation;
 public class Fourmiliere implements Simulation {
 
   int reine = 1;
-  protected final int nbPonte = 1;
+  protected final int nbPonte = 10;
   protected final int tempsVieMin = 1460;
   protected final int tempsVieMax = 3650;
 

@@ -12,8 +12,7 @@ import java.awt.Point;
  */
 public class FourmiGraphique implements ElementGraphique {
 
-
-  protected final int tailleFourmi = 4; // taille defaut d'une FourmiGraphique.
+  protected final int tailleFourmi = 5; // taille defaut d'une FourmiGraphique.
   protected final Color couleurFourmi = Color.RED; // couleur defaut d'une FourmiGraphique.
   protected GRect elementGraphique; // GRect affich� sur la vue.
   protected GRect fourmiliereG; // FourmiliereGraphique dont la FourmiGraphique est issue.

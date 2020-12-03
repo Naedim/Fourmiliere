@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import modele.Fourmi;
 import modele.Proie;
+import vue.Case;
 
 /**
  * Recupere l'ensemble des modifications du modele sous formes d'une liste d'action a appliquer sur

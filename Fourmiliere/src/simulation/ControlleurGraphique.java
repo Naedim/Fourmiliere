@@ -8,8 +8,11 @@ import infomodele.Parametre;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
+import java.util.HashMap;
+import java.util.List;
 import modele.Fourmi;
 import modele.Proie;
+import vue.Case;
 import vue.FourmiGraphique;
 import vue.FourmiliereGraphique;
 import vue.TerrainGraphique;
@@ -21,6 +24,11 @@ import vue.TerrainGraphique;
 public class ControlleurGraphique {
 
   protected TerrainGraphique terrainGraphique;
+  protected Case caseActuelle;
+
+  public Case getCaseActuelle() {
+    return caseActuelle;
+  }
 
   public static class GestionnaireDeplacement {
     private GestionnaireDeplacement(Fourmi fourmi) {}
@@ -147,7 +155,7 @@ public class ControlleurGraphique {
 
     int posX = pos.x;
     int posY = pos.y;
-    int valeurDeplacement = (int) Math.floor(Math.random() * 5);
+    int valeurDeplacement = 5;
 
     switch (EnumDeplacementFourmi.values()[deplacement]) {
       case HAUT:
@@ -177,16 +185,48 @@ public class ControlleurGraphique {
     GRect territoire = this.getFourmiliereGraphique().getTerritoire().getElementGraphique();
     Point posTerritoire = territoire.getPosition();
     Dimension dimTerritoire = territoire.getDimension().getSize();
-    Point pos = this.deplacementAleatoire(fourmiRect);
 
-    int terrX = posTerritoire.x;
-    int terrY = posTerritoire.y;
+    // Définir une case actuelle avant le déplacement
+    this.caseActuelle = new Case(fourmiRect.getX(), fourmiRect.getY(), this.getTerrain());
+    this.caseActuelle.addPheromones(new Point(fourmiRect.getX(), fourmiRect.getY()));
 
-    if (terrX < pos.x && pos.x + fourmiRect.getWidth() < (terrX + dimTerritoire.width)) {
-      if (terrY < pos.y && pos.y + fourmiRect.getHeight() < (terrY + dimTerritoire.height)) {
-        fourmiRect.setPosition(new Point(pos.x, pos.y));
+    // Récupérer la liste des casesAdjacentes pour pouvoir vérifier qui a des phéromones
+    HashMap<String, Case> caseAdjacentes = terrainGraphique.getCasesAdjacentes(caseActuelle);
+
+    // Si aucune case choisit alors déplacement aléatoire 25%
+    if (caseAdjacentes.size() > 0) {
+      // int probabiliteGauche = 25;
+      // int probabiliteDroite = 25;
+      // int probabiliteHaut = 25;
+      // int probabiliteBas = 25;
+      //
+      // // gérer les cas de probabilités
+      // if (caseAdjacentes.get("Gauche").nbDePheromones() > 0) {
+      // probabiliteGauche = 40;
+      // }
+      Point pos;
+      Case caseGauche = caseAdjacentes.get("Gauche");
+      Case caseDroite = caseAdjacentes.get("Gauche");
+      Case caseHaut = caseAdjacentes.get("Gauche");
+      Case caseBas = caseAdjacentes.get("Gauche");
+      
+      if (caseGauche.nbDePheromones() > 0) {
+        pos = new Point(caseGauche.getElementGraphique().getX(),
+            caseGauche.getElementGraphique().getY());
+      } else {
+        pos = this.deplacementAleatoire(fourmiRect);
+      }
+      
+      int terrX = posTerritoire.x;
+      int terrY = posTerritoire.y;
+
+      if (terrX < pos.x && pos.x + fourmiRect.getWidth() < (terrX + dimTerritoire.width)) {
+        if (terrY < pos.y && pos.y + fourmiRect.getHeight() < (terrY + dimTerritoire.height)) {
+          fourmiRect.setPosition(new Point(pos.x, pos.y));
+        }
       }
     }
+
   }
 
   /**
