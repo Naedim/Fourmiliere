@@ -1,6 +1,6 @@
 package modele;
 
-import bilan.BilanGraphique;
+import bilangraphique.BilanGraphique;
 import simulation.Simulation;
 
 public class Proie implements Simulation {

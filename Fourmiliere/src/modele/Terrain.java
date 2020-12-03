@@ -1,8 +1,8 @@
 package modele;
 
-import bilan.BilanGraphique;
 import java.util.ArrayList;
 import java.util.List;
+import bilangraphique.BilanGraphique;
 
 public class Terrain {
   Fourmiliere fourmiliere;

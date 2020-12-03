@@ -1,6 +1,6 @@
 package modele;
 
-import bilan.BilanGraphique;
+import bilangraphique.BilanGraphique;
 import etapes.Etape;
 import etapes.Oeuf;
 import simulation.Simulation;

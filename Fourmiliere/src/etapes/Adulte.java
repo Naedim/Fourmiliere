@@ -1,6 +1,6 @@
 package etapes;
 
-import bilan.BilanGraphique;
+import bilangraphique.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
 import roles.Role;

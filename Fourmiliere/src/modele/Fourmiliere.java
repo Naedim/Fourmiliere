@@ -1,8 +1,8 @@
 package modele;
 
-import bilan.BilanGraphique;
 import java.util.ArrayList;
 import java.util.List;
+import bilangraphique.BilanGraphique;
 import simulation.Simulation;
 
 /**

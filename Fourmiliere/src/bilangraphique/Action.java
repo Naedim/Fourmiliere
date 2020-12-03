@@ -1,4 +1,4 @@
-package bilan;
+package bilangraphique;
 
 public class Action {
   protected EnumAction action;

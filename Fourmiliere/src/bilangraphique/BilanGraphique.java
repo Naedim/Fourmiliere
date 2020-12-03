@@ -1,4 +1,4 @@
-package bilan;
+package bilangraphique;
 
 import java.awt.Color;
 import java.util.ArrayList;
