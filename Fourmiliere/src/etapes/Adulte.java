@@ -34,7 +34,7 @@ public class Adulte extends Etape {
   @Override
   public void step(BilanGraphique b) {
     for (int i = 0; i < 5; i++) {
-      b.deplacement(this.fourmi);
+      b.deplacementFourmi(this.fourmi);
     }
 
     this.dureeVie++;

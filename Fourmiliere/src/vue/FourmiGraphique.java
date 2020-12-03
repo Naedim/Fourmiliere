@@ -17,8 +17,8 @@ public class FourmiGraphique implements ElementGraphique {
    * 
    */
   public FourmiGraphique() {
-//    int x = (int) (Math.random() * (600 - 300) + 300);
-//    int y = (int) (Math.random() * (600 - 300) + 300);
+    // int x = (int) (Math.random() * (600 - 300) + 300);
+    // int y = (int) (Math.random() * (600 - 300) + 300);
     GRect rect = new GRect();
     rect.setWidth(this.tailleFourmi);
     rect.setHeight(this.tailleFourmi);

@@ -4,10 +4,12 @@ import bilan.Action;
 import bilan.BilanGraphique;
 import bilan.Parametre;
 import graphicLayer.GRect;
+import graphicLayer.GSpace;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
 import modele.Fourmi;
+import modele.Proie;
 import vue.FourmiGraphique;
 import vue.FourmiliereGraphique;
 import vue.TerrainGraphique;
@@ -15,22 +17,33 @@ import vue.TerrainGraphique;
 
 public class ControlleurGraphique {
 
-  protected TerrainGraphique terrain;
+  protected TerrainGraphique terrainGraphique;
 
+
+  public static class GestionnaireDeplacement {
+
+    private GestionnaireDeplacement(Fourmi fourmi) {
+
+    }
+
+    private GestionnaireDeplacement(Proie proie) {
+
+    }
+  }
 
 
   /**
-   * Crée un terrain avec une fourmilière et un territoire.
+   * Crée un terrainGraphique avec une fourmilière et un territoire.
    */
   public ControlleurGraphique() {
 
     Point posFourmiliere = new Point(350, 350);
     Dimension dimFourmiliere = new Dimension(100, 100);
-    terrain = new TerrainGraphique(posFourmiliere, dimFourmiliere);
+    terrainGraphique = new TerrainGraphique(posFourmiliere, dimFourmiliere);
   }
 
   public TerrainGraphique getTerrain() {
-    return terrain;
+    return terrainGraphique;
   }
 
   /**
@@ -40,42 +53,64 @@ public class ControlleurGraphique {
    */
   public void updateIhm(BilanGraphique bilan) {
     Fourmi fourmi;
-    GRect fourmiRect;
+    Proie proie;
+    GRect insecteRect;
+    Parametre param;
     for (Action action : bilan.getListAction()) {
       switch (action.getAction()) {
         case AJOUTER:
-          this.ajouterFourmi(action.getParam().getFourmi());
+          param = action.getParam();
+          if (param.getFourmi() != null) {
+            this.ajouterFourmi(action.getParam().getFourmi());
+          } else {
+            this.ajouterProie(action.getParam().getProie());
+          }
+
           break;
         case SUPPRIMER:
-          fourmi = action.getParam().getFourmi();
+          fourmi = (Fourmi) action.getParam().getFourmi();
           this.supprimerFourmi(fourmi);
           break;
         case DEPLACER:
-          fourmi = action.getParam().getFourmi();
-          fourmiRect =
-              this.getFourmiliereGraphique().getFourmiGraphique(fourmi).getElementGraphique();
-          this.deplacerFourmi(fourmiRect);
+          param = action.getParam();
+          fourmi = param.getFourmi();
+          if (fourmi != null) {
+            insecteRect =
+                this.getFourmiliereGraphique().getFourmiGraphique(fourmi).getElementGraphique();
+            this.deplacerFourmi(insecteRect);
+            break;
+          } else {
+            proie = param.getProie();
+            insecteRect = this.terrainGraphique.getProieGraphique(proie).getElementGraphique();
+            this.deplacerProie(insecteRect);
+          }
           break;
+
         case CHANGERCOULEUR:
           Parametre p = action.getParam();
           fourmi = p.getFourmi();
           Color couleur = p.getColor();
 
-          fourmiRect =
+          insecteRect =
               this.getFourmiliereGraphique().getFourmiGraphique(fourmi).getElementGraphique();
-          this.changerCouleurFourmi(fourmiRect, couleur);
+          this.changerCouleurFourmi(insecteRect, couleur);
           break;
         default:
 
       }
     }
-    this.terrain.getElementGraphique().repaint();
+    this.terrainGraphique.getElementGraphique().repaint();
   }
 
   private void ajouterFourmi(Fourmi fourmi) {
     FourmiliereGraphique fourmiliere = this.getFourmiliereGraphique();
-    GRect fourmiRect = fourmiliere.ajouterFourmi(fourmi);
-    this.ajouterElementGraphique(fourmiRect);
+    GRect insecteRect = fourmiliere.ajouterFourmi(fourmi);
+    this.ajouterElementGraphique(insecteRect);
+  }
+
+  private void ajouterProie(Proie proie) {
+    GRect proieGraphique = this.terrainGraphique.ajouterProie(proie);
+    this.ajouterElementGraphique(proieGraphique);
   }
 
   private void supprimerFourmi(Fourmi fourmi) {
@@ -89,45 +124,66 @@ public class ControlleurGraphique {
     fourmiGraphique.setColor(couleur);
   }
 
+  private Point deplacementAleatoire(GRect rect) {
+
+    Point pos = rect.getPosition();
+    int deplacement = (int) Math.floor(Math.random() * 4);
+
+    int posX = pos.x;
+    int posY = pos.y;
+
+    switch (EnumDeplacementFourmi.values()[deplacement]) {
+      case HAUT:
+        posY--;
+        break;
+      case BAS:
+        posY++;
+        break;
+      case GAUCHE:
+        posX--;
+        break;
+      case DROITE:
+        posX++;
+        break;
+      default:
+        System.out.println("ON NE PASSE PAS DEDANS");
+    }
+    return new Point(posX, posY);
+  }
+
   /**
    * Modifie la position d'un GRect d'une fourmiGraphique e manière aléatoire.
    * 
    * @param fourmiGraphique Le rectangle graphique à déplacer.
    */
-  private void deplacerFourmi(GRect fourmiGraphique) {
-    Point posFourmi = fourmiGraphique.getPosition();
-    int deplacement = (int) Math.floor(Math.random() * 4);
-
-    int fourmiX = posFourmi.x;
-    int fourmiY = posFourmi.y;
-
-    switch (EnumDeplacementFourmi.values()[deplacement]) {
-      case HAUT:
-        fourmiY--;
-        break;
-      case BAS:
-        fourmiY++;
-        break;
-      case GAUCHE:
-        fourmiX--;
-        break;
-      case DROITE:
-        fourmiX++;
-        break;
-      default:
-        System.out.println("ON NE PASSE PAS DEDANS");
-    }
+  private void deplacerFourmi(GRect fourmiRect) {
 
     GRect territoire = this.getFourmiliereGraphique().getTerritoire().getElementGraphique();
     Point positionTerrain = territoire.getPosition();
     Dimension dimensionTerrain = territoire.getDimension().getSize();
 
+    Point pos = this.deplacementAleatoire(fourmiRect);
     int terrX = positionTerrain.x;
     int terrY = positionTerrain.y;
 
-    if (terrX < fourmiX && fourmiX < (terrX + dimensionTerrain.width)) {
-      if (terrY < fourmiY && fourmiY < (terrY + dimensionTerrain.height)) {
-        fourmiGraphique.setPosition(new Point(fourmiX, fourmiY));
+    if (terrX < pos.x && pos.x + fourmiRect.getWidth() < (terrX + dimensionTerrain.width)) {
+      if (terrY < pos.y && pos.y + fourmiRect.getHeight() < (terrY + dimensionTerrain.height)) {
+        fourmiRect.setPosition(new Point(pos.x, pos.y));
+      }
+    }
+
+  }
+
+  private void deplacerProie(GRect proieRect) {
+    GSpace terrain = this.getTerrain().getElementGraphique();
+    int maxX = terrain.getWidth();
+    int maxY = terrain.getHeight();
+
+    Point pos = this.deplacementAleatoire(proieRect);
+
+    if (0 < pos.x && pos.x + proieRect.getWidth() < maxX) {
+      if (0 < pos.y && pos.y + proieRect.getHeight() < maxY) {
+        proieRect.setPosition(new Point(pos.x, pos.y));
       }
     }
 
@@ -138,11 +194,12 @@ public class ControlleurGraphique {
   }
 
   private void ajouterElementGraphique(GRect element) {
-    this.terrain.getElementGraphique().addElement(element);
+    this.terrainGraphique.getElementGraphique().addElement(element);
   }
 
-  private void supprimerElementGraphique(GRect fourmiRect) {
-    this.terrain.getElementGraphique().removeElement(fourmiRect);
+  private void supprimerElementGraphique(GRect insecteRect) {
+    this.terrainGraphique.getElementGraphique().removeElement(insecteRect);
   }
+
 
 }

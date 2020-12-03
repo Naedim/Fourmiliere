@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import modele.Fourmi;
+import modele.Proie;
 
 public class BilanGraphique {
 
@@ -17,12 +18,20 @@ public class BilanGraphique {
     return listAction;
   }
 
-  public void maturite(Fourmi fourmi) {
+  public void maturiteFourmi(Fourmi fourmi) {
     this.listAction.add(new Action(EnumAction.AJOUTER, new Parametre(fourmi)));
   }
+  
+  public void apparitionProie(Proie proie) {
+    this.listAction.add(new Action(EnumAction.AJOUTER, new Parametre(proie)));
+  }
 
-  public void deplacement(Fourmi fourmi) {
+  public void deplacementFourmi(Fourmi fourmi) {
     this.listAction.add(new Action(EnumAction.DEPLACER, new Parametre(fourmi)));
+  }
+  
+  public void deplacementProie(Proie proie) {
+    this.listAction.add(new Action(EnumAction.DEPLACER, new Parametre(proie)));
   }
 
   public void mort(Fourmi fourmi) {

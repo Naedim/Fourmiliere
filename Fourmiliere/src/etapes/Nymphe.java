@@ -35,7 +35,7 @@ public class Nymphe extends Etape {
   @Override
   public Etape next(BilanGraphique b) {
     if (this.dureeVie == this.tempsEvolution) {
-      b.maturite(this.fourmi);
+      b.maturiteFourmi(this.fourmi);
       return new Adulte(this.fourmiliere, this.fourmi);
     }
     return this;
