@@ -131,19 +131,20 @@ public class ControlleurGraphique {
 
     int posX = pos.x;
     int posY = pos.y;
+    int valeurDeplacement = (int) Math.floor(Math.random() * 5);
 
     switch (EnumDeplacementFourmi.values()[deplacement]) {
       case HAUT:
-        posY--;
+        posY -= valeurDeplacement;
         break;
       case BAS:
-        posY++;
+        posY += valeurDeplacement;
         break;
       case GAUCHE:
-        posX--;
+        posX -= valeurDeplacement;
         break;
       case DROITE:
-        posX++;
+        posX += valeurDeplacement;
         break;
       default:
         System.out.println("ON NE PASSE PAS DEDANS");
