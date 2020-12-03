@@ -1,16 +1,16 @@
 package bilangraphique;
 
 public class Action {
-  protected EnumAction action;
+  protected EnumAction intituleAction;
   protected Parametre param;
 
-  public Action(EnumAction la, Parametre param) {
-    this.action = la;
+  public Action(EnumAction intituleAction, Parametre param) {
+    this.intituleAction = intituleAction;
     this.param = param;
   }
 
   public EnumAction getAction() {
-    return action;
+    return intituleAction;
   }
 
   public Parametre getParam() {

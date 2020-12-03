@@ -8,7 +8,12 @@ import java.awt.Point;
 import java.util.HashMap;
 import modele.Proie;
 
-
+/**
+ * Un TerrainGraphique contient une fourmiliere et un ensemble d'instances de Proie.
+ * 
+ * @author Damien
+ *
+ */
 public class TerrainGraphique {
 
   protected GSpace elementGraphique;
@@ -16,7 +21,7 @@ public class TerrainGraphique {
   protected HashMap<Proie, ProieGraphique> listProie;
 
   /**
-   * .
+   * Un TerrainGraphique a par default une hauteur.
    * 
    */
   public TerrainGraphique(Point posFourmiliere, Dimension dimFourmiliere) {
@@ -30,7 +35,6 @@ public class TerrainGraphique {
     elementGraphique.addElement(fourmiliere.getElementGraphique());
     elementGraphique.open();
   }
-
 
   public FourmiliereGraphique getFourmiliere() {
     return fourmiliere;
@@ -53,7 +57,7 @@ public class TerrainGraphique {
    * @return
    */
   public GRect ajouterProie(Proie proie) {
-    ProieGraphique proieGraphique = new ProieGraphique();
+    ProieGraphique proieGraphique = new ProieGraphique(this);
     this.listProie.put(proie, proieGraphique);
     return proieGraphique.getElementGraphique();
   }
