@@ -21,8 +21,8 @@ public class Adulte extends Etape {
   protected Role role;
 
   /**
-   * Constructeur de la classe adulte. Initialise un temps de vie al�atoired'une fourmi adulte entre
-   * deux bornes d'esp�rance de vie.
+   * Constructeur de la classe adulte. Initialise un temps de vie aléatoire d'une fourmi adulte
+   * entre deux bornes d'esp�rance de vie.
    */
   public Adulte(Fourmiliere f, Fourmi fourmi) {
     super(f, fourmi);
@@ -46,10 +46,11 @@ public class Adulte extends Etape {
   }
 
   /**
-   * Si la dur�e de vie d'une fourmi adulte est �gale � son temps de vie, la fourmi meurt et devient
+   * Si la durée de vie d'une fourmi adulte est égale à son temps de vie, la fourmi meurt et devient
    * un cadavre.
    * 
-   * @return le m�me object Adulte si dur�e de vie dureeVie == tempsVie, sinon renvoie un nouveau
+   * @param b : BilanGraphique à remplir
+   * @return Le même object Adulte si durée de vie dureeVie == tempsVie, sinon renvoie un nouveau
    *         Cadavre
    */
   @Override

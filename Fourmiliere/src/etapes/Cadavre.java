@@ -5,7 +5,8 @@ import modele.Fourmi;
 import modele.Fourmiliere;
 
 /**
- * Classe cadavre, derni�re �tape de la vie d'une fourmi.
+ * Classe cadavre, dernière étape de la vie d'une fourmi avant d'être définitivement 
+ * retirer de la fourmilière.
  */
 public class Cadavre extends Etape {
   protected int tempsVie = 10;

@@ -22,9 +22,6 @@ public class Fourmi implements Simulation {
     this.etape = new Oeuf(f, this);
   }
 
-  /**
-   * Méthode permettant de lancer le processus d'évolution.
-   */
   @Override
   public void step(BilanGraphique b) {
     this.etape = this.etape.next(b);

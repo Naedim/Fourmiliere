@@ -3,6 +3,9 @@ package modele;
 import bilangraphique.BilanGraphique;
 import simulation.Simulation;
 
+/**
+ * Classe Proie, représente le modèle proie et ses actions.
+ */
 public class Proie implements Simulation {
 
   @Override

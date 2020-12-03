@@ -17,8 +17,8 @@ public abstract class Etape implements Simulation {
   /**
    * Constructeur d'étape, récupère la fourmilière pour que chaque étape soit lié à sa fourmilière.
    * 
-   * @param f : d
-   * @param fourmi : f
+   * @param f : Fourmilière
+   * @param fourmi : Fourmi
    */
   public Etape(Fourmiliere f, Fourmi fourmi) {
     this.fourmiliere = f;
@@ -29,6 +29,7 @@ public abstract class Etape implements Simulation {
    * Méthode permettant de passer à la prochaine étape d'évolution si la durée d'évolution est
    * bonne, sinon renvoie l'étape actuelle.
    * 
+   * @param b : BilanGraphique à remplir
    * @return Etape suivante de l'évolution
    */
   public abstract Etape next(BilanGraphique b);

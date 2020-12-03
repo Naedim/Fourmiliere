@@ -1,8 +1,8 @@
 package modele;
 
+import bilangraphique.BilanGraphique;
 import java.util.ArrayList;
 import java.util.List;
-import bilangraphique.BilanGraphique;
 import simulation.Simulation;
 
 /**
@@ -38,6 +38,12 @@ public class Fourmiliere implements Simulation {
     return tempsVie;
   }
 
+  /**
+   * Ajout une fourmi à la fin d'étape cadavre dans une liste intermiédiaire, permet de ne pas
+   * supprimer directement sur la liste des fourmis.
+   * 
+   * @param fourmi : Fourmi à supprimer
+   */
   public void ajoutCadavre(Fourmi fourmi) {
     this.listCadavres.add(fourmi);
   }
@@ -47,8 +53,11 @@ public class Fourmiliere implements Simulation {
   }
 
   /**
-   * Méthode permettant le fonctionnement de la fourmiliere, la ponte des oeufs puis
-   * l'incrémentation de sa durée de vie.
+   * Méthode permettant le fonctionnement de la fourmiliere, la ponte des oeufs, l'incrémentation de
+   * sa durée de vie puis ensuite elle défile la liste de cadavres pour supprimer les fourmis
+   * correspondantes.
+   * 
+   * @param b : BilanGraphique à remplir
    */
   public void step(BilanGraphique b) {
     this.pondre();
