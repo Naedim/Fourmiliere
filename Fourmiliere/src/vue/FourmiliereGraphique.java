@@ -7,6 +7,14 @@ import java.awt.Point;
 import java.util.HashMap;
 import modele.Fourmi;
 
+/**
+ * FourmiliereGraphique, homologue de la classe Fourmiliere du package modele. Contient l'ensemble
+ * de ses FourmiGraphique dans un HashMap permettant d'associer une Fourmi du modele avec son
+ * homologue graphique FourmiGraphique. Possède une TerritoireGraphique.
+ * 
+ * @author Damien
+ *
+ */
 public class FourmiliereGraphique implements ElementGraphique {
 
   protected HashMap<Fourmi, FourmiGraphique> listFourmi;
@@ -14,7 +22,9 @@ public class FourmiliereGraphique implements ElementGraphique {
   protected GRect elementGraphique;
 
   /**
-   * .
+   * Une fourmiliereGraphique est construite avec une position et des dimensions. Sa couleur est de
+   * base en noire. Le constructeur de FourmiliereGraphique appelle le constructeur de
+   * TerrainGraphique.
    * 
    */
   public FourmiliereGraphique(Point posFourmiliere, Dimension dimFourmiliere) {
@@ -43,9 +53,11 @@ public class FourmiliereGraphique implements ElementGraphique {
     return this.elementGraphique;
   }
 
-  /**.
+  /**
+   * Cree une FourmiGraphique et ajoute une association (Fourmi ,FourmiGraphique) au HashMap en se
+   * basant sur une clef de type Fourmi.
    * 
-   * @param fourmi .
+   * @param fourmi du modele.
    * @return
    */
   public GRect ajouterFourmiGraphique(Fourmi fourmi) {
@@ -54,12 +66,24 @@ public class FourmiliereGraphique implements ElementGraphique {
     return fourmiGraphique.getElementGraphique();
   }
 
+  /**
+   * Supprime une Association du Hashmap en en se basant sur une clef de type Fourmi.
+   * 
+   * @param fourmi la clef de l'association à supprimer.
+   * @return la valeur de l'association supprimée.
+   */
   public FourmiGraphique supprimerFourmiGraphique(Fourmi fourmi) {
     FourmiGraphique fourmiGraphique = this.listFourmi.remove(fourmi);
     return fourmiGraphique;
   }
 
+  /**
+   * Déplace dans la vue l'elementGraphique d'une FourmiGraphique du HashMap.
+   * 
+   * @param fourmi clef de l'association de la la fourmiGraphique à déplacer.
+   * @param p Le nouveau point de la fourmi.
+   */
   public void deplacerFourmi(Fourmi fourmi, Point p) {
-    this.listFourmi.get(fourmi).getElementGraphique().setPosition(p);
+    this.listFourmi.get(fourmi).getElementGraphique().translate(p);
   }
 }

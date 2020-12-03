@@ -39,7 +39,7 @@ public class Terrain {
    */
   public void step() {
 
-    int apparitionProie = (int) Math.floor(Math.random() * 50);
+    int apparitionProie = (int) Math.floor(Math.random() * 500);
     if (apparitionProie <= 1) {
       Proie p = new Proie();
       this.listProies.add(p);

@@ -1,25 +1,37 @@
 package vue;
 
 import graphicLayer.GRect;
+import graphicLayer.GSpace;
 import java.awt.Color;
 import java.awt.Point;
 
+/**
+ * Homologue graphique de la classe Proie du modele Pouvant se déplacer librement dans le terrain.
+ * Une proie appartient au TerrainGraphique. Elle connait son TerrainGraphique. 
+ * Celle-ci a une taille et une couleur par défault.
+ * * @author Damien
+ *
+ */
 public class ProieGraphique implements ElementGraphique {
   protected final int tailleProie = 10;
   protected final Color couleurProie = Color.GREEN;
   protected GRect elementGraphique;
+  protected TerrainGraphique terrainGraphique;
+
 
   /**
-   * .
+   * Une proie apparait aléatoirement sur son Terrain.
    * 
    */
-  public ProieGraphique() {
+  public ProieGraphique(TerrainGraphique terrainGraphique) {
+    this.terrainGraphique = terrainGraphique;
+
     GRect rect = new GRect();
     rect.setWidth(this.tailleProie);
     rect.setHeight(this.tailleProie);
-
-    int posX = (int) Math.floor(Math.random() * 1000);
-    int posY = (int) Math.floor(Math.random() * 8000);
+    GSpace space = this.terrainGraphique.getElementGraphique();
+    int posX = (int) Math.floor(Math.random() * space.getWidth());
+    int posY = (int) Math.floor(Math.random() * space.getHeight());
 
     rect.setPosition(new Point(posX, posY));
     rect.setColor(this.couleurProie);
