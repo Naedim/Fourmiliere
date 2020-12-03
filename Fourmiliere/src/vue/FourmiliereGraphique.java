@@ -10,7 +10,7 @@ import modele.Fourmi;
 /**
  * FourmiliereGraphique, homologue de la classe Fourmiliere du package modele. Contient l'ensemble
  * de ses FourmiGraphique dans un HashMap permettant d'associer une Fourmi du modele avec son
- * homologue graphique FourmiGraphique. Possède une TerritoireGraphique.
+ * homologue graphique FourmiGraphique. Possï¿½de une TerritoireGraphique.
  * 
  * @author Damien
  *
@@ -54,12 +54,16 @@ public class FourmiliereGraphique implements ElementGraphique {
     return this.elementGraphique;
   }
 
+  public HashMap<Fourmi, FourmiGraphique> getListFourmi() {
+    return listFourmi;
+  }
+  
   /**
    * Cree une FourmiGraphique et ajoute une association (Fourmi ,FourmiGraphique) au HashMap en se
    * basant sur une clef de type Fourmi.
    * 
    * @param fourmi du modele.
-   * @return l'élement graphique de la fourmi
+   * @return l'ï¿½lement graphique de la fourmi
    */
   public GRect ajouterFourmiGraphique(Fourmi fourmi) {
     FourmiGraphique fourmiGraphique = new FourmiGraphique(this.getElementGraphique());
@@ -71,7 +75,7 @@ public class FourmiliereGraphique implements ElementGraphique {
    * Supprime une Association du Hashmap en en se basant sur une clef de type Fourmi.
    * 
    * @param fourmi la clef de l'association a supprimer.
-   * @return la valeur de l'association supprimée.
+   * @return la valeur de l'association supprimï¿½e.
    */
   public FourmiGraphique supprimerFourmiGraphique(Fourmi fourmi) {
     FourmiGraphique fourmiGraphique = this.listFourmi.remove(fourmi);
@@ -79,9 +83,9 @@ public class FourmiliereGraphique implements ElementGraphique {
   }
 
   /**
-   * Déplace dans la vue l'elementGraphique d'une FourmiGraphique du HashMap.
+   * Dï¿½place dans la vue l'elementGraphique d'une FourmiGraphique du HashMap.
    * 
-   * @param fourmi clef de l'association de la la fourmiGraphique a déplacer.
+   * @param fourmi clef de l'association de la la fourmiGraphique a dï¿½placer.
    * @param p Le nouveau point de la fourmi.
    */
   public void deplacerFourmi(Fourmi fourmi, Point p) {
