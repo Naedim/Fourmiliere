@@ -9,7 +9,7 @@ import java.util.HashMap;
 import modele.Proie;
 
 /**
- * Un TerrainGraphique contient une fourmiliere et un ensemble d'instances de Proie.
+ * Un TerrainGraphique contient une fourmiliere et un ensemble d'instances de Proie dans un HashMap.
  * 
  * @author Damien
  *
@@ -21,7 +21,8 @@ public class TerrainGraphique {
   protected HashMap<Proie, ProieGraphique> listProie;
 
   /**
-   * Un TerrainGraphique a par default une hauteur.
+   * Un TerrainGraphique a par default une hauteur et une largeur de 1000 et 800. Le controleur
+   * lance la vue après sa création.
    * 
    */
   public TerrainGraphique(Point posFourmiliere, Dimension dimFourmiliere) {
@@ -51,10 +52,10 @@ public class TerrainGraphique {
 
 
   /**
-   * .
+   * Ajoute une proie à l'ensemble de ProieGraphique.
    * 
-   * @param proie .
-   * @return
+   * @param proie la cle de l'association Proie ProieGrapgique
+   * @return L'élément graphique de la ProieGraphique cree.
    */
   public GRect ajouterProie(Proie proie) {
     ProieGraphique proieGraphique = new ProieGraphique(this);
@@ -62,7 +63,13 @@ public class TerrainGraphique {
     return proieGraphique.getElementGraphique();
   }
 
-  public void deplacerFourmi(Proie proie, Point p) {
+  /**
+   * Deplace une proie de l'ensemble de ProieGraphique.
+   * 
+   * @param proie la clef de l'association de la ProieGraphique à modifier.
+   * @param p le nouveau point où la ProieGraphique doit être située.
+   */
+  public void deplacerProie(Proie proie, Point p) {
     this.listProie.get(proie).getElementGraphique().setPosition(p);
   }
 
