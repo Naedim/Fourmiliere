@@ -5,11 +5,11 @@ import modele.Terrain;
 public class Simulateur {
 
   /**
-   * Classe simulation, permet de simuler le fonctionnement d'une fourmilière jusqu'à ce qu'elle
+   * Classe simulation, permet de simuler le fonctionnement d'une fourmiliere jusqu'a� ce qu'elle
    * disparaisse.
    * 
    * @param args : arg
-   * @throws InterruptedException : Erreur liée au Thread.sleep
+   * @throws InterruptedException : Erreur liee au Thread.sleep
    */
   public static void main(String[] args) throws InterruptedException {
 
@@ -19,7 +19,7 @@ public class Simulateur {
     while (true) {
       terrain.step();
       cg.updateIhm(terrain.getBilan());
-      Thread.sleep(1);
+      Thread.sleep(100);
     }
   }
 }

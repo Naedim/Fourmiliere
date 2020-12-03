@@ -1,12 +1,12 @@
 package etapes;
 
-import bilangraphique.BilanGraphique;
+import infomodele.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
 import simulation.Simulation;
 
 /**
- * Classe abstraite représentant les étapes de l'évolution d'une fourmi.
+ * Classe abstraite representant les etapes de l'evolution d'une fourmi.
  */
 public abstract class Etape implements Simulation {
 
@@ -15,22 +15,22 @@ public abstract class Etape implements Simulation {
   protected Fourmi fourmi;
 
   /**
-   * Constructeur d'étape, récupère la fourmilière pour que chaque étape soit lié à sa fourmilière.
+   * Constructeur d'etape, recupere la fourmiliere pour que chaque etape soit lie a� sa fourmiliere.
    * 
-   * @param f : Fourmilière
+   * @param fourmiliere : Fourmiliere
    * @param fourmi : Fourmi
    */
-  public Etape(Fourmiliere f, Fourmi fourmi) {
-    this.fourmiliere = f;
+  public Etape(Fourmiliere fourmiliere, Fourmi fourmi) {
+    this.fourmiliere = fourmiliere;
     this.fourmi = fourmi;
   }
 
   /**
-   * Méthode permettant de passer à la prochaine étape d'évolution si la durée d'évolution est
-   * bonne, sinon renvoie l'étape actuelle.
+   * Methode permettant de passer a� la prochaine etape d'evolution si la duree d'evolution est
+   * bonne, sinon renvoie l'etape actuelle.
    * 
-   * @param b : BilanGraphique à remplir
-   * @return Etape suivante de l'évolution
+   * @param b : BilanGraphique a� remplir
+   * @return Etape suivante de l'evolution
    */
   public abstract Etape next(BilanGraphique b);
 

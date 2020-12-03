@@ -1,19 +1,19 @@
 package modele;
 
-import bilangraphique.BilanGraphique;
+import infomodele.BilanGraphique;
 import java.util.ArrayList;
 import java.util.List;
 import simulation.Simulation;
 
 /**
- * Classe Fourmiliere, simule le fonctionnement d'une fourmiliere. Une reine est de base intégrée
- * dans la fourmilière, lorsqu'elle meurt (selon une espérance de vie aléatoire) celle ci arrete
+ * Classe Fourmiliere, simule le fonctionnement d'une fourmiliere. Une reine est de base integree
+ * dans la fourmiliere, lorsqu'elle meurt (selon une esperance de vie aleatoire) celle ci arrete
  * depondre des oeufs et laisse la fourmiliere mourir.
  */
 public class Fourmiliere implements Simulation {
 
   int reine = 1;
-  protected final int nbPonte = 1;
+  protected final int nbPonte = 1000;
   protected final int tempsVieMin = 1460;
   protected final int tempsVieMax = 3650;
 
@@ -39,10 +39,10 @@ public class Fourmiliere implements Simulation {
   }
 
   /**
-   * Ajout une fourmi à la fin d'étape cadavre dans une liste intermiédiaire, permet de ne pas
+   * Ajout une fourmi a� la fin d'etape cadavre dans une liste intermiediaire, permet de ne pas
    * supprimer directement sur la liste des fourmis.
    * 
-   * @param fourmi : Fourmi à supprimer
+   * @param fourmi : Fourmi a� supprimer
    */
   public void ajoutCadavre(Fourmi fourmi) {
     this.listCadavres.add(fourmi);
@@ -53,11 +53,11 @@ public class Fourmiliere implements Simulation {
   }
 
   /**
-   * Méthode permettant le fonctionnement de la fourmiliere, la ponte des oeufs, l'incrémentation de
-   * sa durée de vie puis ensuite elle défile la liste de cadavres pour supprimer les fourmis
+   * Methode permettant le fonctionnement de la fourmiliere, la ponte des oeufs, l'incrementation de
+   * sa duree de vie puis ensuite elle defile la liste de cadavres pour supprimer les fourmis
    * correspondantes.
    * 
-   * @param b : BilanGraphique à remplir
+   * @param b : BilanGraphique a� remplir
    */
   public void step(BilanGraphique b) {
     this.pondre();
@@ -77,7 +77,7 @@ public class Fourmiliere implements Simulation {
   }
 
   /**
-   * Méthode permettant de créer un nombre précis d'oeufs dans la fourmiliere.
+   * Methode permettant de creer un nombre precis d'oeufs dans la fourmiliere.
    */
   private void pondre() {
     if (this.dureeVie < this.tempsVie) {

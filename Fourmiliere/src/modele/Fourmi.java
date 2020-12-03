@@ -1,12 +1,12 @@
 package modele;
 
-import bilangraphique.BilanGraphique;
 import etapes.Etape;
 import etapes.Oeuf;
+import infomodele.BilanGraphique;
 import simulation.Simulation;
 
 /**
- * Classe de Fourmi, permet de représenter une fourmi en fonction de son étape d'évolution.
+ * Classe de Fourmi, permet de representer une fourmi en fonction de son etape d'evolution.
  */
 public class Fourmi implements Simulation {
   Etape etape;
@@ -16,10 +16,10 @@ public class Fourmi implements Simulation {
   }
 
   /**
-   * Constructeur de fourmi, initialise une fourmi à la première étape de sa vie. (Oeuf)
+   * Constructeur de fourmi, initialise une fourmi a� la premiere etape de sa vie. (Oeuf)
    */
-  public Fourmi(Fourmiliere f) {
-    this.etape = new Oeuf(f, this);
+  public Fourmi(Fourmiliere fourmiliere) {
+    this.etape = new Oeuf(fourmiliere, this);
   }
 
   @Override

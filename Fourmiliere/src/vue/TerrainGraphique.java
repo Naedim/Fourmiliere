@@ -23,7 +23,8 @@ public class TerrainGraphique {
   /**
    * Un TerrainGraphique a par default une hauteur et une largeur de 1000 et 800. Le controleur
    * lance la vue après sa création.
-   * 
+   * @param posFourmiliere : position de la fourmiliere du terrain
+   * @param dimFourmiliere : dimensions de la fourmiliere du terrain
    */
   public TerrainGraphique(Point posFourmiliere, Dimension dimFourmiliere) {
 
@@ -52,7 +53,7 @@ public class TerrainGraphique {
 
 
   /**
-   * Ajoute une proie à l'ensemble de ProieGraphique.
+   * Ajoute une proie a l'ensemble de ProieGraphique.
    * 
    * @param proie la cle de l'association Proie ProieGrapgique
    * @return L'élément graphique de la ProieGraphique cree.
@@ -66,7 +67,7 @@ public class TerrainGraphique {
   /**
    * Deplace une proie de l'ensemble de ProieGraphique.
    * 
-   * @param proie la clef de l'association de la ProieGraphique à modifier.
+   * @param proie la clef de l'association de la ProieGraphique a modifier.
    * @param p le nouveau point où la ProieGraphique doit être située.
    */
   public void deplacerProie(Proie proie, Point p) {

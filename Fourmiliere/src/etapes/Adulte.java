@@ -1,14 +1,14 @@
 package etapes;
 
-import bilangraphique.BilanGraphique;
+import infomodele.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
 import roles.Role;
 import roles.UsineRole;
 
 /**
- * Classe Adulte, permettant de symboliser l'étape adulte de l'évolution. Une fourmi adulte � une
- * esp�rance de vie, une fourm adulte arriv�e � la fin de son esp�rance de vie passe � l'�tape
+ * Classe Adulte, permettant de symboliser l'etape adulte de l'evolution. Une fourmi adulte a une
+ * esperance de vie, une fourm adulte arrivee a la fin de son esperance de vie passe a l'etape
  * cadavre.
  *
  */
@@ -21,14 +21,16 @@ public class Adulte extends Etape {
   protected Role role;
 
   /**
-   * Constructeur de la classe adulte. Initialise un temps de vie aléatoire d'une fourmi adulte
-   * entre deux bornes d'esp�rance de vie.
+   * Constructeur de la classe adulte. Initialise un temps de vie aleatoire d'une fourmi adulte
+   * entre deux bornes d'esperance de vie.
+   *  @param fourmiliere : fourmiliere de la fourmi
+   *  @param fourmi : fourmi du role adulte
    */
-  public Adulte(Fourmiliere f, Fourmi fourmi) {
-    super(f, fourmi);
+  public Adulte(Fourmiliere fourmiliere, Fourmi fourmi) {
+    super(fourmiliere, fourmi);
     this.tempsVie = (int) (Math.random() * (tempsVieMax - tempsVieMin) + tempsVieMin);
     this.dureeVie = 0;
-    this.role = new UsineRole().creerRole(f);
+    this.role = new UsineRole().creerRole(fourmiliere);
   }
 
   @Override
@@ -46,11 +48,11 @@ public class Adulte extends Etape {
   }
 
   /**
-   * Si la durée de vie d'une fourmi adulte est égale à son temps de vie, la fourmi meurt et devient
-   * un cadavre.
+   * Si la duree de vie d'une fourmi adulte est egale a� son temps de vie, la fourmi meurt et
+   * devient un cadavre.
    * 
-   * @param b : BilanGraphique à remplir
-   * @return Le même object Adulte si durée de vie dureeVie == tempsVie, sinon renvoie un nouveau
+   * @param b : BilanGraphique a� remplir
+   * @return Le ma�me object Adulte si duree de vie dureeVie == tempsVie, sinon renvoie un nouveau
    *         Cadavre
    */
   @Override

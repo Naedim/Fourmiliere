@@ -1,7 +1,7 @@
 package simulation;
 
 /**
- * Enumération représentant les différentes actions prise en compte par le contrôleurGraphique.
+ * Enumeration representant les differentes actions prise en compte par le controleurGraphique.
  */
 public enum EnumDeplacementFourmi {
   HAUT, BAS, GAUCHE, DROITE

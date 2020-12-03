@@ -1,6 +1,6 @@
 package modele;
 
-import bilangraphique.BilanGraphique;
+import infomodele.BilanGraphique;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +10,7 @@ public class Terrain {
   protected List<Proie> listProies;
 
   /**
-   * Constructeur de terrain, créer un terrain contenant une fourmilière, une liste de proie ainsi
+   * Constructeur de terrain, creer un terrain contenant une fourmiliere, une liste de proie ainsi
    * qu'un BilanGraphique.
    */
   public Terrain() {
@@ -20,7 +20,7 @@ public class Terrain {
   }
 
   /**
-   * Récupère le BilanGraphique dans un objet, puis le reinitialise.
+   * Recupere le BilanGraphique dans un objet, puis le reinitialise.
    * 
    * @return Un BilanGraphique avec une liste d'action
    */
@@ -35,8 +35,8 @@ public class Terrain {
   }
 
   /**
-   * Méthode qui avance de 1 step le fonctionnement d'un terrain, fait apparaître des proies selon
-   * une certaine probabilité et incrémente le fonctionnement d'une fourmilière. <br>
+   * Methode qui avance de 1 step le fonctionnement d'un terrain, fait apparaitre des proies selon
+   * une certaine probabilite et incremente le fonctionnement d'une fourmiliere. <br>
    * Chaque step permet de remplir le BilanGraphique de terrain.
    */
   public void step() {

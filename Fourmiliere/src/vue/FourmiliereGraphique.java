@@ -25,7 +25,8 @@ public class FourmiliereGraphique implements ElementGraphique {
    * Une fourmiliereGraphique est construite avec une position et des dimensions. Sa couleur est de
    * base en noire. Le constructeur de FourmiliereGraphique appelle le constructeur de
    * TerrainGraphique.
-   * 
+   * @param posFourmiliere : position de la fourmiliere
+   * @param dimFourmiliere : dimensions de la fourmiliere
    */
   public FourmiliereGraphique(Point posFourmiliere, Dimension dimFourmiliere) {
 
@@ -58,7 +59,7 @@ public class FourmiliereGraphique implements ElementGraphique {
    * basant sur une clef de type Fourmi.
    * 
    * @param fourmi du modele.
-   * @return
+   * @return l'élement graphique de la fourmi
    */
   public GRect ajouterFourmiGraphique(Fourmi fourmi) {
     FourmiGraphique fourmiGraphique = new FourmiGraphique(this.getElementGraphique());
@@ -69,7 +70,7 @@ public class FourmiliereGraphique implements ElementGraphique {
   /**
    * Supprime une Association du Hashmap en en se basant sur une clef de type Fourmi.
    * 
-   * @param fourmi la clef de l'association à supprimer.
+   * @param fourmi la clef de l'association a supprimer.
    * @return la valeur de l'association supprimée.
    */
   public FourmiGraphique supprimerFourmiGraphique(Fourmi fourmi) {
@@ -80,7 +81,7 @@ public class FourmiliereGraphique implements ElementGraphique {
   /**
    * Déplace dans la vue l'elementGraphique d'une FourmiGraphique du HashMap.
    * 
-   * @param fourmi clef de l'association de la la fourmiGraphique à déplacer.
+   * @param fourmi clef de l'association de la la fourmiGraphique a déplacer.
    * @param p Le nouveau point de la fourmi.
    */
   public void deplacerFourmi(Fourmi fourmi, Point p) {

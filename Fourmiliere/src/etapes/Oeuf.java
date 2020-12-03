@@ -1,12 +1,12 @@
 package etapes;
 
-import bilangraphique.BilanGraphique;
+import infomodele.BilanGraphique;
 import modele.Fourmi;
 import modele.Fourmiliere;
 
 /**
- * Classe Oeuf, 1ère étape de l'évolution d'une fourmi. Evolue en larve après 
- * un temps d'évolution précis.
+ * Classe Oeuf, 1ere etape de l'evolution d'une fourmi. Evolue en larve apres 
+ * un temps d'evolution precis.
  */
 public class Oeuf extends Etape {
 
@@ -16,11 +16,11 @@ public class Oeuf extends Etape {
   /**
    * Constructeur d'oeuf.
    * 
-   * @param f : Fourmiliere
+   * @param fourmiliere : Fourmiliere
    * @param fourmi : Fourmi
    */
-  public Oeuf(Fourmiliere f, Fourmi fourmi) {
-    super(f, fourmi);
+  public Oeuf(Fourmiliere fourmiliere, Fourmi fourmi) {
+    super(fourmiliere, fourmi);
   }
   
   public int getTempsEvolution() {

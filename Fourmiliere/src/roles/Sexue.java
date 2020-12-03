@@ -1,7 +1,7 @@
 package roles;
 
 /** 
- * Fourmi sexuee, soit mâle soit femelle (possible nouvelle reine).
+ * Fourmi sexuee, soit male soit femelle (possible nouvelle reine).
  * @author Damien
  *
  */

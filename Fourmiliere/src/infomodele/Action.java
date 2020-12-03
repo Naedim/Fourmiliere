@@ -1,5 +1,12 @@
-package bilangraphique;
+package infomodele;
 
+/**
+ * Decrit une action a que le controlleurGraphique doit efefctuer pour actualiser la vue par rapport
+ * au modele.
+ * 
+ * @author Damien
+ *
+ */
 public class Action {
   protected EnumAction intituleAction;
   protected Parametre param;

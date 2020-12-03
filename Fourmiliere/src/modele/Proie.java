@@ -1,10 +1,10 @@
 package modele;
 
-import bilangraphique.BilanGraphique;
+import infomodele.BilanGraphique;
 import simulation.Simulation;
 
 /**
- * Classe Proie, représente le modèle proie et ses actions.
+ * Classe Proie, represente le modele proie et ses actions.
  */
 public class Proie implements Simulation {
 

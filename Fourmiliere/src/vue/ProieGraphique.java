@@ -21,7 +21,7 @@ public class ProieGraphique implements ElementGraphique {
 
   /**
    * Une proie apparait aléatoirement sur son Terrain.
-   * 
+   * @param terrainGraphique : Le terrain dans laquelle la proie est
    */
   public ProieGraphique(TerrainGraphique terrainGraphique) {
     this.terrainGraphique = terrainGraphique;

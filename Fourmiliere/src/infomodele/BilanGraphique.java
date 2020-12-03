@@ -1,4 +1,4 @@
-package bilangraphique;
+package infomodele;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -6,6 +6,13 @@ import java.util.List;
 import modele.Fourmi;
 import modele.Proie;
 
+/**
+ * Recupere l'ensemble des modifications du modele sous formes d'une liste d'action a appliquer sur
+ * la vue.
+ * 
+ * @author Damien
+ *
+ */
 public class BilanGraphique {
 
   protected List<Action> listAction;
@@ -21,7 +28,7 @@ public class BilanGraphique {
   public void maturiteFourmi(Fourmi fourmi) {
     this.listAction.add(new Action(EnumAction.AJOUTER, new Parametre(fourmi)));
   }
-  
+
   public void apparitionProie(Proie proie) {
     this.listAction.add(new Action(EnumAction.AJOUTER, new Parametre(proie)));
   }
@@ -29,14 +36,13 @@ public class BilanGraphique {
   public void deplacementFourmi(Fourmi fourmi) {
     this.listAction.add(new Action(EnumAction.DEPLACER, new Parametre(fourmi)));
   }
-  
+
   public void deplacementProie(Proie proie) {
     this.listAction.add(new Action(EnumAction.DEPLACER, new Parametre(proie)));
   }
 
   public void mort(Fourmi fourmi) {
-    this.listAction
-        .add(new Action(EnumAction.CHANGERCOULEUR, new Parametre(fourmi, Color.BLACK)));
+    this.listAction.add(new Action(EnumAction.CHANGERCOULEUR, new Parametre(fourmi, Color.BLACK)));
   }
 
   public void disparition(Fourmi fourmi) {

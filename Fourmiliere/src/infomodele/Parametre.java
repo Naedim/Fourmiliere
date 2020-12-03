@@ -1,10 +1,15 @@
-package bilangraphique;
+package infomodele;
 
 import java.awt.Color;
 import java.awt.Point;
 import modele.Fourmi;
 import modele.Proie;
 
+/**
+ * Contient les parametres a utiliser pour une action donnée.
+ * @author Damien
+ *
+ */
 public class Parametre {
 
   protected Fourmi fourmi;
