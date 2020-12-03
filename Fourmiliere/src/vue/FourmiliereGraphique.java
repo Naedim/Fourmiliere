@@ -48,7 +48,7 @@ public class FourmiliereGraphique implements ElementGraphique {
    * @param fourmi .
    * @return
    */
-  public GRect ajouterFourmi(Fourmi fourmi) {
+  public GRect ajouterFourmiGraphique(Fourmi fourmi) {
     FourmiGraphique fourmiGraphique = new FourmiGraphique(this.getElementGraphique());
     this.listFourmi.put(fourmi, fourmiGraphique);
     return fourmiGraphique.getElementGraphique();
