@@ -50,7 +50,7 @@ public class ControlleurGraphique {
           break;
         case DEPLACER:
           indexFourmi = action.getParam().getIndex();
-          fourmi = this.getFourmiliere().getFourmi(indexFourmi);
+          fourmi = this.getFourmiliereGraphique().getFourmi(indexFourmi);
           this.deplacerFourmi(fourmi);
           break;
         case CHANGERCOULEUR:
@@ -58,7 +58,7 @@ public class ControlleurGraphique {
           indexFourmi = p.getIndex();
           Color couleur = p.getColor();
 
-          fourmi = this.getFourmiliere().getFourmi(indexFourmi);
+          fourmi = this.getFourmiliereGraphique().getFourmi(indexFourmi);
           this.changerCouleurFourmi(fourmi, couleur);
           break;
         default:
@@ -69,13 +69,13 @@ public class ControlleurGraphique {
   }
 
   private void ajouterFourmi() {
-    FourmiliereGraphique fourmiliere = this.getFourmiliere();
+    FourmiliereGraphique fourmiliere = this.getFourmiliereGraphique();
     int indexFourmi = fourmiliere.ajouterFourmi();
     this.ajouterElementGraphique(fourmiliere.getFourmi(indexFourmi));
   }
 
   private void supprimerFourmi(int indexFourmi) {
-    this.getFourmiliere().supprimerFourmi(indexFourmi);
+    this.getFourmiliereGraphique().supprimerFourmi(indexFourmi);
     this.supprimerElementGraphique(indexFourmi);
   }
 
@@ -113,7 +113,7 @@ public class ControlleurGraphique {
         System.out.println("ON NE PASSE PAS DEDANS");
     }
 
-    GRect territoire = this.getFourmiliere().getTerritoire().getElementGraphique();
+    GRect territoire = this.getFourmiliereGraphique().getTerritoire().getElementGraphique();
     Point positionTerrain = territoire.getPosition();
     Dimension dimensionTerrain = territoire.getDimension().getSize();
 
@@ -128,7 +128,7 @@ public class ControlleurGraphique {
 
   }
 
-  private FourmiliereGraphique getFourmiliere() {
+  private FourmiliereGraphique getFourmiliereGraphique() {
     return this.getTerrain().getFourmiliere();
   }
 
