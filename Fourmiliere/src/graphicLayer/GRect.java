@@ -27,7 +27,6 @@ public class GRect extends GBounded {
 
   public void setBorderColor(Color borderColor) {
     this.borderColor = borderColor;
-    repaint();
   }
 
   public void setBorderWidth(float w) {
@@ -36,7 +35,6 @@ public class GRect extends GBounded {
 
   public void setStroke(Stroke stroke) {
     this.stroke = stroke;
-    repaint();
   }
 
   public void withoutBorder() {

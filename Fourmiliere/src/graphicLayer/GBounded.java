@@ -30,7 +30,6 @@ public class GBounded extends GElement implements GContainer {
 
   public void setPosition(Point p) {
     position = p;
-    repaint();
   }
 
   public Point getGlobalPosition() {
