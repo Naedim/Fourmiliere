@@ -29,7 +29,8 @@ public class ControlleurGraphique {
   }
 
   /**
-   * Crée un terrainGraphique avec une représentation graphique de fourmilière et d'un territoire.
+   * Crée un terrainGraphique avec une représentation graphique de fourmilière et d'un
+   * territoire.
    */
   public ControlleurGraphique() {
     Point posFourmiliere = new Point(350, 350);
@@ -108,6 +109,7 @@ public class ControlleurGraphique {
 
   /**
    * Méthode permettant d'ajouter un objet proie dans le terrain graphique.
+   * 
    * @param proie : L'objet proie à ajouter dans l'affichage
    */
   private void ajouterProie(Proie proie) {
@@ -118,6 +120,7 @@ public class ControlleurGraphique {
 
   /**
    * Méthode supprimant la fourmi et sa réference graphique.
+   * 
    * @param fourmi : L'objet fourmi qui réference l'objet graphique à supprimer
    */
   private void supprimerFourmi(Fourmi fourmi) {

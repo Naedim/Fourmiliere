@@ -4,9 +4,15 @@ import graphicLayer.GRect;
 import java.awt.Color;
 import java.awt.Point;
 
+/**Homologue graphique de la classe Fourmi du modèle.
+ * 
+ * @author Damien
+ *
+ */
 public class FourmiGraphique implements ElementGraphique {
 
-  protected final int tailleFourmi = 4;
+  
+  protected final int tailleFourmi = 4; //taille par défaut de la représentation graphique d'une fourmi 
   protected final Color couleurFourmi = Color.RED;
   protected GRect elementGraphique;
   protected GRect fourmiliereG;
