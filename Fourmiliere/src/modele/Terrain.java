@@ -40,12 +40,10 @@ public class Terrain {
   public void step() {
 
     int apparitionProie = (int) Math.floor(Math.random() * 50);
-    System.out.println(apparitionProie);
     if (apparitionProie <= 1) {
       Proie p = new Proie();
       this.listProies.add(p);
       this.bilan.apparitionProie(p);
-      
     }
     
     for (Proie p : this.listProies) {

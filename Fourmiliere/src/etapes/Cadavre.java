@@ -8,7 +8,7 @@ import modele.Fourmiliere;
  * Classe cadavre, derni�re �tape de la vie d'une fourmi.
  */
 public class Cadavre extends Etape {
-  protected int tempsVie = 2;
+  protected int tempsVie = 10;
   protected int dureeVie = 0;
 
   /**

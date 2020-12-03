@@ -13,7 +13,7 @@ import simulation.Simulation;
 public class Fourmiliere implements Simulation {
 
   int reine = 1;
-  protected final int nbPonte = 100;
+  protected final int nbPonte = 1;
   protected final int tempsVieMin = 1460;
   protected final int tempsVieMax = 3650;
 
@@ -71,10 +71,9 @@ public class Fourmiliere implements Simulation {
    * Méthode permettant de créer un nombre précis d'oeufs dans la fourmiliere.
    */
   private void pondre() {
-    if (this.dureeVie < this.tempsVie && this.getNbFourmi() < 350) {
+    if (this.dureeVie < this.tempsVie) {
       for (int i = 0; i < nbPonte; i++) {
         this.listFourmi.add(new Fourmi(this));
-
       }
     }
   }

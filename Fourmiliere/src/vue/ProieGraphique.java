@@ -7,7 +7,6 @@ import java.awt.Point;
 public class ProieGraphique implements ElementGraphique {
   protected final int tailleProie = 10;
   protected final Color couleurProie = Color.GREEN;
-
   protected GRect elementGraphique;
 
   /**

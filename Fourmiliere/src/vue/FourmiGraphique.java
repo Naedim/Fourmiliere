@@ -8,17 +8,45 @@ public class FourmiGraphique implements ElementGraphique {
 
   protected final int tailleFourmi = 4;
   protected final Color couleurFourmi = Color.RED;
-  protected final Point positionSortie = new Point(450, 400);
-
   protected GRect elementGraphique;
+  protected GRect fourmiliereG;
 
   /**
    * .
    * 
    */
-  public FourmiGraphique() {
-    // int x = (int) (Math.random() * (600 - 300) + 300);
-    // int y = (int) (Math.random() * (600 - 300) + 300);
+  public FourmiGraphique(GRect fourmiliereG) {
+    Point positionSortie = new Point();
+    int sortie = (int) Math.floor(Math.random() * 4);
+
+    Point sortieHaut =
+        new Point(fourmiliereG.getX() + fourmiliereG.getWidth() / 2, fourmiliereG.getY());
+
+    Point sortieBas = new Point(fourmiliereG.getX() + fourmiliereG.getWidth() / 2,
+        fourmiliereG.getY() + fourmiliereG.getHeight());
+
+    Point sortieDroite = new Point(fourmiliereG.getX() + fourmiliereG.getHeight(),
+        fourmiliereG.getY() + fourmiliereG.getHeight() / 2);
+
+    Point sortieGauche =
+        new Point(fourmiliereG.getX(), fourmiliereG.getY() + fourmiliereG.getHeight() / 2);
+
+    switch (sortie) {
+      case 0:
+        positionSortie = sortieHaut;
+        break;
+      case 1:
+        positionSortie = sortieBas;
+        break;
+      case 2:
+        positionSortie = sortieDroite;
+        break;
+      case 3:
+        positionSortie = sortieGauche;
+        break;
+      default:
+    }
+
     GRect rect = new GRect();
     rect.setWidth(this.tailleFourmi);
     rect.setHeight(this.tailleFourmi);

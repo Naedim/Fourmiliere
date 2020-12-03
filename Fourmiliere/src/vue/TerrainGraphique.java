@@ -1,11 +1,11 @@
 package vue;
 
+import graphicLayer.GRect;
+import graphicLayer.GSpace;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.util.HashMap;
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
 import modele.Proie;
 
 
@@ -40,7 +40,7 @@ public class TerrainGraphique {
     return elementGraphique;
   }
 
-  
+
   public HashMap<Proie, ProieGraphique> getListProie() {
     return listProie;
   }
@@ -61,7 +61,7 @@ public class TerrainGraphique {
   public void deplacerFourmi(Proie proie, Point p) {
     this.listProie.get(proie).getElementGraphique().setPosition(p);
   }
-  
+
   public ProieGraphique getProieGraphique(Proie proie) {
     return this.listProie.get(proie);
   }
