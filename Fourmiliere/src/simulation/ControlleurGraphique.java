@@ -24,11 +24,6 @@ import vue.TerrainGraphique;
 public class ControlleurGraphique {
 
   protected TerrainGraphique terrainGraphique;
-  protected Case caseActuelle;
-
-  public Case getCaseActuelle() {
-    return caseActuelle;
-  }
 
   public static class GestionnaireDeplacement {
     private GestionnaireDeplacement(Fourmi fourmi) {}
@@ -187,6 +182,9 @@ public class ControlleurGraphique {
     Point posTerritoire = territoire.getPosition();
     Dimension dimTerritoire = territoire.getDimension().getSize();
 
+    Point posFourmi = fourmiRect.getPosition();
+    Case maCase = this.getCaseActuelle((int)posFourmi.getX(), (int)posFourmi.getY());
+
     // Définir une case actuelle avant le déplacement
     // this.caseActuelle = new Case(fourmiRect.getX(), fourmiRect.getY(), this.getTerrain());
     // this.caseActuelle.addPheromones(new Point(fourmiRect.getX(), fourmiRect.getY()));
@@ -229,6 +227,11 @@ public class ControlleurGraphique {
   }
 
   // }
+
+
+  public Case getCaseActuelle(int x, int y) {
+    return this.getFourmiliereGraphique().getTerritoire().getCaseByCoord(x, y);
+  }
 
   /**
    * Modifie la position d'une proie tout ne respectant les limites imposer par le terrain.

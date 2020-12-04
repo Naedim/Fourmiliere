@@ -16,6 +16,8 @@ public class TerritoireGraphique implements ElementGraphique {
   protected GRect elementGraphique;
   protected Case[] tabCase = new Case[nbCases];
   protected int casesParLigne = 10;
+  protected int tailleTerritoire;
+  protected int tailleCase;
 
   /**
    * La taille d'un territoire et son positionnement d�pendent de la taille de la fourmiliere du
@@ -32,23 +34,25 @@ public class TerritoireGraphique implements ElementGraphique {
 
     int territoireX = (int) posFourmiliere.getX();
     int territoireY = (int) posFourmiliere.getY();
-    int tailleTerritoire = (int) dimFourmiliere.getWidth();
+    int tailleFourmiliere = (int) dimFourmiliere.getWidth();
 
 
     Point positionTerritoire =
-        new Point(territoireX - tailleTerritoire * 2, territoireY - tailleTerritoire * 2);
+        new Point(territoireX - tailleFourmiliere * 2, territoireY - tailleFourmiliere * 2);
 
     elementGraphique.setPosition(positionTerritoire);
-    elementGraphique
-        .setDimension(new Dimension((int) tailleTerritoire * 5, (int) tailleTerritoire * 5));
+    this.tailleTerritoire = tailleFourmiliere * 5;
+    elementGraphique.setDimension(new Dimension((int) tailleTerritoire, (int) tailleTerritoire));
 
-    this.quadrillage(territoireX, territoireY, tailleTerritoire * 5 / this.casesParLigne);
+    this.tailleCase = tailleTerritoire / casesParLigne;
+
+    this.quadrillage(territoireX, territoireY);
   }
 
   /**
    * .
    */
-  public void quadrillage(int x, int y, int tailleCase) {
+  public void quadrillage(int x, int y) {
     for (int i = 0; i < tabCase.length; i++) {
 
       tabCase[i] = new Case((i % casesParLigne) * tailleCase,
@@ -61,5 +65,20 @@ public class TerritoireGraphique implements ElementGraphique {
 
   public GRect getElementGraphique() {
     return this.elementGraphique;
+  }
+
+  /**
+   * .
+   * 
+   * @param x :
+   * @param y :
+   * @return
+   */
+  public Case getCaseByCoord(int x, int y) {
+    int i = 0;
+    i += (y / this.tailleCase) * nbCases;
+    i += (x / tailleCase);
+
+    return this.tabCase[i];
   }
 }

@@ -15,7 +15,8 @@ public class FourmiGraphique implements ElementGraphique {
   protected final int tailleFourmi = 5; // taille defaut d'une FourmiGraphique.
   protected final Color couleurFourmi = Color.RED; // couleur defaut d'une FourmiGraphique.
   protected GRect elementGraphique; // GRect affich� sur la vue.
-  protected GRect fourmiliereG; // FourmiliereGraphique dont la FourmiGraphique est issue.
+  protected FourmiliereGraphique fourmiliereG; // FourmiliereGraphique dont la FourmiGraphique est issue.
+  protected Case maCase;
 
   /**
    * Une FourmiGraphique n�cessite de conna�tre sa fourmili�re FourmiliereGraphique Une fourmi
@@ -24,7 +25,7 @@ public class FourmiGraphique implements ElementGraphique {
    * 
    * @param fourmiliereGraphique : la fourmiliereGraphique de ma FourmiGraphique.
    */
-  public FourmiGraphique(GRect fourmiliereGraphique) {
+  public FourmiGraphique(FourmiliereGraphique fourmiliereGraphique) {
     Point positionSortie = new Point();
     // Nombre al�atoire entre 0 et 4 pour choisir al�atoirement une des 4 sorties.
     int sortie = (int) Math.floor(Math.random() * 4);
@@ -49,6 +50,8 @@ public class FourmiGraphique implements ElementGraphique {
         break;
       default:
     }
+    
+    this.maCase = this.
 
     // Cr�ation et param�trage du GRect de la fourmie
     GRect rect = new GRect();
