@@ -36,18 +36,17 @@ public class TerrainGraphique {
     listProie = new HashMap<Proie, ProieGraphique>();
 
     elementGraphique.setColor(Color.WHITE);
-
+    elementGraphique.addElement(fourmiliere.getTerritoire().getElementGraphique());
+    
     Case cas = new Case(0, 0, this);
     listCase = new ArrayList<Case>();
     for (int x = 0; x < 1000; x += 5) {
       for (int y = 0; y < 800; y += 5) {
         cas = new Case(x, y, this);
         listCase.add(cas);
-        elementGraphique.addElement(cas.getElementGraphique());
+        //elementGraphique.addElement(cas.getElementGraphique());
       }
     }
-
-    elementGraphique.addElement(fourmiliere.getTerritoire().getElementGraphique());
     elementGraphique.addElement(fourmiliere.getElementGraphique());
 
     elementGraphique.open();

@@ -123,6 +123,7 @@ public class ControlleurGraphique {
    * @param proie : L'objet proie a� ajouter dans l'affichage
    */
   private void ajouterProie(Proie proie) {
+    System.out.println("Ajout d'une proie");
     TerrainGraphique terrainG = this.terrainGraphique;
     GRect proieGraphique = terrainG.ajouterProie(proie);
     this.ajouterElementGraphique(proieGraphique);

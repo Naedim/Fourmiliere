@@ -26,8 +26,8 @@ public class Case implements ElementGraphique {
     rect.setWidth(this.tailleCase);
     rect.setHeight(this.tailleCase);
     rect.setPosition(new Point(x, y));
-    rect.withBorder();
-    rect.setColor(Color.WHITE);
+    rect.withoutBorder();
+    rect.setColor(Color.BLUE);
 
     this.elementGraphique = rect;
   }
@@ -39,13 +39,16 @@ public class Case implements ElementGraphique {
     nbPheromones++;
     System.out.println("Ajout de phéromones case : " + this.getElementGraphique().getX() + " , "
         + this.getElementGraphique().getY());
-    GRect rect = new GRect();
-    rect.setWidth(this.tailleCase);
-    rect.setHeight(this.tailleCase);
-    rect.setPosition(p);
-    rect.withBorder();
-    rect.setColor(Color.BLUE);
-    terrainG.getElementGraphique().addElement(rect);
+
+    // Utiliser pour marquer un emplacement de phéromones
+    // GRect rect = new GRect();
+    // rect.setWidth(this.tailleCase);
+    // rect.setHeight(this.tailleCase);
+    // rect.setPosition(p);
+    // rect.withBorder();
+    // rect.setColor(Color.WHITE);
+    //terrainG.getElementGraphique().addElement(this.getElementGraphique());
+    // this.getElementGraphique().setColor(Color.BLUE);
   }
 
   public int nbDePheromones() {
