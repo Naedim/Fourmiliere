@@ -10,6 +10,7 @@ public class Case implements ElementGraphique {
   protected GRect elementGraphique;
   protected int nbPheromones;
 
+  int step = 0;
 
   /**
    * Constructeur d'une case.
@@ -32,29 +33,30 @@ public class Case implements ElementGraphique {
   /**
    * .
    */
-  public void addPheromones(Point p) {
+  public void addPheromones() {
     nbPheromones++;
     System.out.println("Ajout de phéromones case : " + this.getElementGraphique().getX() + " , "
         + this.getElementGraphique().getY());
-
-    // Utiliser pour marquer un emplacement de phéromones
-    // GRect rect = new GRect();
-    // rect.setWidth(this.tailleCase);
-    // rect.setHeight(this.tailleCase);
-    // rect.setPosition(p);
-    // rect.withBorder();
-    // rect.setColor(Color.WHITE);
-    // terrainG.getElementGraphique().addElement(this.getElementGraphique());
-    // this.getElementGraphique().setColor(Color.BLUE);
   }
 
-  public int nbDePheromones() {
+  public int getNbPheromone() {
     return nbPheromones;
   }
 
   @Override
   public GRect getElementGraphique() {
     return elementGraphique;
+  }
+
+  /**
+   * .
+   * 
+   */
+  public void updatePheromone() {
+    step++;
+    if (step == 5) {
+      this.nbPheromones -= 3;
+    }
   }
 
 }

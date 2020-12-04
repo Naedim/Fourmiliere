@@ -98,6 +98,8 @@ public class ControlleurGraphique {
         default:
       }
     }
+
+    // UPDATE LES CASES A NE PAS OUBLIER
     this.terrainGraphique.getElementGraphique().repaint();
   }
 
@@ -145,6 +147,36 @@ public class ControlleurGraphique {
    * @param rect : GRect avant deplacement
    * @return Un nouveau point de position
    */
+  private Point deplacementAleatoire(GRect rect, int[] valeurs) {
+    Point pos = rect.getPosition();
+
+    int posX = pos.x;
+    int posY = pos.y;
+    int valeurDeplacement = 5;
+
+    int random = (int) Math.floor(Math.random() * valeurs[3]);
+
+
+    // GAUCHE
+    if (0 <= random && random < valeurs[0]) {
+      posX -= valeurDeplacement;
+
+      // DROITE
+    } else if (valeurs[0] <= random && random < valeurs[1]) {
+      posX += valeurDeplacement;
+
+      // HAUT
+    } else if (valeurs[1] <= random && random < valeurs[2]) {
+      posY -= valeurDeplacement;
+
+      // BAS
+    } else if (valeurs[2] <= random && random < valeurs[3]) {
+      posY += valeurDeplacement;
+    }
+
+    return new Point(posX, posY);
+  }
+
   private Point deplacementAleatoire(GRect rect) {
     Point pos = rect.getPosition();
     int deplacement = (int) Math.floor(Math.random() * 4);
@@ -178,47 +210,30 @@ public class ControlleurGraphique {
    * @param fourmiGraphique : La fourmi graphique a� deplacer
    */
   private void deplacerFourmi(GRect fourmiRect) {
+
+    Point posFourmi = fourmiRect.getPosition();
+    Case maCase = this.getCaseActuelle((int) posFourmi.getX(), (int) posFourmi.getY());
+    maCase.addPheromones();
+
+    // Tableau de taille 4 de Case
+    Case[] casesAdjacentes =
+        this.getFourmiliereGraphique().getTerritoire().getCasesAdjacentes(maCase);
+
+    int[] valeurs = new int[4];
+    valeurs[0] = casesAdjacentes[0].getNbPheromone();
+
+    for (int i = 1; i < 4; i++) {
+      valeurs[i] = valeurs[i - 1] + casesAdjacentes[i].getNbPheromone();
+    }
+
     GRect territoire = this.getFourmiliereGraphique().getTerritoire().getElementGraphique();
     Point posTerritoire = territoire.getPosition();
     Dimension dimTerritoire = territoire.getDimension().getSize();
 
-    Point posFourmi = fourmiRect.getPosition();
-    Case maCase = this.getCaseActuelle((int)posFourmi.getX(), (int)posFourmi.getY());
-
-    // Définir une case actuelle avant le déplacement
-    // this.caseActuelle = new Case(fourmiRect.getX(), fourmiRect.getY(), this.getTerrain());
-    // this.caseActuelle.addPheromones(new Point(fourmiRect.getX(), fourmiRect.getY()));
-
-    // Récupérer la liste des casesAdjacentes pour pouvoir vérifier qui a des phéromones
-    // HashMap<String, Case> caseAdjacentes = terrainGraphique.getCasesAdjacentes(caseActuelle);
-
-    // Si aucune case choisit alors déplacement aléatoire 25%
-    // if (caseAdjacentes.size() > 0) {
-    // int probabiliteGauche = 25;
-    // int probabiliteDroite = 25;
-    // int probabiliteHaut = 25;
-    // int probabiliteBas = 25;
-    //
-    // // gérer les cas de probabilités
-    // if (caseAdjacentes.get("Gauche").nbDePheromones() > 0) {
-    // probabiliteGauche = 40;
-    // }
-    Point pos;
-    // Case caseGauche = caseAdjacentes.get("Gauche");
-    // Case caseDroite = caseAdjacentes.get("Gauche");
-    // Case caseHaut = caseAdjacentes.get("Gauche");
-    // Case caseBas = caseAdjacentes.get("Gauche");
-
-    // if (caseGauche.nbDePheromones() > 0) {
-    // pos = new Point(caseGauche.getElementGraphique().getX(),
-    // caseGauche.getElementGraphique().getY());
-    // } else {
-    pos = this.deplacementAleatoire(fourmiRect);
-    // }
-
     int terrX = posTerritoire.x;
     int terrY = posTerritoire.y;
 
+    Point pos = this.deplacementAleatoire(fourmiRect, valeurs);
     if (terrX < pos.x && pos.x + fourmiRect.getWidth() < (terrX + dimTerritoire.width)) {
       if (terrY < pos.y && pos.y + fourmiRect.getHeight() < (terrY + dimTerritoire.height)) {
         fourmiRect.setPosition(new Point(pos.x, pos.y));

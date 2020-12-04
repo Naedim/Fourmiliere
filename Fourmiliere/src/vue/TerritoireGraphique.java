@@ -81,4 +81,44 @@ public class TerritoireGraphique implements ElementGraphique {
 
     return this.tabCase[i];
   }
+
+  /**
+   * .
+   * 
+   * @param maCase :
+   * @return
+   */
+  public Case[] getCasesAdjacentes(Case maCase) {
+
+    Case[] casesAdjacentes = new Case[4];
+    int indexMaCase = 0;
+    for (Case c : this.tabCase) {
+      if (c.equals(maCase)) {
+        break;
+      }
+      indexMaCase++;
+    }
+
+    // Si case gauche
+    if (indexMaCase - 1 > 0) {
+      casesAdjacentes[0] = tabCase[indexMaCase - 1];
+    }
+
+    // Si case droite
+    if (indexMaCase + 1 < tabCase.length) {
+      casesAdjacentes[1] = tabCase[indexMaCase + 1];
+    }
+
+    // Si case haut
+    if (indexMaCase - casesParLigne > 0) {
+      casesAdjacentes[2] = tabCase[indexMaCase - casesParLigne];
+    }
+
+    // Si case bas
+    if (indexMaCase + casesParLigne > tabCase.length) {
+      casesAdjacentes[3] = tabCase[indexMaCase + casesParLigne];
+    }
+    
+    return casesAdjacentes;
+  }
 }

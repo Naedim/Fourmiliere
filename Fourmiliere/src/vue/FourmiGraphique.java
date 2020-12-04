@@ -15,7 +15,8 @@ public class FourmiGraphique implements ElementGraphique {
   protected final int tailleFourmi = 5; // taille defaut d'une FourmiGraphique.
   protected final Color couleurFourmi = Color.RED; // couleur defaut d'une FourmiGraphique.
   protected GRect elementGraphique; // GRect affich� sur la vue.
-  protected FourmiliereGraphique fourmiliereG; // FourmiliereGraphique dont la FourmiGraphique est issue.
+  protected FourmiliereGraphique fourmiliereG; // FourmiliereGraphique dont la FourmiGraphique est
+  // issue.
   protected Case maCase;
 
   /**
@@ -27,31 +28,29 @@ public class FourmiGraphique implements ElementGraphique {
    */
   public FourmiGraphique(FourmiliereGraphique fourmiliereGraphique) {
     Point positionSortie = new Point();
+    GRect elemFourmiliere = fourmiliereGraphique.getElementGraphique();
+    this.fourmiliereG = fourmiliereGraphique;
     // Nombre al�atoire entre 0 et 4 pour choisir al�atoirement une des 4 sorties.
     int sortie = (int) Math.floor(Math.random() * 4);
     switch (sortie) {
       case 0:
-        positionSortie =
-            new Point(fourmiliereGraphique.getX() + fourmiliereGraphique.getWidth() / 2,
-                fourmiliereGraphique.getY());
+        positionSortie = new Point(elemFourmiliere.getX() + elemFourmiliere.getWidth() / 2,
+            elemFourmiliere.getY());
         break;
       case 1:
-        positionSortie =
-            new Point(fourmiliereGraphique.getX() + fourmiliereGraphique.getWidth() / 2,
-                fourmiliereGraphique.getY() + fourmiliereGraphique.getHeight());
+        positionSortie = new Point(elemFourmiliere.getX() + elemFourmiliere.getWidth() / 2,
+            elemFourmiliere.getY() + elemFourmiliere.getHeight());
         break;
       case 2:
-        positionSortie = new Point(fourmiliereGraphique.getX() + fourmiliereGraphique.getHeight(),
-            fourmiliereGraphique.getY() + fourmiliereGraphique.getHeight() / 2);
+        positionSortie = new Point(elemFourmiliere.getX() + elemFourmiliere.getHeight(),
+            elemFourmiliere.getY() + elemFourmiliere.getHeight() / 2);
         break;
       case 3:
-        positionSortie = new Point(fourmiliereGraphique.getX(),
-            fourmiliereGraphique.getY() + fourmiliereGraphique.getHeight() / 2);
+        positionSortie = new Point(elemFourmiliere.getX(),
+            elemFourmiliere.getY() + elemFourmiliere.getHeight() / 2);
         break;
       default:
     }
-    
-    this.maCase = this.
 
     // Cr�ation et param�trage du GRect de la fourmie
     GRect rect = new GRect();
@@ -61,6 +60,9 @@ public class FourmiGraphique implements ElementGraphique {
     rect.setColor(this.couleurFourmi);
     rect.withoutBorder();
     this.elementGraphique = rect;
+
+    this.maCase =
+        this.fourmiliereG.getTerritoire().getCaseByCoord(rect.getX(), rect.getY());
   }
 
   @Override
