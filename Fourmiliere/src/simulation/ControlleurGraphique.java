@@ -1,7 +1,5 @@
 package simulation;
 
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
 import infomodele.Action;
 import infomodele.BilanGraphique;
 import infomodele.Parametre;
@@ -10,6 +8,8 @@ import java.awt.Dimension;
 import java.awt.Point;
 import java.util.HashMap;
 import java.util.List;
+import graphicLayer2.GRect;
+import graphicLayer2.GSpace;
 import modele.Fourmi;
 import modele.Proie;
 import vue.Case;
@@ -223,7 +223,11 @@ public class ControlleurGraphique {
     valeurs[0] = casesAdjacentes[0].getNbPheromone();
 
     for (int i = 1; i < 4; i++) {
-      valeurs[i] = valeurs[i - 1] + casesAdjacentes[i].getNbPheromone();
+      if (casesAdjacentes[i] != null) {
+        valeurs[i] = valeurs[i - 1] + casesAdjacentes[i].getNbPheromone();
+      } else {
+        valeurs[i] = 0;
+      }
     }
 
     GRect territoire = this.getFourmiliereGraphique().getTerritoire().getElementGraphique();

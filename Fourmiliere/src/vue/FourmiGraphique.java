@@ -1,8 +1,8 @@
 package vue;
 
-import graphicLayer.GRect;
 import java.awt.Color;
 import java.awt.Point;
+import graphicLayer2.GRect;
 
 /**
  * Homologue graphique de la classe Fourmi du mod�le.

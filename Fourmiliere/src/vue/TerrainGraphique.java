@@ -1,13 +1,13 @@
 package vue;
 
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import graphicLayer2.GRect;
+import graphicLayer2.GSpace;
 import modele.Proie;
 
 /**

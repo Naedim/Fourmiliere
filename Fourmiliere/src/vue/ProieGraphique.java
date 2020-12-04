@@ -1,14 +1,14 @@
 package vue;
 
-import graphicLayer.GRect;
-import graphicLayer.GSpace;
 import java.awt.Color;
 import java.awt.Point;
+import graphicLayer2.GRect;
+import graphicLayer2.GSpace;
 
 /**
- * Homologue graphique de la classe Proie du modele Pouvant se déplacer librement dans le terrain.
+ * Homologue graphique de la classe Proie du modele Pouvant se dï¿½placer librement dans le terrain.
  * Une proie appartient au TerrainGraphique. Elle connait son TerrainGraphique. 
- * Celle-ci a une taille et une couleur par défault.
+ * Celle-ci a une taille et une couleur par dï¿½fault.
  * * @author Damien
  *
  */
@@ -20,7 +20,7 @@ public class ProieGraphique implements ElementGraphique {
 
 
   /**
-   * Une proie apparait aléatoirement sur son Terrain.
+   * Une proie apparait alï¿½atoirement sur son Terrain.
    * @param terrainGraphique : Le terrain dans laquelle la proie est
    */
   public ProieGraphique(TerrainGraphique terrainGraphique) {

@@ -1,10 +1,10 @@
 package vue;
 
-import graphicLayer.GRect;
+import graphicLayer2.GRect;
 
 /**
- * Interface assurant la présence d'une méthode getElementGraphique dans chaque élement graphique.
- * Un élément graphique a un attribut elementGraphique étant l'objet GRect lui correspondant dans la
+ * Interface assurant la prï¿½sence d'une mï¿½thode getElementGraphique dans chaque ï¿½lement graphique.
+ * Un ï¿½lï¿½ment graphique a un attribut elementGraphique ï¿½tant l'objet GRect lui correspondant dans la
  * vue.
  * 
  * @author Damien

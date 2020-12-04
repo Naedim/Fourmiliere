@@ -1,10 +1,10 @@
 package vue;
 
-import graphicLayer.GRect;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.util.HashMap;
+import graphicLayer2.GRect;
 import modele.Fourmi;
 
 /**

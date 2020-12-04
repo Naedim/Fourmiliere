@@ -1,9 +1,9 @@
 package vue;
 
-import graphicLayer.GRect;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
+import graphicLayer2.GRect;
 
 /**
  * Repr�sentation graphique du TerritoireGraphhique d'une FourmiliereGraphique.
@@ -46,7 +46,7 @@ public class TerritoireGraphique implements ElementGraphique {
 
     this.tailleCase = tailleTerritoire / casesParLigne;
 
-    this.quadrillage(territoireX, territoireY);
+    this.quadrillage((int) positionTerritoire.getX(), (int) positionTerritoire.getY());
   }
 
   /**
@@ -55,7 +55,7 @@ public class TerritoireGraphique implements ElementGraphique {
   public void quadrillage(int x, int y) {
     for (int i = 0; i < tabCase.length; i++) {
 
-      tabCase[i] = new Case((i % casesParLigne) * tailleCase,
+      tabCase[i] = new Case((i % casesParLigne) * tailleCase ,
           ((int) (i / casesParLigne)) * tailleCase, tailleCase);
 
 
@@ -76,8 +76,8 @@ public class TerritoireGraphique implements ElementGraphique {
    */
   public Case getCaseByCoord(int x, int y) {
     int i = 0;
-    i += (y / this.tailleCase) * nbCases;
-    i += (x / tailleCase);
+    i += (y / this.tailleCase) * casesParLigne;
+    i += (x / this.tailleCase);
 
     return this.tabCase[i];
   }
@@ -118,7 +118,7 @@ public class TerritoireGraphique implements ElementGraphique {
     if (indexMaCase + casesParLigne > tabCase.length) {
       casesAdjacentes[3] = tabCase[indexMaCase + casesParLigne];
     }
-    
+
     return casesAdjacentes;
   }
 }
