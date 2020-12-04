@@ -21,7 +21,6 @@ public class TerrainGraphique {
   protected GSpace elementGraphique;
   protected FourmiliereGraphique fourmiliere;
   protected HashMap<Proie, ProieGraphique> listProie;
-  protected List<Case> listCase;
 
   /**
    * Un TerrainGraphique a par default une hauteur et une largeur de 1000 et 800. Le controleur
@@ -37,34 +36,9 @@ public class TerrainGraphique {
 
     elementGraphique.setColor(Color.WHITE);
     elementGraphique.addElement(fourmiliere.getTerritoire().getElementGraphique());
-    
-    Case cas = new Case(0, 0, this);
-    listCase = new ArrayList<Case>();
-    for (int x = 0; x < 1000; x += 5) {
-      for (int y = 0; y < 800; y += 5) {
-        cas = new Case(x, y, this);
-        listCase.add(cas);
-        //elementGraphique.addElement(cas.getElementGraphique());
-      }
-    }
     elementGraphique.addElement(fourmiliere.getElementGraphique());
 
     elementGraphique.open();
-  }
-
-  /** Défile tt les cases et récupère la case. */
-  public Case getCaseByPos(int x, int y) {
-    if (x >= 0 && y >= 0) {
-      Case cas = null;
-      for (Case c : this.listCase) {
-        if (c.getElementGraphique().getX() == x && c.getElementGraphique().getY() == y) {
-          cas = c;
-          break;
-        }
-      }
-      return cas;
-    }
-    return null;
   }
 
   public FourmiliereGraphique getFourmiliere() {
@@ -105,40 +79,5 @@ public class TerrainGraphique {
 
   public ProieGraphique getProieGraphique(Proie proie) {
     return this.listProie.get(proie);
-  }
-
-  /**
-   * méthode qui récupère la case a gauche, a droite, au dessus, et en dessous de celle actuelle.
-   * 
-   * @param cas : case
-   * @return
-   */
-  public HashMap<String, Case> getCasesAdjacentes(Case cas) {
-    HashMap<String, Case> lstCaseReturn = new HashMap<String, Case>();
-    Case caseGauche =
-        this.getCaseByPos(cas.getElementGraphique().getX() - 5, cas.getElementGraphique().getY());
-    if (caseGauche != null) {
-      lstCaseReturn.put("Gauche", caseGauche);
-    }
-    
-    Case caseDroit =
-        this.getCaseByPos(cas.getElementGraphique().getX() + 5, cas.getElementGraphique().getY());
-    if (caseDroit != null) {
-      lstCaseReturn.put("Droit", caseDroit);
-    }
-    
-    Case caseHaut =
-        this.getCaseByPos(cas.getElementGraphique().getX(), cas.getElementGraphique().getY() - 5);
-    if (caseHaut != null) {
-      lstCaseReturn.put("Haut", caseHaut);
-    }
-    
-    Case caseBas =
-        this.getCaseByPos(cas.getElementGraphique().getX(), cas.getElementGraphique().getY() + 5);
-    if (caseBas != null) {
-      lstCaseReturn.put("Bas", caseBas);
-    }
-
-    return lstCaseReturn;
   }
 }
